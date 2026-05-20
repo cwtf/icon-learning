@@ -101,3 +101,100 @@ export const proofBento = {
     },
   ],
 } as const;
+
+export const coursesShowcase = {
+  eyebrow: "Program categories",
+  heading: "Find the training lane that fits the work",
+  description:
+    "Browse the six most requested category families, then jump into the full catalog when you are ready to compare formats, durations, and team needs.",
+  browseAllCta: {
+    label: "Browse all 9 categories",
+    href: "/programs",
+  },
+  categories: [
+    {
+      slug: "leadership-management-coaching",
+      title: "Leadership, Management & Coaching",
+      summary: "Build sharper supervisors, managers, and leaders through practical people-management habits.",
+      intro:
+        "Leadership programs focus on the everyday work of guiding people, setting priorities, and improving team performance. They can support new supervisors, experienced managers, and teams going through change.",
+      topics: ["Leadership", "Coaching", "Performance", "Change"],
+      courses: [
+        "Leadership Boot Camp",
+        "Leadership + People Management",
+        "Supervisory Development Program",
+        "Performance Management via KRA and KPI",
+      ],
+    },
+    {
+      slug: "quality-lean-food-safety",
+      title: "Quality, Lean & Food Safety",
+      summary: "Strengthen systems, audits, food safety, and continuous improvement across operations.",
+      intro:
+        "This category covers quality systems, ISO awareness, internal auditing, food safety, lean tools, and structured problem solving. It is built for teams responsible for standards, consistency, and operational discipline.",
+      topics: ["ISO 9001", "HACCP", "GMP", "Lean"],
+      courses: [
+        "ISO 9001 QMS Awareness",
+        "HACCP Internal Quality Audit",
+        "MS 1514-2022 GMP",
+        "Root Cause Analysis",
+      ],
+    },
+    {
+      slug: "safety-health-environment",
+      title: "Safety, Health & Environment",
+      summary: "Support safer workplaces with OSH, HIRARC, waste, fire, and emergency readiness.",
+      intro:
+        "Safety, health, and environment courses help operational teams identify risks, respond clearly, and meet workplace safety responsibilities. Programs range from committee training to hands-on emergency and equipment safety topics.",
+      topics: ["OSH", "HIRARC", "First Aid", "Fire Safety"],
+      courses: [
+        "Occupational Safety & Health at Workplace",
+        "Hazard Identification Risk Assessment & Risk Control",
+        "First Aid CPR at Work",
+        "Fire Safety Training for Fire Squad",
+      ],
+    },
+    {
+      slug: "hr-employment-law",
+      title: "HR & Employment Law",
+      summary: "Help managers and HR teams handle compliance, discipline, payroll, and workplace policy.",
+      intro:
+        "HR and employment law training gives teams a clearer way to manage people issues without drifting into avoidable compliance risk. It is useful for HR teams, department heads, and non-HR managers.",
+      topics: ["Employment Act", "Payroll", "PDPA", "Discipline"],
+      courses: [
+        "HR for Non-HR Managers",
+        "Understanding the Labour Law",
+        "How to Conduct a Domestic Inquiry",
+        "Anti-Bribery & Anti-Corruption",
+      ],
+    },
+    {
+      slug: "microsoft-ai-digital-skills",
+      title: "Microsoft, AI & Digital Skills",
+      summary: "Upgrade everyday productivity with Excel, Power BI, AI, and cyber awareness.",
+      intro:
+        "Digital skills programs are designed for practical workplace use, from spreadsheet confidence to dashboard reporting and safer online habits. The category also includes AI and prompt-engineering topics for modern teams.",
+      topics: ["Excel", "Power BI", "AI", "Cybersecurity"],
+      courses: [
+        "Microsoft Excel Advanced Conditional Formatting",
+        "Power BI Desktop",
+        "Work Smarter, Prompt Better",
+        "Human Firewall Initiative",
+      ],
+    },
+    {
+      slug: "sales-marketing-customer-service",
+      title: "Sales, Marketing & Customer Service",
+      summary: "Improve selling, service conversations, retail performance, and digital marketing execution.",
+      intro:
+        "Commercial and service programs help customer-facing teams communicate value, handle objections, and improve the customer experience. Topics span sales skills, retail, social media, and complaint handling.",
+      topics: ["Sales", "Customer Care", "Digital Marketing", "Negotiation"],
+      courses: [
+        "High Impact Selling Skills",
+        "Digital Marketing Zero to Hero",
+        "Customer Care Workshop",
+        "Complaints Management",
+      ],
+    },
+  ],
+} as const;

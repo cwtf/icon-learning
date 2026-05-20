@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 3 bento masonry implemented; ready for review.
+- **Phase:** PR 4 CoursesTabbed implemented as true show/hide tabs; ready for review.
 - **Last touched:** 2026-05-20.
-- **Next action:** Review PR 3, then start PR 4 (`CoursesTabbed` scroll-spy section) per [DESIGN.md Section 11 Phase 2](DESIGN.md).
-- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, and `CtaCloser` sections using content from `src/content/home.ts`.
+- **Next action:** Review PR 4, then start PR 5 (`ApproachSection` + `FeatureStripe`) per [DESIGN.md Section 11 Phase 2](DESIGN.md).
+- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, true-tabbed `CoursesTabbed`, and `CtaCloser` sections using content from `src/content/home.ts`.
 
 ---
 
 ## What's Done
 
+- **2026-05-20** - PR 4 CoursesTabbed added: six homepage categories, show/hide tab behavior after JS enhancement, desktop sidebar labels, mobile horizontal labels, no-JS readable fallback, keyboard tab navigation, and course/category links.
 - **2026-05-20** - PR 3 bento masonry added: proof section after the hero, real client logo assets, verified-only "Since 2011" proof, HRD/ISO positioning cards, reduced-motion-aware parallax script, and static fallback layout.
 - **2026-05-20** - PR 2 hero and CTA closer added: real homepage hero component, compact CTA closer, homepage content module, WhatsApp-first CTA wiring, and shared contact details in `src/content/site.ts`.
 - **2026-05-20** - PR 1 foundation added: Astro config, package scripts, Tailwind/PostCSS setup, design tokens, global styles, `BaseLayout`, `Nav`, `Footer`, primitives (`Button`, `Card`, `SectionHeading`, `TabBar`, `LogoWall`), favicon, and temporary smoke homepage.
@@ -32,13 +33,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 4: CoursesTabbed
+## Next Up - PR 5: ApproachSection + FeatureStripe
 
 Per [DESIGN.md Section 11 Phase 2](DESIGN.md):
 
-> `CoursesTabbed` + tab island. No-JS stacked fallback first, then sliding indicator + crossfade.
+> `ApproachSection` + `FeatureStripe` (3-4 stripes, alternating).
 
-Note: the consolidated spec later changed `CoursesTabbed` into a scroll-spy section. Follow [DESIGN.md Section 5.2](DESIGN.md): sticky labels on desktop, stacked cards on mobile, no-JS fallback, reduced-motion instant state changes.
+PR 5 should add the Discover, Customize, Deliver, Reinforce sequence and keep image/media handling honest until approved workshop assets arrive.
 
 ---
 
@@ -73,6 +74,18 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 ### 2026-05-20 - PR 3 bento uses logos before photos
 
 Workshop/photo assets are not available yet, so the bento uses real client logos plus verified proof and positioning cards. Photo cards can replace some proof/logo cards when approved workshop imagery lands.
+
+### 2026-05-20 - CoursesTabbed changed to true tabs
+
+The category showcase now hides inactive panels after JavaScript enhancement instead of scroll-spying through all panels. All panels remain in the HTML and visible without JavaScript for fallback and crawlability.
+
+### 2026-05-20 - CoursesTabbed uses CSS slide-preview media
+
+Category hero images are not available yet, so PR 4 uses structured CSS slide-preview panels with real category topics. Replace these with approved workshop photos or slide previews when assets arrive under `assets/source/programs/`.
+
+### 2026-05-20 - Client scripts are modules
+
+`BentoMasonry.client.ts` and `CoursesTabbed.client.ts` both end with `export {}` so Astro's typechecker treats them as isolated modules instead of merging top-level variable names globally.
 
 ### 2026-05-20 - Bento parallax is progressive enhancement
 
@@ -110,6 +123,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - Production dependency audit is clean via `npm audit --omit=dev --audit-level=moderate`.
 - PR 3 imports logo images directly from `assets/source/logos/clients/`; Astro fingerprints them into `dist/_astro`.
 - There are no workshop photos in `assets/source/photos/` yet, so bento media cards are intentionally deferred.
+- There are no category hero images in `assets/source/programs/` yet, so PR 4 uses CSS slide-preview panels as temporary representative media.
 - Full `npm audit` still reports moderate advisories in dev-only `@astrojs/check` / language-server dependencies. Keep watching for an upstream fix.
 - `npm run dev` currently fails in this sandboxed Windows environment with a Vite/esbuild dependency-optimization access error (`Cannot read directory "../../..": Access is denied`). The production build is unaffected.
 - The in-app Browser plugin is installed, but this session did not expose its required Node REPL tool, so visual browser automation could not be completed here.

@@ -46,3 +46,5 @@ if (section && cards.length > 0 && !reducedMotion.matches) {
   reducedMotion.addEventListener("change", requestUpdate);
   requestUpdate();
 }
+
+export {};
