@@ -36,7 +36,7 @@ if (form && trainingInput) {
       `${data.get("message") || ""}`,
     ];
 
-    const mailto = new URL(`mailto:${form.dataset.email ?? "jane@iconlearning.com.my"}`);
+    const mailto = new URL(`mailto:${form.dataset.email ?? "info@iconlearning.com.my"}`);
     mailto.searchParams.set("subject", subject);
     mailto.searchParams.set("body", lines.join("\n"));
 

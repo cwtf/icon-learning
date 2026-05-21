@@ -250,6 +250,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - `public/robots.txt` points to `https://www.iconlearning.com.my/sitemap.xml`; sitemap files are static launch seeds for the current MVP page set.
 - `docs/launch/redirect-plan.md` is a redirect seed list, not an installed redirect config. Final implementation depends on the deploy host.
 - The homepage outcomes/ResultsGrid segment is intentionally removed. `ResultsGrid.astro` is a no-op placeholder; do not re-add the segment or `#outcomes` anchor unless navigation/content strategy changes.
+- The Clients hero intentionally has no subcopy. Do not re-add `clientsPage.hero.sub` or an empty placeholder paragraph.
 - Logo and HRD images now emit width/height attributes through `LogoWall`, `HomeClients`, `BentoMasonry`, `ServicesBento`, and `/about-us` to keep the static image audit clean.
 - `npm run build` passes with Astro check and static build.
 - PR 17 builds `/accessibility-statement/index.html` and raises the static build output to 25 pages.

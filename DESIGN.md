@@ -408,7 +408,7 @@ Hero `Trusted by teams across Malaysia` · logo wall grouped by industry where p
 ### 6.7 Contact (`/contact`)
 Split layout: form left, contact cards right. Mobile: contact actions before form.
 Form fields: Name · Company · Email · Phone/WhatsApp · Training interest · Team size · Preferred format · Message.
-Contact cards: WhatsApp, email (`jane@iconlearning.com.my`), phone (`+6012-3245 938`), address (`No 1, Jalan Radin 5, 57000 Sri Petaling, Kuala Lumpur`), hours (`Monday–Friday, 09:00–18:00`).
+Contact cards: WhatsApp, email (`info@iconlearning.com.my`), phone (`+6012-3245 938`), address (`No 1, Jalan Radin 5, 57000 Sri Petaling, Kuala Lumpur`), hours (`Monday–Friday, 09:00–18:00`).
 
 ### 6.8 Accessibility statement (`/accessibility-statement`)
 Replace template placeholders with: WCAG 2.2 AA target, contact email, last-updated date.
