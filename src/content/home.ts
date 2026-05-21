@@ -265,39 +265,3 @@ export const serviceSolutions = {
     },
   ],
 } as const;
-
-export const outcomesProof = {
-  eyebrow: "Outcomes and proof",
-  heading: "Proof points without inflated numbers",
-  description:
-    "Until Icon Learning confirms broader metrics, this section surfaces only facts already supported by the current catalog structure and company positioning.",
-  items: [
-    {
-      label: "Established",
-      value: "Since 2011",
-      description:
-        "Icon Learning has been operating since 2011, supporting teams through corporate training and consultancy.",
-    },
-    {
-      label: "Catalog breadth",
-      value: "9",
-      countTo: 9,
-      description:
-        "Top-level program categories structure the catalog, from leadership and HR to safety, quality, digital skills, and more.",
-    },
-    {
-      label: "Homepage focus",
-      value: "6",
-      countTo: 6,
-      description:
-        "Priority category families are surfaced on the homepage so buyers can scan the most requested training lanes quickly.",
-    },
-    {
-      label: "Engagement lanes",
-      value: "3",
-      countTo: 3,
-      description:
-        "Corporate training, ISO consultancy, and customized in-house learning stay visible as distinct ways to work with the team.",
-    },
-  ],
-} as const;

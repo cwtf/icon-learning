@@ -11,7 +11,7 @@
 - **Phase:** PR 18 QA & Launch implemented; ready for review.
 - **Last touched:** 2026-05-21.
 - **Next action:** Review PR 18, then confirm deploy target, install redirects on the chosen host, and run browser-based Lighthouse/Rich Results checks against the final preview URL.
-- **Working tree:** PR 18 adds launch QA automation, robots/sitemaps, redirect planning docs, HRD-filter entry links, image dimension cleanup for logo surfaces, refreshed course review output, keeps the homepage ResultsGrid without a public `#outcomes` anchor, and removes the temporary GitHub Pages base path for canonical launch URLs.
+- **Working tree:** PR 18 adds launch QA automation, robots/sitemaps, redirect planning docs, HRD-filter entry links, image dimension cleanup for logo surfaces, refreshed course review output, keeps the homepage outcomes/ResultsGrid segment removed, and removes the temporary GitHub Pages base path for canonical launch URLs.
 
 ---
 
@@ -20,7 +20,7 @@
 - **2026-05-21** - CI/CD setup: Added GitHub Actions workflow (`deploy.yml`) using Node 22, and configured `base` path in `astro.config.mjs` for temporary GitHub Pages hosting.
 - **2026-05-21** - Programs update: Updated all 10 sample course JSON files to `hrdClaimable: true` and set the HRD Corp claimable toggle on `/programs` to be checked by default.
 - **2026-05-21** - Homepage updates: Added infinite scrolling marquee for "Our Clients" segment, adjusted wording to "Companies across Malaysia", and refined mask gradient.
-- **2026-05-21** - PR 18 QA & Launch pass added: `npm run qa:launch` checks built metadata, JSON-LD syntax, H1 counts, internal links/anchors, image alt/dimensions, crawl files, and script gzip budget; `robots.txt`, sitemap index, pages/courses sitemap splits, launch QA report, and seed redirect plan were added. Removed the temporary GitHub Pages `base` path so built canonicals and assets target the root domain. Kept `ResultsGrid` rendered without `id="outcomes"` because that anchor was intentionally removed. Launch gates pass: course review 0 failures/0 warnings, build 25 pages with 0 errors/warnings/hints, launch QA 0 issues/0 warnings with 22 KB total script gzip, production audit 0 vulnerabilities.
+- **2026-05-21** - PR 18 QA & Launch pass added: `npm run qa:launch` checks built metadata, JSON-LD syntax, H1 counts, internal links/anchors, image alt/dimensions, crawl files, and script gzip budget; `robots.txt`, sitemap index, pages/courses sitemap splits, launch QA report, and seed redirect plan were added. Removed the temporary GitHub Pages `base` path so built canonicals and assets target the root domain. Kept the homepage outcomes/ResultsGrid segment removed because that section was intentionally taken out. Launch gates pass: course review 0 failures/0 warnings, build 25 pages with 0 errors/warnings/hints, launch QA 0 issues/0 warnings with 22 KB total script gzip, production audit 0 vulnerabilities.
 - **2026-05-21** - PR 17 Accessibility Statement added: `/accessibility-statement` renders WCAG 2.2 AA target copy, last-updated date, accessibility measures, known limitations, feedback contacts, Breadcrumb/WebPage JSON-LD, and global Organization/WebSite metadata/schema through `BaseLayout`.
 - **2026-05-21** - PR 16 Contact page added: `/contact` renders a split inquiry form and contact cards, mobile contact actions before the form, WhatsApp/email/phone/address/hours, `?training=` prefill behavior, email-draft submit behavior, buyer FAQs, and Breadcrumb/LocalBusiness/FAQPage JSON-LD.
 - **2026-05-21** - PR 15 Clients page added: `/clients` renders the verified public client logo set via `LogoWall`, broad sector groupings, engagement types, CTA, and Breadcrumb/LocalBusiness JSON-LD while avoiding client counts, testimonials, and outcome claims.
@@ -32,7 +32,7 @@
 - **2026-05-21** - PR 9 course rewrite pipeline started: added `src/content/courses/schema.ts`, `npm run courses:inventory`, generated a tracked source inventory at `src/content/courses/_curation/inventory.json`, and created 10 representative summary-only course JSON drafts across all 9 categories plus Bahasa Malaysia and multi-day edge cases.
 - **2026-05-21** - PR 8 homepage wiring and static QA completed: added the missing `ServicesBento` section at `#services`, wired services copy through `home.ts`, confirmed homepage anchors and production build, and kept unavailable workshop/category/testimonial assets out of the UI.
 - **2026-05-21** - PR 7 global motion polish added: hero stack staggers on page load, section headings reveal once on scroll, same-page anchor clicks smooth-scroll for no-preference users, and reduced-motion users keep instant/static behavior.
-- **2026-05-21** - PR 6 outcomes and testimonial components added: `ResultsGrid` renders verified-only proof points with reduced-motion-aware count-up, and `Testimonials` ships as a carousel component gated behind an empty approved-quotes list.
+- **2026-05-21** - PR 6 outcomes and testimonial components added: `ResultsGrid` was implemented for verified-only proof points with reduced-motion-aware count-up, and `Testimonials` ships as a carousel component gated behind an empty approved-quotes list. The homepage later removed the outcomes/ResultsGrid segment; keep it removed unless the content strategy changes.
 - **2026-05-21** - PR 5 approach sequence added: `ApproachSection` composes four alternating `FeatureStripe` rows for Discover, Customize, Deliver, and Reinforce, with honest CSS process media panels until approved workshop imagery arrives.
 - **2026-05-20** - PR 4 CoursesTabbed added: six homepage categories, show/hide tab behavior after JS enhancement, desktop sidebar labels, mobile horizontal labels, no-JS readable fallback, keyboard tab navigation, and course/category links.
 - **2026-05-20** - PR 3 bento masonry added: proof section after the hero, real client logo assets, verified-only "Since 2011" proof, HRD/ISO positioning cards, reduced-motion-aware parallax script, and static fallback layout.
@@ -99,7 +99,7 @@ Workshop photos are still unavailable, so `FeatureStripe` uses structured CSS pa
 
 ### 2026-05-21 - PR 6 avoids fabricated outcomes and quotes
 
-`ResultsGrid` only counts facts derived from the current catalog/site structure (`9` categories, `6` homepage families, `3` engagement lanes) plus a non-counted "Since 2011" card. It is intentionally not exposed as a public `#outcomes` anchor. `Testimonials` is implemented but gated by `approvedTestimonials`, which remains empty until Icon Learning confirms public-use quotes.
+The homepage outcomes/ResultsGrid segment was removed after PR 6. `ResultsGrid.astro` remains only as a no-op breadcrumb so future work does not recreate that section by mistake. `Testimonials` is implemented but gated by `approvedTestimonials`, which remains empty until Icon Learning confirms public-use quotes.
 
 ### 2026-05-21 - PR 7 motion is progressive enhancement
 
@@ -249,7 +249,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - `npm run qa:launch` writes `dist/launch-qa-report.json`; it is build output and is not tracked.
 - `public/robots.txt` points to `https://www.iconlearning.com.my/sitemap.xml`; sitemap files are static launch seeds for the current MVP page set.
 - `docs/launch/redirect-plan.md` is a redirect seed list, not an installed redirect config. Final implementation depends on the deploy host.
-- The homepage ResultsGrid is rendered without `id="outcomes"`. Do not re-add that anchor unless navigation/content strategy changes.
+- The homepage outcomes/ResultsGrid segment is intentionally removed. `ResultsGrid.astro` is a no-op placeholder; do not re-add the segment or `#outcomes` anchor unless navigation/content strategy changes.
 - Logo and HRD images now emit width/height attributes through `LogoWall`, `HomeClients`, `BentoMasonry`, `ServicesBento`, and `/about-us` to keep the static image audit clean.
 - `npm run build` passes with Astro check and static build.
 - PR 17 builds `/accessibility-statement/index.html` and raises the static build output to 25 pages.

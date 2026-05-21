@@ -77,7 +77,7 @@ const structuredData = [
         <span>Clients</span>
       </div>
 
-      <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,0.64fr)_minmax(20rem,0.36fr)] lg:items-end">
+      <div class="mt-8 max-w-4xl">
         <div>
           <p class="eyebrow" data-reveal>{clientsPage.hero.eyebrow}</p>
           <h1 class="display-xl mt-4 max-w-4xl text-balance" data-reveal>{clientsPage.hero.heading}</h1>
@@ -87,29 +87,12 @@ const structuredData = [
             <Button href={clientsPage.hero.secondaryCta.href} variant="outline">{clientsPage.hero.secondaryCta.label}</Button>
           </div>
         </div>
-
-        <div class="clients-proof-panel" data-reveal>
-          <p class="eyebrow">{clientsPage.proof.eyebrow}</p>
-          <h2>{clientsPage.proof.heading}</h2>
-          <p>{clientsPage.proof.body}</p>
-          <div class="clients-proof-tags" aria-label="Engagement types">
-            {clientsPage.engagementTypes.map((item) => <span>{item.title}</span>)}
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section class="section-pad pt-0">
+  <section class="section-pad pt-0" style="padding-top: 0px;">
     <div class="container-wide">
-      <div class="clients-section-heading" data-reveal>
-        <p class="eyebrow">Logo wall</p>
-        <h2 class="display-md mt-4">Selected public client logos</h2>
-        <p class="body-copy mt-4 max-w-3xl text-[var(--color-ink-muted)]">
-          Grouped broadly so buyers can scan familiar sectors without turning the page into a claims list.
-        </p>
-      </div>
-
       <div class="clients-groups">
         {
           clientGroups.map((group) => (
@@ -131,7 +114,7 @@ const structuredData = [
   <section class="clients-engagement section-pad">
     <div class="container-wide">
       <div class="clients-engagement-heading" data-reveal>
-        <p class="eyebrow">How teams work with Icon Learning</p>
+        <p class="eyebrow">How companies work with Icon Learning</p>
         <h2 class="display-md mt-4">Engagement types</h2>
       </div>
 
@@ -180,49 +163,6 @@ const structuredData = [
   .clients-breadcrumb a {
     color: var(--color-ink);
     font-weight: 700;
-  }
-
-  .clients-proof-panel {
-    background:
-      linear-gradient(135deg, rgb(10 10 10 / 0.08), transparent 34%),
-      var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    min-height: 18rem;
-    padding: clamp(1.25rem, 3vw, 2rem);
-  }
-
-  .clients-proof-panel h2 {
-    color: var(--color-ink);
-    font-size: clamp(1.75rem, 3vw, 2.4rem);
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 1.08;
-    margin: 3.5rem 0 0;
-  }
-
-  .clients-proof-panel p:not(.eyebrow) {
-    color: var(--color-ink-muted);
-    line-height: 1.6;
-    margin: 1rem 0 0;
-  }
-
-  .clients-proof-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .clients-proof-tags span {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
-    color: var(--color-ink-muted);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.45rem 0.6rem;
   }
 
   .clients-section-heading {

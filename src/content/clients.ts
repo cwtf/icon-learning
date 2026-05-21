@@ -37,14 +37,12 @@ type ClientGroup = {
 };
 
 export const clientsPage = {
-  title: "Trusted by Malaysian Teams - Icon Learning Clients",
+  title: "Trusted by Malaysian Companies - Icon Learning Clients",
   description:
-    "See selected public client logos and how teams work with Icon Learning through training, ISO consultancy, and technical programmes.",
+    "See selected public client logos and how companies work with Icon Learning through training, ISO consultancy, and technical programmes.",
   hero: {
     eyebrow: "Clients",
-    heading: "Trusted by teams across Malaysia",
-    sub:
-      "These logos come from Icon Learning's existing public client list. They are presented as relationship proof while detailed outcomes stay for direct conversations or approved case studies.",
+    heading: "Trusted by companies across Malaysia",
     primaryCta: {
       label: "Request training",
       href: "/contact",
@@ -53,12 +51,6 @@ export const clientsPage = {
       label: "View programs",
       href: "/programs",
     },
-  },
-  proof: {
-    eyebrow: "Verified proof",
-    heading: "Public logo assets, kept honest",
-    body:
-      "Until approved case studies or testimonials are confirmed, this page focuses on public logos and the ways organisations typically engage Icon Learning.",
   },
   engagementTypes: [
     {
@@ -70,7 +62,7 @@ export const clientsPage = {
     {
       title: "ISO consultancy and quality systems",
       body:
-        "Support for teams working on ISO management systems, audits, quality discipline, food safety, and continuous improvement.",
+        "Support for companies working on ISO management systems, audits, quality discipline, food safety, and continuous improvement.",
       href: "/programs/quality-lean-food-safety",
     },
     {
@@ -98,8 +90,7 @@ export const clientsPage = {
 export const clientGroups: ClientGroup[] = [
   {
     title: "Manufacturing, engineering and infrastructure",
-    summary:
-      "Logos from industrial, automotive, engineering, building materials, electronics, and infrastructure-adjacent teams represented in the public client list.",
+    summary: "",
     logos: [
       { name: "Acer", src: acerLogo, meta: "Technology" },
       { name: "DNP", src: dnpLogo, meta: "Manufacturing" },
@@ -118,8 +109,7 @@ export const clientGroups: ClientGroup[] = [
   },
   {
     title: "Consumer, food and retail",
-    summary:
-      "Selected logos from retail, food, hospitality, and consumer-facing organisations in the current public logo set.",
+    summary: "",
     logos: [
       { name: "Cuckoo", src: cuckooLogo, meta: "Consumer" },
       { name: "Foh San", src: fohSanLogo, meta: "Food" },
@@ -132,8 +122,7 @@ export const clientGroups: ClientGroup[] = [
   },
   {
     title: "Public, nonprofit and agency",
-    summary:
-      "Public-sector, nonprofit, and agency logos shown in Icon Learning's existing public client presentation.",
+    summary: "",
     logos: [
       { name: "FFKR", src: ffkrLogo, meta: "Organisation" },
       { name: "IFRC", src: ifrcLogo, meta: "Nonprofit" },

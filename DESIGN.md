@@ -299,7 +299,7 @@ The remaining three categories (Finance & Taxation; Supply Chain & Shipping; Com
 **`ApproachSection.astro` / `FeatureStripe.astro`**
 Composes 3 stripes alternating image left/right. Stripes for Icon: Discover → Customize → Deliver → Reinforce (combine 3–4 stripes; copy in §7). `display-md` headings, tighter padding rhythm between stripes so they read as a sequence. Mobile: image always above text.
 
-**`ResultsGrid.astro`** — Outcomes / proof.
+**`ResultsGrid.astro`** — Reserved no-op placeholder. The homepage outcomes/proof segment was removed and should not be recreated unless the content strategy changes.
 4 cards in `grid-cols-4` (desktop) / `grid-cols-2` (tablet) / `grid-cols-1` (mobile). White surface, `--color-border`, `20px` radius, `2rem` padding. Numbers in `display-md` weight 700, count up over 1200ms on viewport entry (threshold 0.4, one-shot, rAF). **Use verified-only values** (see §7) — do not fabricate trainee/client counts. Non-numeric proof renders without count-up.
 
 **`Testimonials.astro`**
@@ -322,7 +322,7 @@ Same `--color-bg` as page (or `--color-surface-muted`). Single `--color-border-s
 3. **Program category showcase** (`CoursesTabbed`) — scroll-spy section with sticky left labels and tall right-column content blocks (Framer-style). 6 categories from §5.2; section is ~5–6 viewports tall on desktop, collapses to a vertical card stack on mobile. Each block links through to `/programs/[category]`; section closes with a `Browse all 9 categories →` CTA.
 4. **Services / solutions bento** — 3 cards: Corporate Training Programs · ISO & Quality Management Solutions · Technical & Safety Training. Bento (one large + two smaller), not equal cards.
 5. **Training approach** (`ApproachSection`) — Discover · Customize · Deliver · Reinforce.
-6. **Outcomes & proof stats** — verified only (§7).
+6. **Outcomes & proof stats** — removed from the homepage; do not re-add without an approved content strategy.
 7. **Testimonials** carousel (if approved quotes available — otherwise omit and lean on bento quotes).
 8. **CTA closer** — heading `Ready to plan your next training?`, primary `WhatsApp us`, secondary `Email inquiry`.
 9. **Footer**.
@@ -336,7 +336,7 @@ Same `--color-bg` as page (or `--color-surface-muted`). Single `--color-border-s
 | Program category showcase (`CoursesTabbed`) | `categories` |
 | Services / solutions bento | `services` |
 | Training approach | `approach` |
-| Outcomes & proof stats | No public anchor; `ResultsGrid` intentionally does not use `id="outcomes"` |
+| Outcomes & proof stats | Removed; no public anchor and no rendered homepage segment |
 | Testimonials | `testimonials` |
 | CTA closer | `contact-cta` |
 
