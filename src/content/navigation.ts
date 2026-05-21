@@ -1,7 +1,7 @@
 import { site } from "./site";
 
 export const navigationItems = [
-  { label: "Programs", href: "/programs" },
+  { label: "Programs", href: "/#categories" },
   { label: "Solutions", href: "/#services" },
   { label: "About", href: "/about-us" },
   { label: "Clients", href: "/clients" },
