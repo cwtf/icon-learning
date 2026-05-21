@@ -4,7 +4,7 @@
   "subtitle": "A concise ISO 9001 awareness workshop for teams that need to understand quality management expectations.",
   "categorySlug": "quality-lean-food-safety",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "A quality management system only works when people understand how their daily work connects to process control, customer requirements, risk, and continual improvement. This course gives teams a practical shared language for ISO 9001 without turning the session into a clause-by-clause lecture.",

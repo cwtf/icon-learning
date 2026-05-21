@@ -4,7 +4,7 @@
   "subtitle": "Latihan asas pengendalian makanan untuk membantu peserta memahami amalan kebersihan dan keselamatan makanan.",
   "categorySlug": "quality-lean-food-safety",
   "durationDays": 0.5,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "ms",
   "deliveryFormats": ["Public", "In-house", "Certification"],
   "whyThisMatters": "Pengendalian makanan yang selamat melindungi pelanggan, pekerja, dan reputasi operasi makanan. Kursus ringkas ini membantu peserta memahami tanggungjawab asas kebersihan makanan, mengenal pasti risiko pencemaran biasa, dan mengamalkan prosedur kerja yang lebih bersih serta selamat setiap hari.",

@@ -4,7 +4,7 @@
   "subtitle": "A hands-on AI prompting workshop for improving everyday workplace productivity.",
   "categorySlug": "microsoft-ai-digital-skills",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop", "Blended"],
   "whyThisMatters": "AI tools are most useful when employees know how to ask better questions, check outputs, and apply results responsibly. This workshop helps participants move from casual experimentation to practical prompting habits that save time without lowering professional judgment.",

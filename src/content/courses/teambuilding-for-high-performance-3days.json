@@ -4,7 +4,7 @@
   "subtitle": "A multi-day team alignment workshop for strengthening trust, collaboration, and shared ownership.",
   "categorySlug": "communication-personal-effectiveness",
   "durationDays": 3,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "High-performing teams are built through shared clarity, trust, communication, and the willingness to solve problems together. This workshop creates structured space for teams to reset how they collaborate and translate that energy into workplace commitments.",

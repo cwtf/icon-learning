@@ -4,7 +4,7 @@
   "subtitle": "A clear employment-law foundation for HR teams and managers handling people decisions.",
   "categorySlug": "hr-employment-law",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "People decisions can quickly become compliance risks when managers are unsure what the law requires. This course gives HR practitioners and line managers a practical foundation for handling employment matters with clearer judgment, better documentation, and fewer avoidable disputes.",

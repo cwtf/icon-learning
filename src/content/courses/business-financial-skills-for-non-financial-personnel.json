@@ -4,7 +4,7 @@
   "subtitle": "A finance essentials workshop for managers who need to read numbers and make better business decisions.",
   "categorySlug": "finance-taxation",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "Managers do not need to become accountants, but they do need to understand the numbers behind performance, cost, and business decisions. This course translates key finance ideas into practical management language so non-finance teams can act with more confidence.",

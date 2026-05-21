@@ -4,7 +4,7 @@
   "subtitle": "A practical Incoterms workshop for teams involved in shipping, procurement, and international trade.",
   "categorySlug": "supply-chain-shipping-warehousing",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "Incoterms affect cost, risk, documentation, responsibility, and customer commitments across the shipping process. This course helps commercial and logistics teams use Incoterms 2020 more accurately so handovers are clearer, documents are checked with better context, and avoidable disputes are reduced.",

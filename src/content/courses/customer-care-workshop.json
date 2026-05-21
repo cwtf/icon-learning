@@ -4,7 +4,7 @@
   "subtitle": "A service-skills workshop for improving customer conversations, complaint handling, and service consistency.",
   "categorySlug": "sales-marketing-customer-service",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "Customer experience is shaped by small moments: how teams listen, respond, recover, and follow through when pressure rises. This workshop helps service teams build practical habits for clearer communication, calmer complaint handling, stronger ownership, and more consistent customer care across everyday interactions.",

@@ -4,7 +4,7 @@
   "subtitle": "A practical safety awareness course for reducing workplace risk and strengthening daily OSH habits.",
   "categorySlug": "safety-health-environment",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
   "whyThisMatters": "Safety performance depends on what people notice, report, and correct before incidents happen. This course helps employees and supervisors understand workplace hazards, personal responsibility, and practical prevention routines in a way that supports safer operations.",
