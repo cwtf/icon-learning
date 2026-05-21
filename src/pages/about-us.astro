@@ -1,0 +1,519 @@
+---
+import brandLogo from "../../assets/source/brand/logo/icon-learning-black.png";
+import Button from "../components/primitives/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { aboutPage } from "../content/about";
+import { site } from "../content/site";
+
+const pageUrl = new URL("/about-us", site.url).toString();
+const emailHref = `${site.emailHref}?subject=${encodeURIComponent("Training and consultancy inquiry")}`;
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About Icon Learning",
+        item: pageUrl,
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: site.name,
+    legalName: site.legalName,
+    url: site.url,
+    email: site.email,
+    telephone: site.phone,
+    foundingDate: site.foundingDate,
+    identifier: site.registrationNumber,
+    slogan: site.brandLine,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "No 1, Jalan Radin 5",
+      postalCode: "57000",
+      addressLocality: "Sri Petaling",
+      addressRegion: "Kuala Lumpur",
+      addressCountry: "MY",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "Malaysia",
+    },
+    knowsAbout: [
+      "Corporate training",
+      "Strategic consulting",
+      "ISO management system consultancy",
+      "HRD Corp claimable training",
+    ],
+  },
+];
+---
+
+<BaseLayout title={aboutPage.title} description={aboutPage.description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <section class="about-hero">
+    <div class="container-wide">
+      <div class="about-breadcrumb body-sm" data-reveal>
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>About</span>
+      </div>
+
+      <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,0.64fr)_minmax(20rem,0.36fr)] lg:items-end">
+        <div>
+          <p class="eyebrow" data-reveal>{aboutPage.hero.eyebrow}</p>
+          <h1 class="display-xl mt-4 max-w-4xl text-balance" data-reveal>{aboutPage.hero.heading}</h1>
+          <p class="body-lg mt-5 max-w-3xl text-[var(--color-ink-muted)]" data-reveal>{aboutPage.hero.sub}</p>
+          <div class="mt-8 flex flex-wrap gap-3" data-reveal>
+            <Button href={aboutPage.hero.primaryCta.href} variant="filled-ink">{aboutPage.hero.primaryCta.label}</Button>
+            <Button href={aboutPage.hero.secondaryCta.href} variant="outline">{aboutPage.hero.secondaryCta.label}</Button>
+          </div>
+        </div>
+
+        <div class="about-brand-panel" data-reveal>
+          <div class="about-brand-mark">
+            <img src={brandLogo.src} alt="Icon Learning" loading="eager" />
+          </div>
+          <p>{site.brandLine}</p>
+          <dl>
+            <div>
+              <dt>Established</dt>
+              <dd>2011</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Kuala Lumpur</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad pt-0">
+    <div class="container-wide about-layout">
+      <article class="about-main">
+        <section class="about-section about-story" aria-labelledby="story-heading" data-reveal>
+          <p class="eyebrow">{aboutPage.story.eyebrow}</p>
+          <h2 id="story-heading" class="display-md mt-4">{aboutPage.story.heading}</h2>
+          <p class="body-lg mt-5 max-w-3xl text-[var(--color-ink-muted)]">{aboutPage.story.body}</p>
+          <dl class="about-fact-row mt-7">
+            {
+              aboutPage.story.facts.map((fact) => (
+                <div>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </section>
+
+        <section class="about-section" aria-labelledby="services-heading" data-reveal>
+          <p class="eyebrow">{aboutPage.services.eyebrow}</p>
+          <h2 id="services-heading" class="display-md mt-4">{aboutPage.services.heading}</h2>
+          <div class="about-service-grid mt-6">
+            {
+              aboutPage.services.items.map((item) => (
+                <div class="about-service-card">
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                  <div>
+                    {item.tags.map((tag) => <span>{tag}</span>)}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+        <section class="about-section about-split" aria-labelledby="philosophy-heading" data-reveal>
+          <div>
+            <p class="eyebrow">{aboutPage.philosophy.eyebrow}</p>
+            <h2 id="philosophy-heading" class="display-md mt-4">{aboutPage.philosophy.heading}</h2>
+          </div>
+          <div>
+            <p class="body-copy text-[var(--color-ink-muted)]">{aboutPage.philosophy.body}</p>
+            <ol class="about-principles mt-6">
+              {aboutPage.philosophy.principles.map((item) => <li>{item}</li>)}
+            </ol>
+          </div>
+        </section>
+
+        <section class="about-section about-expertise" aria-labelledby="expertise-heading" data-reveal>
+          <div>
+            <p class="eyebrow">{aboutPage.expertise.eyebrow}</p>
+            <h2 id="expertise-heading" class="display-md mt-4">{aboutPage.expertise.heading}</h2>
+            <p class="body-copy mt-4 max-w-3xl text-[var(--color-ink-muted)]">{aboutPage.expertise.body}</p>
+          </div>
+          <dl class="about-expertise-stats">
+            {
+              aboutPage.expertise.stats.map((stat) => (
+                <div>
+                  <dt>{stat.label}</dt>
+                  <dd>{stat.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </section>
+
+        <section class="about-section" aria-labelledby="values-heading" data-reveal>
+          <p class="eyebrow">{aboutPage.values.eyebrow}</p>
+          <h2 id="values-heading" class="display-md mt-4">{aboutPage.values.heading}</h2>
+          <div class="about-values-grid mt-6">
+            {
+              aboutPage.values.items.map((item) => (
+                <div class="about-value-card">
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+      </article>
+
+      <aside class="about-aside" aria-label="Company details">
+        <div class="about-inquiry" data-reveal>
+          <p class="eyebrow">Company details</p>
+          <h2 class="mt-4 text-2xl font-semibold leading-tight">{site.legalName}</h2>
+          <dl class="about-details">
+            <div>
+              <dt>Company no.</dt>
+              <dd>{site.registrationNumber}</dd>
+            </div>
+            <div>
+              <dt>Office</dt>
+              <dd>{site.address}</dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <dd>{site.openingHours}</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href={site.whatsappHref}>{site.phone}</a></dd>
+            </div>
+          </dl>
+          <div class="mt-6 grid gap-3">
+            <Button href={site.whatsappHref} variant="filled-ink" class="w-full">WhatsApp us</Button>
+            <Button href={emailHref} variant="outline" class="w-full">Email inquiry</Button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="about-cta section-pad">
+    <div class="container-page">
+      <div class="about-cta-inner" data-reveal>
+        <p class="eyebrow justify-center">Start a conversation</p>
+        <h2 class="display-lg mt-4 text-balance">{aboutPage.cta.heading}</h2>
+        <p class="body-lg mx-auto mt-5 max-w-[42rem] text-[var(--color-ink-muted)]">{aboutPage.cta.sub}</p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <Button href={aboutPage.cta.primaryCta.href} size="lg">{aboutPage.cta.primaryCta.label}</Button>
+          <Button href={aboutPage.cta.secondaryCta.href} variant="outline" size="lg">{aboutPage.cta.secondaryCta.label}</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    padding-block: calc(var(--nav-height) + 4.5rem) clamp(3rem, 7vw, 5.5rem);
+  }
+
+  .about-breadcrumb {
+    align-items: center;
+    color: var(--color-ink-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .about-breadcrumb a {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+
+  .about-brand-panel {
+    aspect-ratio: 4 / 3;
+    background:
+      linear-gradient(135deg, rgb(124 58 237 / 0.12), transparent 38%),
+      var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 18rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .about-brand-mark {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    max-width: 15rem;
+    padding: 1rem;
+  }
+
+  .about-brand-panel p {
+    color: var(--color-ink);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.08;
+    margin: 1.5rem 0;
+  }
+
+  .about-brand-panel dl,
+  .about-fact-row,
+  .about-expertise-stats {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .about-brand-panel dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 0;
+  }
+
+  .about-brand-panel dt,
+  .about-fact-row dt,
+  .about-expertise-stats dt,
+  .about-details dt {
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .about-brand-panel dd,
+  .about-fact-row dd,
+  .about-expertise-stats dd,
+  .about-details dd {
+    color: var(--color-ink);
+    font-weight: 700;
+    margin: 0.25rem 0 0;
+  }
+
+  .about-layout {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .about-main {
+    display: grid;
+    gap: clamp(2.5rem, 6vw, 4rem);
+    min-width: 0;
+  }
+
+  .about-section {
+    border-top: 1px solid var(--color-border);
+    padding-top: clamp(2rem, 5vw, 3rem);
+  }
+
+  .about-section:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .about-fact-row {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  }
+
+  .about-fact-row div,
+  .about-expertise-stats div {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 1rem;
+  }
+
+  .about-service-grid,
+  .about-values-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  }
+
+  .about-service-card,
+  .about-value-card,
+  .about-inquiry {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .about-service-card,
+  .about-value-card {
+    padding: 1rem;
+  }
+
+  .about-service-card h3,
+  .about-value-card h3 {
+    color: var(--color-ink);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .about-service-card p,
+  .about-value-card p {
+    color: var(--color-ink-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0.75rem 0 0;
+  }
+
+  .about-service-card div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .about-service-card span {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-ink-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.55rem;
+  }
+
+  .about-split,
+  .about-expertise {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .about-principles {
+    counter-reset: principle;
+    display: grid;
+    gap: 0;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .about-principles li {
+    align-items: start;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-ink);
+    counter-increment: principle;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2rem 1fr;
+    padding: 1rem 0;
+  }
+
+  .about-principles li::before {
+    background: var(--color-accent-soft);
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 70%);
+    border-radius: 999px;
+    color: var(--color-accent);
+    content: counter(principle, decimal-leading-zero);
+    display: grid;
+    font-size: 0.72rem;
+    font-weight: 800;
+    height: 2rem;
+    place-items: center;
+    width: 2rem;
+  }
+
+  .about-expertise-stats {
+    align-content: start;
+  }
+
+  .about-aside {
+    min-width: 0;
+  }
+
+  .about-inquiry {
+    padding: 1.25rem;
+  }
+
+  .about-details {
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    gap: 0;
+    margin: 1.25rem 0 0;
+  }
+
+  .about-details div {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.85rem 0;
+  }
+
+  .about-details a {
+    color: var(--color-accent);
+  }
+
+  .about-cta {
+    background: var(--color-surface-muted);
+  }
+
+  .about-cta-inner {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-inline: auto;
+    max-width: 45rem;
+    padding: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .about-split,
+    .about-expertise {
+      grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+    }
+
+    .about-expertise-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .about-layout {
+      align-items: start;
+      grid-template-columns: minmax(0, 0.68fr) minmax(18rem, 0.32fr);
+    }
+
+    .about-inquiry {
+      position: sticky;
+      top: calc(var(--nav-height) + 2rem);
+    }
+  }
+</style>

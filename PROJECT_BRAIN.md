@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 13 Bulk Content Review implemented for the current publishable course set; ready for review.
+- **Phase:** PR 14 About Us implemented; ready for review.
 - **Last touched:** 2026-05-21.
-- **Next action:** Review PR 13, then start PR 14 `/about-us` per [DESIGN.md Section 11 Phase 4](DESIGN.md).
-- **Working tree:** Homepage remains complete through PR 8. PR 13 adds a repeatable course review script/report, fixes current related-course links, polishes two public-facing titles, and keeps all HRD statuses explicitly unconfirmed.
+- **Next action:** Review PR 14, then start PR 15 `/clients` with `LogoWall` per [DESIGN.md Section 11 Phase 4](DESIGN.md).
+- **Working tree:** Homepage remains complete through PR 8. PR 14 adds `/about-us`, centralizes verified company facts in `site.ts`, and uses a separate `about.ts` content module for story, services, philosophy, expertise, values, and CTA copy.
 
 ---
 
 ## What's Done
 
+- **2026-05-21** - PR 14 About Us page added: `/about-us` renders verified company story, 15 December 2011 establishment date, company registration number, services, training philosophy, trainer expertise, values, sticky company details, CTA, brand-logo visual, and Breadcrumb/LocalBusiness JSON-LD.
 - **2026-05-21** - PR 13 bulk content review pass completed for the current 10 publishable course JSON files: added `npm run courses:review`, generated `src/content/courses/_curation/review-report.json`, fixed all broken `relatedSlugs`, corrected public-facing title polish, and verified zero hard review failures.
 - **2026-05-21** - PR 12 course detail pages added: all ten course JSON records render at `/programs/[category]/[course]` with hero badges, Why this matters, Built for, outcomes, module-title-only workshop view, methodology bar, closer, sticky inquiry panel, and Course/Breadcrumb JSON-LD.
 - **2026-05-21** - PR 11 program category pages added: all nine `/programs/[category]` routes render category hero, overview, available course list, audience, delivery formats, related categories, sticky inquiry panel, and BreadcrumbList/ItemList structured data.
@@ -42,13 +43,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 14: About Us
+## Next Up - PR 15: Clients
 
 Per [DESIGN.md Section 11 Phase 4](DESIGN.md):
 
-> `/about-us`.
+> `/clients` (`LogoWall`).
 
-PR 14 should build the About page with verified company story, training philosophy, what Icon Learning does, values, and CTA without adding unverified claims.
+PR 15 should build the Clients page using approved client logo assets, avoiding fabricated testimonials or unsupported client metrics.
 
 ---
 
@@ -148,6 +149,14 @@ The course detail route renders only the summary fields in each course JSON: rew
 
 The bulk copy pass applies to the 10 current course JSON files from PR 9. The full ~180 course expansion still needs future import/rewrite work plus human review before those records become publishable.
 
+### 2026-05-21 - PR 14 centralizes verified company facts
+
+`src/content/site.ts` now carries legal name, registration number, founding date, brand line, and opening hours from the current About page/contact footer. `/about-us` uses those facts directly and avoids unverified stats, awards, client counts, or trainer credentials.
+
+### 2026-05-21 - PR 14 omits unknown geo coordinates
+
+About page LocalBusiness JSON-LD includes the verified address, telephone, email, founding date, opening hours, and service areas. Geo coordinates remain omitted until the exact Sri Petaling office coordinates are confirmed.
+
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
 The category showcase now hides inactive panels after JavaScript enhancement instead of scroll-spying through all panels. All panels remain in the HTML and visible without JavaScript for fallback and crawlability.
@@ -193,6 +202,8 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 ## Gotchas
 
 - `npm run build` passes with Astro check and static build.
+- PR 14 builds `/about-us/index.html` and raises the static build output to 22 pages.
+- `/about-us` uses `/contact` as a request-training destination in one CTA, but the actual contact page remains PR 16.
 - `npm run courses:review` currently reports 0 hard failures and 10 warnings, all because HRD claimable status remains unconfirmed on the current course set.
 - `src/content/courses/_curation/review-report.json` is generated review metadata. Treat `hrdClaimable: false` as unconfirmed/not claimable, not proof that a course is definitely ineligible.
 - PR 13 changed the finance course public slug from `business-financial-skills-for-non-financial-personnels` to `business-financial-skills-for-non-financial-personnel`. No redirect is needed pre-launch; add one if the old URL was ever shared publicly.
@@ -235,12 +246,14 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/components/programs/` | Catalog cards and catalog client enhancement. | Yes |
 | `src/components/sections/` | Homepage sections. | Yes |
 | `scripts/course-review.mjs` | Course JSON review gate and report generator. | Yes |
+| `src/pages/about-us.astro` | About page route with company story and LocalBusiness JSON-LD. | Yes |
 | `src/pages/programs/index.astro` | Programs catalog route. | Yes |
 | `src/pages/programs/[category].astro` | Program category detail route for all 9 categories. | Yes |
 | `src/pages/programs/[category]/[course].astro` | Summary-only course detail route. | Yes |
 | `src/styles/tokens.css` | Design tokens. | Yes |
 | `src/styles/global.css` | Tailwind entry and global styles. | Yes |
 | `src/content/` | Site/navigation content. | Yes |
+| `src/content/about.ts` | About page copy and section data. | Yes |
 | `src/content/courses/` | Summary-only course JSON, schema, and tracked curation metadata. | Yes |
 | `src/content/courses/_curation/review-report.json` | Latest generated course review report. | Yes |
 | `course/documents/*.pdf` | Canonical raw course outlines. | No - source material only |
