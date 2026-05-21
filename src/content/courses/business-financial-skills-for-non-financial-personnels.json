@@ -1,0 +1,41 @@
+{
+  "slug": "business-financial-skills-for-non-financial-personnels",
+  "title": "Business Financial Skills for Non-Financial Personnels",
+  "subtitle": "A finance essentials workshop for managers who need to read numbers and make better business decisions.",
+  "categorySlug": "finance-taxation",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "Managers do not need to become accountants, but they do need to understand the numbers behind performance, cost, and business decisions. This course translates key finance ideas into practical management language so non-finance teams can act with more confidence.",
+  "builtFor": [
+    "Non-finance managers and executives",
+    "Department heads responsible for budgets or costs",
+    "Business owners who want a clearer finance foundation"
+  ],
+  "walkAwayWith": [
+    "Read core financial statements with more confidence.",
+    "Understand the link between decisions, cost, profit, and cash flow.",
+    "Ask better questions when reviewing business performance.",
+    "Use financial thinking to support planning and resource decisions."
+  ],
+  "modules": [
+    { "title": "Finance Language for Non-Finance Roles" },
+    { "title": "Reading Business Performance" },
+    { "title": "Cost, Profit, and Cash Flow Thinking" },
+    { "title": "Using Numbers in Everyday Decisions" }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 35,
+    "groupActivities": 20,
+    "selfAssessment": 10
+  },
+  "methodologyCaption": "The session uses simple business examples and guided exercises so participants can practise interpreting financial information.",
+  "sourceDoc": "course/documents/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.pdf",
+  "relatedSlugs": [
+    "budgeting-and-cost-control",
+    "finance-for-non-finance",
+    "business-strategy-development-in-a-vuca-world"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "teambuilding-for-high-performance-3days",
+  "title": "Teambuilding for High Performance",
+  "subtitle": "A multi-day team alignment workshop for strengthening trust, collaboration, and shared ownership.",
+  "categorySlug": "communication-personal-effectiveness",
+  "durationDays": 3,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "High-performing teams are built through shared clarity, trust, communication, and the willingness to solve problems together. This workshop creates structured space for teams to reset how they collaborate and translate that energy into workplace commitments.",
+  "builtFor": [
+    "Departments preparing for a new performance cycle",
+    "Cross-functional teams that need stronger collaboration",
+    "Managers who want a facilitated team reset"
+  ],
+  "walkAwayWith": [
+    "Build stronger trust and understanding across the team.",
+    "Clarify how collaboration breaks down and how to repair it.",
+    "Practise communication habits that support shared ownership.",
+    "Agree on practical team commitments for after the workshop."
+  ],
+  "modules": [
+    { "day": 1, "title": "Team Identity and Trust" },
+    { "day": 1, "title": "Communication Patterns That Help or Hurt" },
+    { "day": 2, "title": "Collaboration Under Pressure" },
+    { "day": 2, "title": "Solving Problems as One Team" },
+    { "day": 3, "title": "Commitments, Roles, and Follow-Through" },
+    { "day": 3, "title": "Action Planning for High Performance" }
+  ],
+  "methodology": {
+    "interactiveLectures": 15,
+    "handsOnExercises": 25,
+    "groupActivities": 45,
+    "rolePlaying": 10,
+    "selfAssessment": 5
+  },
+  "methodologyCaption": "The programme is highly activity-based, with facilitated reflection that connects each exercise back to real workplace behavior.",
+  "sourceDoc": "course/documents/Teambuilding For High Performance  3days.pdf",
+  "relatedSlugs": [
+    "teambuilding-teamwork-that-works",
+    "communicate-and-engage-using-nlp",
+    "10-key-tools-for-work-success"
+  ]
+}

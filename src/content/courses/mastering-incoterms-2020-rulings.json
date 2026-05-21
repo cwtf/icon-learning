@@ -1,0 +1,41 @@
+{
+  "slug": "mastering-incoterms-2020-rulings",
+  "title": "Mastering Incoterms 2020 Rulings",
+  "subtitle": "A practical Incoterms workshop for teams involved in shipping, procurement, and international trade.",
+  "categorySlug": "supply-chain-shipping-warehousing",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "Incoterms affect cost, risk, documentation, and responsibility across the shipping process. This course helps commercial and logistics teams use Incoterms 2020 more accurately so handovers are clearer and avoidable disputes are reduced.",
+  "builtFor": [
+    "Shipping, logistics, and forwarding teams",
+    "Procurement and purchasing staff",
+    "Sales or customer service teams involved in international orders"
+  ],
+  "walkAwayWith": [
+    "Understand what Incoterms do and do not control.",
+    "Choose terms with clearer awareness of cost, risk, and responsibility.",
+    "Spot common Incoterms mistakes in documents and conversations.",
+    "Coordinate more effectively between sales, purchasing, and logistics."
+  ],
+  "modules": [
+    { "title": "Incoterms 2020 in Plain Business Language" },
+    { "title": "Cost, Risk, and Responsibility Transfer" },
+    { "title": "Choosing Terms for Real Shipping Scenarios" },
+    { "title": "Documentation Checks and Common Pitfalls" }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 30,
+    "groupActivities": 25,
+    "demonstrations": 10
+  },
+  "methodologyCaption": "Participants work through practical trade scenarios and document examples to connect Incoterms rules with everyday shipping decisions.",
+  "sourceDoc": "course/documents/MASTERING INCOTERMS 2020 RULINGS.pdf",
+  "relatedSlugs": [
+    "fundamentals-of-shipping",
+    "warehouse-management-and-inventory-control",
+    "effective-store-and-warehouse-management"
+  ]
+}

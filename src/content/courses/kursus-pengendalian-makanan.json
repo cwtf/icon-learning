@@ -1,0 +1,41 @@
+{
+  "slug": "kursus-pengendalian-makanan",
+  "title": "Kursus Pengendalian Makanan",
+  "subtitle": "Latihan asas pengendalian makanan untuk membantu peserta memahami amalan kebersihan dan keselamatan makanan.",
+  "categorySlug": "quality-lean-food-safety",
+  "durationDays": 0.5,
+  "hrdClaimable": false,
+  "language": "ms",
+  "deliveryFormats": ["Public", "In-house", "Certification"],
+  "whyThisMatters": "Pengendalian makanan yang selamat melindungi pelanggan, pekerja, dan reputasi operasi makanan. Kursus ringkas ini membantu peserta memahami tanggungjawab asas kebersihan makanan dan mengamalkan prosedur kerja yang lebih selamat.",
+  "builtFor": [
+    "Pengendali makanan",
+    "Kakitangan dapur, katering, kantin, dan premis makanan",
+    "Pasukan operasi makanan yang memerlukan latihan asas"
+  ],
+  "walkAwayWith": [
+    "Memahami kepentingan kebersihan diri semasa mengendalikan makanan.",
+    "Mengenal pasti risiko pencemaran makanan yang biasa berlaku.",
+    "Mengamalkan prosedur asas penyimpanan, penyediaan, dan pengendalian makanan.",
+    "Menyokong budaya kerja makanan yang lebih bersih dan selamat."
+  ],
+  "modules": [
+    { "title": "Tanggungjawab Pengendali Makanan" },
+    { "title": "Kebersihan Diri dan Tempat Kerja" },
+    { "title": "Pencemaran Makanan dan Kawalan Risiko" },
+    { "title": "Amalan Selamat dalam Operasi Harian" }
+  ],
+  "methodology": {
+    "interactiveLectures": 40,
+    "demonstrations": 30,
+    "handsOnExercises": 20,
+    "selfAssessment": 10
+  },
+  "methodologyCaption": "Sesi ini menggabungkan penerangan ringkas, demonstrasi, dan semakan kefahaman supaya peserta boleh terus mengamalkan langkah asas di tempat kerja.",
+  "sourceDoc": "course/documents/KURSUS PENGENDALIAN MAKANAN.pdf",
+  "relatedSlugs": [
+    "food-handler-training",
+    "kursus-persijilan-halal",
+    "sertu-workshop"
+  ]
+}

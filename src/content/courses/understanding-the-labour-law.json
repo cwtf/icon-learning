@@ -1,0 +1,41 @@
+{
+  "slug": "understanding-the-labour-law",
+  "title": "Understanding the Labour Law",
+  "subtitle": "A clear employment-law foundation for HR teams and managers handling people decisions.",
+  "categorySlug": "hr-employment-law",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "People decisions can quickly become compliance risks when managers are unsure what the law requires. This course gives HR practitioners and line managers a practical foundation for handling employment matters with clearer judgment, better documentation, and fewer avoidable disputes.",
+  "builtFor": [
+    "HR executives and administrators",
+    "Line managers who handle employee issues",
+    "Business owners who need employment-law awareness"
+  ],
+  "walkAwayWith": [
+    "Understand key employment-law responsibilities in plain language.",
+    "Identify common risk areas in discipline, leave, and workplace conduct.",
+    "Improve documentation habits for people-management decisions.",
+    "Know when an issue needs escalation or specialist advice."
+  ],
+  "modules": [
+    { "title": "Employment Law Essentials for Managers" },
+    { "title": "Terms, Records, Leave, and Working Conditions" },
+    { "title": "Misconduct, Absenteeism, and Discipline Risks" },
+    { "title": "Practical Documentation and Escalation" }
+  ],
+  "methodology": {
+    "interactiveLectures": 40,
+    "groupActivities": 25,
+    "handsOnExercises": 20,
+    "selfAssessment": 15
+  },
+  "methodologyCaption": "Participants work through realistic HR scenarios and documentation examples so the legal concepts stay connected to workplace decisions.",
+  "sourceDoc": "course/documents/UNDERSTANDING THE LABOUR LAW.pdf",
+  "relatedSlugs": [
+    "application-of-employment-act-absenteeism-and-misconduct",
+    "domestic-inquiry",
+    "payroll-administration"
+  ]
+}

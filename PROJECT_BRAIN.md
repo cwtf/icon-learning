@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 8 Homepage Content Wiring + QA implemented; ready for review.
+- **Phase:** PR 9 Course Rewrite Pipeline implemented; ready for review.
 - **Last touched:** 2026-05-21.
-- **Next action:** Review PR 8, then start PR 9 course rewrite pipeline per [DESIGN.md Section 11 Phase 3](DESIGN.md).
-- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, true-tabbed `CoursesTabbed`, `ServicesBento`, `ApproachSection`, `ResultsGrid`, and `CtaCloser` sections using content from `src/content/home.ts`. Global motion polish is loaded from `src/scripts/global-motion.ts`; `Testimonials` exists but is not rendered until approved quotes are added.
+- **Next action:** Review PR 9, then start PR 10 `/programs` catalog per [DESIGN.md Section 11 Phase 3](DESIGN.md).
+- **Working tree:** Homepage remains complete through PR 8. PR 9 adds the course content schema, deterministic source inventory generator, tracked curation manifest, and ten representative summary-only course JSON files under `src/content/courses/`.
 
 ---
 
 ## What's Done
 
+- **2026-05-21** - PR 9 course rewrite pipeline started: added `src/content/courses/schema.ts`, `npm run courses:inventory`, generated a tracked source inventory at `src/content/courses/_curation/inventory.json`, and created 10 representative summary-only course JSON drafts across all 9 categories plus Bahasa Malaysia and multi-day edge cases.
 - **2026-05-21** - PR 8 homepage wiring and static QA completed: added the missing `ServicesBento` section at `#services`, wired services copy through `home.ts`, confirmed homepage anchors and production build, and kept unavailable workshop/category/testimonial assets out of the UI.
 - **2026-05-21** - PR 7 global motion polish added: hero stack staggers on page load, section headings reveal once on scroll, same-page anchor clicks smooth-scroll for no-preference users, and reduced-motion users keep instant/static behavior.
 - **2026-05-21** - PR 6 outcomes and testimonial components added: `ResultsGrid` renders verified-only proof points with reduced-motion-aware count-up, and `Testimonials` ships as a carousel component gated behind an empty approved-quotes list.
@@ -37,13 +38,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 9: Course Rewrite Pipeline
+## Next Up - PR 10: Programs Catalog
 
 Per [DESIGN.md Section 11 Phase 3](DESIGN.md):
 
-> Course rewrite pipeline. Curation pass on `course/documents/` (identify canonical PDFs, de-duplicate variants, assign category slugs). LLM-assisted rewrite pass produces `src/content/courses/*.json` per the summary-only `Course` type.
+> `/programs` catalog with `ProgramCard`, search across title + topics, filter chips (category, duration, HRD claimable, language), view-mode toggle (grouped vs flat alphabetical).
 
-PR 9 should inventory canonical course PDFs first, define skip/superseded rules, and generate/review a small representative batch before scaling to the full catalog.
+PR 10 should consume only top-level `src/content/courses/*.json` files, keeping `_curation/inventory.json` as pipeline metadata rather than a publishable course.
 
 ---
 
@@ -64,9 +65,9 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 | 9 | Domain / deploy target | PR 18 | OPEN |
 | 10 | Legacy URL redirects | PR 18 | OPEN |
 | 11 | Accessibility page language: EN, BM, or both | PR 17 | OPEN |
-| 12 | Canonical course outlines: PDF vs DOC dupes | PR 9 | OPEN |
+| 12 | Canonical course outlines: PDF vs DOC dupes | PR 9 | PARTIAL - inventory groups 358 files into 175 course candidates; human curation still needed |
 | 13 | HRD claimable status per course | PR 9 | OPEN |
-| 14 | Bahasa Malaysia URL strategy | PR 9, PR 12 | OPEN |
+| 14 | Bahasa Malaysia URL strategy | PR 9, PR 12 | PARTIAL - BM sample created as its own course JSON pending URL strategy |
 | 15 | Itinerary documents: published download or internal only | PR 9 | OPEN |
 | 16 | Course images per individual course | PR 12 | OPEN |
 | 17 | Full-outline delivery on inquiry: auto-attach vs manual | PR 16 | OPEN |
@@ -94,6 +95,18 @@ Global reveal/stagger styles only activate after `global-motion.ts` adds `data-m
 ### 2026-05-21 - PR 8 services section completes homepage order
 
 The homepage was missing the `#services` solutions bento required by §6.1. PR 8 adds `ServicesBento` with three supported service lanes: Corporate Training Programs; ISO & Quality Management Solutions; Technical & Safety Training. No new unverified claims were introduced.
+
+### 2026-05-21 - PR 9 keeps source curation separate from publishable course JSON
+
+Raw course documents stay under ignored `course/documents/`. The tracked inventory lives at `src/content/courses/_curation/inventory.json` so future catalog imports can safely glob only top-level `src/content/courses/*.json` as publishable courses.
+
+### 2026-05-21 - PR 9 defaults HRD claimable to false
+
+All representative course JSON files use `hrdClaimable: false` until Icon Learning confirms claimable status from the source PDF/title page or an authoritative course list. The inventory generator does not infer HRD status.
+
+### 2026-05-21 - PR 9 samples before bulk rewrite
+
+The first rewrite batch covers all nine categories, plus Bahasa Malaysia (`Kursus Pengendalian Makanan`) and a multi-day programme (`Teambuilding for High Performance`). These are structured drafts for review before scaling to the remaining inventory.
 
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
@@ -140,6 +153,9 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 ## Gotchas
 
 - `npm run build` passes with Astro check and static build.
+- PR 9 inventory currently reports 358 supported source files, 181 PDFs, and 175 course candidate groups. It still flags 7 non-PDF canonicals, 10 itinerary canonicals, and 136 courses with no duration inferred from filename; these need human curation before bulk import.
+- `src/content/courses/_curation/inventory.json` is pipeline metadata. Do not treat it as a course in PR 10; import only top-level `src/content/courses/*.json`.
+- The 10 PR 9 course JSON files are representative summary drafts, not final Icon Learning-approved copy. HRD claimable is intentionally false everywhere.
 - PR 8 static QA confirms `#hero`, `#proof`, `#categories`, `#services`, `#approach`, `#outcomes`, and `#contact-cta` render in `dist/index.html`; `#testimonials` remains intentionally absent until approved quotes exist.
 - Production dependency audit is clean via `npm audit --omit=dev --audit-level=moderate`.
 - Lighthouse CLI is not installed in this workspace, so the PR 7 Lighthouse pass still needs to be run in an environment with Lighthouse/browser automation available.
@@ -170,6 +186,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/styles/tokens.css` | Design tokens. | Yes |
 | `src/styles/global.css` | Tailwind entry and global styles. | Yes |
 | `src/content/` | Site/navigation content. | Yes |
+| `src/content/courses/` | Summary-only course JSON, schema, and tracked curation metadata. | Yes |
 | `course/documents/*.pdf` | Canonical raw course outlines. | No - source material only |
 
 ---
@@ -180,6 +197,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - `npm run dev` - Astro dev server. Currently blocked in this sandbox by the Vite/esbuild access issue noted above.
 - `npm run build` - Astro check + production build.
 - `npm run preview` - Astro preview server for the built site.
+- `npm run courses:inventory` - regenerate `src/content/courses/_curation/inventory.json` from ignored raw course documents.
 - `npm audit --omit=dev --audit-level=moderate` - production dependency audit.
 
 ---

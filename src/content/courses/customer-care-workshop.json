@@ -1,0 +1,41 @@
+{
+  "slug": "customer-care-workshop",
+  "title": "Customer Care Workshop",
+  "subtitle": "A service-skills workshop for improving customer conversations, complaint handling, and service consistency.",
+  "categorySlug": "sales-marketing-customer-service",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "Customer experience is shaped by small moments: how teams listen, respond, recover, and follow through. This workshop helps service teams build practical habits for clearer communication, calmer complaint handling, and more consistent customer care.",
+  "builtFor": [
+    "Customer service and front-line teams",
+    "Sales support or counter-service staff",
+    "Supervisors who coach service quality"
+  ],
+  "walkAwayWith": [
+    "Use simple service behaviors that make customers feel heard.",
+    "Respond to difficult moments without escalating tension.",
+    "Handle complaints with structure, empathy, and ownership.",
+    "Align service standards across the team."
+  ],
+  "modules": [
+    { "title": "What Customers Remember" },
+    { "title": "Listening, Tone, and Service Language" },
+    { "title": "Handling Complaints and Difficult Interactions" },
+    { "title": "Making Service Standards Stick" }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "rolePlaying": 25
+  },
+  "methodologyCaption": "Participants practise service conversations and complaint responses through role-play, feedback, and group reflection.",
+  "sourceDoc": "course/documents/CUSTOMER CARE WORKSHOP.pdf",
+  "relatedSlugs": [
+    "complaints-management",
+    "1st-class-hospitality-service",
+    "automobile-sales-training-realigning-the-drive-mindset"
+  ]
+}

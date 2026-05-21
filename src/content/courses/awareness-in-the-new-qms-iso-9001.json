@@ -1,0 +1,41 @@
+{
+  "slug": "awareness-in-the-new-qms-iso-9001",
+  "title": "Awareness in the New QMS ISO 9001",
+  "subtitle": "A concise ISO 9001 awareness workshop for teams that need to understand quality management expectations.",
+  "categorySlug": "quality-lean-food-safety",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "A quality management system only works when people understand how their daily work connects to process control, customer requirements, risk, and continual improvement. This course gives teams a practical shared language for ISO 9001 without turning the session into a clause-by-clause lecture.",
+  "builtFor": [
+    "Quality and operations teams",
+    "Process owners involved in ISO 9001 systems",
+    "Employees preparing for internal or external audits"
+  ],
+  "walkAwayWith": [
+    "Explain the purpose of ISO 9001 in practical workplace terms.",
+    "Recognize how process discipline supports customer satisfaction.",
+    "Connect risks, controls, records, and improvement actions.",
+    "Participate more confidently in QMS implementation and audit activities."
+  ],
+  "modules": [
+    { "title": "Why Quality Management Systems Matter" },
+    { "title": "The Process Approach in Daily Work" },
+    { "title": "Risk, Evidence, and Continual Improvement" },
+    { "title": "Getting Audit-Ready Without Panic" }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "demonstrations": 15
+  },
+  "methodologyCaption": "Participants connect ISO 9001 concepts to their own work through guided examples, short activities, and facilitator-led discussion.",
+  "sourceDoc": "course/documents/AWARENESS IN THE NEW QMS ISO 9001.pdf",
+  "relatedSlugs": [
+    "iso-9001-awareness",
+    "iso-9001-quality-management-system",
+    "iso-9001-2015-internal-quality-auditing-and-audit-report-writing"
+  ]
+}

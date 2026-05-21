@@ -1,0 +1,41 @@
+{
+  "slug": "work-smarter-prompt-better",
+  "title": "Work Smarter, Prompt Better",
+  "subtitle": "A hands-on AI prompting workshop for improving everyday workplace productivity.",
+  "categorySlug": "microsoft-ai-digital-skills",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop", "Blended"],
+  "whyThisMatters": "AI tools are most useful when employees know how to ask better questions, check outputs, and apply results responsibly. This workshop helps participants move from casual experimentation to practical prompting habits that save time without lowering professional judgment.",
+  "builtFor": [
+    "Office teams using AI tools for everyday tasks",
+    "Managers who want practical AI productivity habits",
+    "Employees who need confidence writing better prompts"
+  ],
+  "walkAwayWith": [
+    "Write clearer prompts for emails, reports, summaries, and planning.",
+    "Use context, constraints, examples, and review steps to improve output.",
+    "Check AI responses for accuracy, tone, and confidentiality risks.",
+    "Build reusable prompt patterns for common workplace tasks."
+  ],
+  "modules": [
+    { "title": "Prompting Fundamentals for Real Work" },
+    { "title": "Context, Constraints, and Better Instructions" },
+    { "title": "Reviewing, Refining, and Reusing Outputs" },
+    { "title": "Responsible AI Habits at Work" }
+  ],
+  "methodology": {
+    "interactiveLectures": 20,
+    "handsOnExercises": 45,
+    "groupActivities": 20,
+    "demonstrations": 15
+  },
+  "methodologyCaption": "Most of the session is hands-on: participants test prompts, compare outputs, and refine reusable patterns for their own roles.",
+  "sourceDoc": "course/documents/Work Smarter^J Prompt Better - course outline.pdf",
+  "relatedSlugs": [
+    "ai-marketing",
+    "microsoft-excel",
+    "power-bi"
+  ]
+}

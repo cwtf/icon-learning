@@ -1,0 +1,42 @@
+{
+  "slug": "leadership-boot-camp-leading-with-impact",
+  "title": "Leadership Boot Camp: Leading With Impact",
+  "subtitle": "A practical leadership reset for managers who need clearer influence, accountability, and team direction.",
+  "categorySlug": "leadership-management-coaching",
+  "durationDays": 2,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "Managers are often expected to lead before they have a reliable leadership toolkit. This workshop helps them turn intent into visible habits: clearer expectations, stronger conversations, better follow-through, and a steadier way to guide people through day-to-day pressure.",
+  "builtFor": [
+    "New and developing managers",
+    "Supervisors preparing for wider responsibility",
+    "Team leads who need practical people-management habits"
+  ],
+  "walkAwayWith": [
+    "Clarify what your team needs from you as a leader.",
+    "Communicate expectations without creating confusion or defensiveness.",
+    "Coach performance with practical, workplace-ready conversations.",
+    "Build personal action steps for leading with more consistency."
+  ],
+  "modules": [
+    { "day": 1, "title": "Lead Self Before Leading Others" },
+    { "day": 1, "title": "Set Direction People Can Act On" },
+    { "day": 2, "title": "Coach, Influence, and Give Feedback" },
+    { "day": 2, "title": "Turn Leadership Intent Into Daily Practice" }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "rolePlaying": 15,
+    "selfAssessment": 10
+  },
+  "methodologyCaption": "Short facilitator inputs are balanced with self-reflection, group work, and role-play so managers practise the conversations they will need back at work.",
+  "sourceDoc": "course/documents/LEADERSHIP BOOT CAMP - LEADING WITH IMPACT.pdf",
+  "relatedSlugs": [
+    "coaching-and-mentoring-for-leadership-success",
+    "building-positive-influence",
+    "change-management-managing-mindset-for-peak-performance"
+  ]
+}

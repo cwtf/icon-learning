@@ -1,0 +1,41 @@
+{
+  "slug": "occupational-safety-and-health-at-work-place",
+  "title": "Occupational Safety and Health at Work Place",
+  "subtitle": "A practical safety awareness course for reducing workplace risk and strengthening daily OSH habits.",
+  "categorySlug": "safety-health-environment",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop"],
+  "whyThisMatters": "Safety performance depends on what people notice, report, and correct before incidents happen. This course helps employees and supervisors understand workplace hazards, personal responsibility, and practical prevention routines in a way that supports safer operations.",
+  "builtFor": [
+    "Employees in operational or site-based roles",
+    "Supervisors responsible for daily safety practices",
+    "Teams that need a shared OSH awareness baseline"
+  ],
+  "walkAwayWith": [
+    "Recognize common workplace hazards before they become incidents.",
+    "Apply safer work habits and basic control measures.",
+    "Understand personal responsibility in workplace safety and health.",
+    "Support reporting, housekeeping, and prevention routines."
+  ],
+  "modules": [
+    { "title": "Safety Awareness and Legal Responsibility" },
+    { "title": "Hazards, Risks, and Controls" },
+    { "title": "Safe Work Practices in Daily Operations" },
+    { "title": "Incident Prevention and Reporting Culture" }
+  ],
+  "methodology": {
+    "interactiveLectures": 30,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "demonstrations": 20
+  },
+  "methodologyCaption": "The workshop uses workplace examples, discussion, and practical hazard-recognition activities to make safety behavior concrete.",
+  "sourceDoc": "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.pdf",
+  "relatedSlugs": [
+    "occupational-safety-and-health-coordinator-osh-c",
+    "chemical-safe-and-right-use-of-ppe",
+    "hirarc"
+  ]
+}
