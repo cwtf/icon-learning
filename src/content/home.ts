@@ -272,6 +272,39 @@ export const trainingApproach = {
   ],
 } as const;
 
+export const serviceSolutions = {
+  eyebrow: "Services and solutions",
+  heading: "Three ways to bring the training into the work",
+  description:
+    "Start with a public program, bring a workshop in-house, or pair training with ISO and quality management support.",
+  items: [
+    {
+      eyebrow: "Corporate training",
+      title: "Corporate Training Programs",
+      description:
+        "Practical programs across leadership, HR, quality, safety, digital skills, sales, service, and communication for Malaysian teams.",
+      points: ["Public runs", "In-house workshops", "HRD Corp claimable where confirmed", "Team skill gaps"],
+      href: "/programs",
+    },
+    {
+      eyebrow: "Consultancy",
+      title: "ISO & Quality Management Solutions",
+      description:
+        "Support for teams working on quality systems, audits, food safety, lean practice, and structured problem solving.",
+      points: ["ISO", "Audits", "Food safety", "Lean"],
+      href: "/programs/quality-lean-food-safety",
+    },
+    {
+      eyebrow: "Technical and safety",
+      title: "Technical & Safety Training",
+      description:
+        "Operational programs for workplace safety, health, environment, emergency response, and equipment-related awareness.",
+      points: ["OSH", "HIRARC", "Fire safety", "First aid"],
+      href: "/programs/safety-health-environment",
+    },
+  ],
+} as const;
+
 export const outcomesProof = {
   eyebrow: "Outcomes and proof",
   heading: "Proof points without inflated numbers",

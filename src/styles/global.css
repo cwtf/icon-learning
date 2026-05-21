@@ -172,6 +172,7 @@ a {
   [class*="hover:-translate-y"]:hover,
   .bento-card:hover,
   .course-card:hover,
+  .service-card:hover,
   .testimonial-card:hover,
   .testimonial-button:hover {
     transform: none !important;

@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 7 Global Motion Polish implemented; ready for review.
+- **Phase:** PR 8 Homepage Content Wiring + QA implemented; ready for review.
 - **Last touched:** 2026-05-21.
-- **Next action:** Review PR 7, then start PR 8 homepage content wiring and final homepage QA per [DESIGN.md Section 11 Phase 2](DESIGN.md).
-- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, true-tabbed `CoursesTabbed`, `ApproachSection`, `ResultsGrid`, and `CtaCloser` sections using content from `src/content/home.ts`. Global motion polish is loaded from `src/scripts/global-motion.ts`; `Testimonials` exists but is not rendered until approved quotes are added.
+- **Next action:** Review PR 8, then start PR 9 course rewrite pipeline per [DESIGN.md Section 11 Phase 3](DESIGN.md).
+- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, true-tabbed `CoursesTabbed`, `ServicesBento`, `ApproachSection`, `ResultsGrid`, and `CtaCloser` sections using content from `src/content/home.ts`. Global motion polish is loaded from `src/scripts/global-motion.ts`; `Testimonials` exists but is not rendered until approved quotes are added.
 
 ---
 
 ## What's Done
 
+- **2026-05-21** - PR 8 homepage wiring and static QA completed: added the missing `ServicesBento` section at `#services`, wired services copy through `home.ts`, confirmed homepage anchors and production build, and kept unavailable workshop/category/testimonial assets out of the UI.
 - **2026-05-21** - PR 7 global motion polish added: hero stack staggers on page load, section headings reveal once on scroll, same-page anchor clicks smooth-scroll for no-preference users, and reduced-motion users keep instant/static behavior.
 - **2026-05-21** - PR 6 outcomes and testimonial components added: `ResultsGrid` renders verified-only proof points with reduced-motion-aware count-up, and `Testimonials` ships as a carousel component gated behind an empty approved-quotes list.
 - **2026-05-21** - PR 5 approach sequence added: `ApproachSection` composes four alternating `FeatureStripe` rows for Discover, Customize, Deliver, and Reinforce, with honest CSS process media panels until approved workshop imagery arrives.
@@ -36,13 +37,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 8: Homepage Content Wiring + QA
+## Next Up - PR 9: Course Rewrite Pipeline
 
-Per [DESIGN.md Section 11 Phase 2](DESIGN.md):
+Per [DESIGN.md Section 11 Phase 3](DESIGN.md):
 
-> Homepage content wiring: move copy to `src/content/*.ts`, wire real assets, final homepage QA.
+> Course rewrite pipeline. Curation pass on `course/documents/` (identify canonical PDFs, de-duplicate variants, assign category slugs). LLM-assisted rewrite pass produces `src/content/courses/*.json` per the summary-only `Course` type.
 
-PR 8 should replace remaining placeholder media/copy where approved assets exist, keep unsupported claims out, and perform the broad final homepage QA pass.
+PR 9 should inventory canonical course PDFs first, define skip/superseded rules, and generate/review a small representative batch before scaling to the full catalog.
 
 ---
 
@@ -53,7 +54,7 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 | # | Question | Blocks | Status |
 |---|---|---|---|
 | 1 | Tech stack confirmation | PR 1 | CLOSED - Astro + Tailwind selected for PR 1 |
-| 2 | Logo SVG | PR 1 | PARTIAL - text/IL wordmark placeholder used until real logo lands in `assets/source/brand/logo/` |
+| 2 | Logo SVG | PR 1 | CLOSED - `BrandLogo` uses `assets/source/brand/icons/icon-logo-vector.svg` |
 | 3 | Bento assets, at least 8 strong photos | PR 3 | PARTIAL - client logos available; workshop photos still missing |
 | 4 | Course images per category | PR 4 | OPEN |
 | 5 | HRD claimable per-course list | PR 9, PR 13 | OPEN |
@@ -89,6 +90,10 @@ Workshop photos are still unavailable, so `FeatureStripe` uses structured CSS pa
 ### 2026-05-21 - PR 7 motion is progressive enhancement
 
 Global reveal/stagger styles only activate after `global-motion.ts` adds `data-motion-ready` to `<html>`, so no-JS users see fully visible content. The script exits entirely under `prefers-reduced-motion: reduce`; CSS also suppresses hover transforms in reduced-motion mode.
+
+### 2026-05-21 - PR 8 services section completes homepage order
+
+The homepage was missing the `#services` solutions bento required by §6.1. PR 8 adds `ServicesBento` with three supported service lanes: Corporate Training Programs; ISO & Quality Management Solutions; Technical & Safety Training. No new unverified claims were introduced.
 
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
@@ -135,10 +140,11 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 ## Gotchas
 
 - `npm run build` passes with Astro check and static build.
+- PR 8 static QA confirms `#hero`, `#proof`, `#categories`, `#services`, `#approach`, `#outcomes`, and `#contact-cta` render in `dist/index.html`; `#testimonials` remains intentionally absent until approved quotes exist.
+- Production dependency audit is clean via `npm audit --omit=dev --audit-level=moderate`.
 - Lighthouse CLI is not installed in this workspace, so the PR 7 Lighthouse pass still needs to be run in an environment with Lighthouse/browser automation available.
 - PR 6 adds `src/content/testimonials.ts` with an empty `approvedTestimonials` export; the homepage intentionally omits `#testimonials` until that array has approved entries.
 - PR 5 static output includes `#approach`; local port 4321 is currently occupied by older Node preview processes in this workspace, so direct preview on that port may return stale 500s until those processes are cleared.
-- Production dependency audit is clean via `npm audit --omit=dev --audit-level=moderate`.
 - PR 3 imports logo images directly from `assets/source/logos/clients/`; Astro fingerprints them into `dist/_astro`.
 - There are no workshop photos in `assets/source/photos/` yet, so bento media cards are intentionally deferred.
 - There are no category hero images in `assets/source/programs/` yet, so PR 4 uses CSS slide-preview panels as temporary representative media.
