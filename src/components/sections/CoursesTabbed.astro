@@ -202,6 +202,21 @@ const previewHref = (category: Category, course: Category["courses"][number]) =>
     display: none;
   }
 
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  [data-courses-tabbed][data-enhanced] [data-course-panel]:not([hidden]) {
+    animation: fadeSlideIn 350ms var(--ease-standard) forwards;
+  }
+
   .category-topic-grid {
     display: grid;
     gap: 0.75rem;
@@ -282,6 +297,10 @@ const previewHref = (category: Category, course: Category["courses"][number]) =>
     .course-label-title,
     .course-card {
       transition: none;
+    }
+
+    [data-courses-tabbed][data-enhanced] [data-course-panel]:not([hidden]) {
+      animation: none;
     }
 
     .course-card:hover {
