@@ -1,15 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ApproachSection from "../components/sections/ApproachSection.astro";
 import BentoMasonry from "../components/sections/BentoMasonry.astro";
 import CtaCloser from "../components/sections/CtaCloser.astro";
 import CoursesTabbed from "../components/sections/CoursesTabbed.astro";
 import Hero from "../components/sections/Hero.astro";
-import { coursesShowcase, ctaCloser, homeHero, proofBento } from "../content/home";
+import { coursesShowcase, ctaCloser, homeHero, proofBento, trainingApproach } from "../content/home";
 ---
 
 <BaseLayout>
   <Hero {...homeHero} />
   <BentoMasonry {...proofBento} />
   <CoursesTabbed {...coursesShowcase} />
+  <ApproachSection {...trainingApproach} />
   <CtaCloser {...ctaCloser} />
 </BaseLayout>

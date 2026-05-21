@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 4 CoursesTabbed implemented as true show/hide tabs; ready for review.
-- **Last touched:** 2026-05-20.
-- **Next action:** Review PR 4, then start PR 5 (`ApproachSection` + `FeatureStripe`) per [DESIGN.md Section 11 Phase 2](DESIGN.md).
-- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, true-tabbed `CoursesTabbed`, and `CtaCloser` sections using content from `src/content/home.ts`.
+- **Phase:** PR 5 ApproachSection + FeatureStripe implemented; ready for review.
+- **Last touched:** 2026-05-21.
+- **Next action:** Review PR 5, then start PR 6 (`ResultsGrid` + `Testimonials`) per [DESIGN.md Section 11 Phase 2](DESIGN.md).
+- **Working tree:** Homepage now composes `Hero`, `BentoMasonry`, true-tabbed `CoursesTabbed`, `ApproachSection`, and `CtaCloser` sections using content from `src/content/home.ts`.
 
 ---
 
 ## What's Done
 
+- **2026-05-21** - PR 5 approach sequence added: `ApproachSection` composes four alternating `FeatureStripe` rows for Discover, Customize, Deliver, and Reinforce, with honest CSS process media panels until approved workshop imagery arrives.
 - **2026-05-20** - PR 4 CoursesTabbed added: six homepage categories, show/hide tab behavior after JS enhancement, desktop sidebar labels, mobile horizontal labels, no-JS readable fallback, keyboard tab navigation, and course/category links.
 - **2026-05-20** - PR 3 bento masonry added: proof section after the hero, real client logo assets, verified-only "Since 2011" proof, HRD/ISO positioning cards, reduced-motion-aware parallax script, and static fallback layout.
 - **2026-05-20** - PR 2 hero and CTA closer added: real homepage hero component, compact CTA closer, homepage content module, WhatsApp-first CTA wiring, and shared contact details in `src/content/site.ts`.
@@ -33,13 +34,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 5: ApproachSection + FeatureStripe
+## Next Up - PR 6: ResultsGrid + Testimonials
 
 Per [DESIGN.md Section 11 Phase 2](DESIGN.md):
 
-> `ApproachSection` + `FeatureStripe` (3-4 stripes, alternating).
+> `ResultsGrid` + count-up island; `Testimonials` + carousel island (ship together).
 
-PR 5 should add the Discover, Customize, Deliver, Reinforce sequence and keep image/media handling honest until approved workshop assets arrive.
+PR 6 should use verified-only outcome proof and omit testimonials unless approved public quotes are available.
 
 ---
 
@@ -74,6 +75,10 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 ### 2026-05-20 - PR 3 bento uses logos before photos
 
 Workshop/photo assets are not available yet, so the bento uses real client logos plus verified proof and positioning cards. Photo cards can replace some proof/logo cards when approved workshop imagery lands.
+
+### 2026-05-21 - PR 5 approach uses process media panels
+
+Workshop photos are still unavailable, so `FeatureStripe` uses structured CSS panels that represent process artifacts instead of fabricated photography. Replace these with approved workshop images or slide previews when assets arrive.
 
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
@@ -120,6 +125,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 ## Gotchas
 
 - `npm run build` passes with Astro check and static build.
+- PR 5 static output includes `#approach`; local port 4321 is currently occupied by older Node preview processes in this workspace, so direct preview on that port may return stale 500s until those processes are cleared.
 - Production dependency audit is clean via `npm audit --omit=dev --audit-level=moderate`.
 - PR 3 imports logo images directly from `assets/source/logos/clients/`; Astro fingerprints them into `dist/_astro`.
 - There are no workshop photos in `assets/source/photos/` yet, so bento media cards are intentionally deferred.

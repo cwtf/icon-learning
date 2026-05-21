@@ -1,0 +1,52 @@
+---
+import SectionHeading from "../primitives/SectionHeading.astro";
+import FeatureStripe from "./FeatureStripe.astro";
+
+interface MediaPanel {
+  eyebrow: string;
+  title: string;
+  items: readonly string[];
+  footer: string;
+}
+
+interface ApproachStep {
+  eyebrow: string;
+  heading: string;
+  body: string;
+  points: readonly string[];
+  media: MediaPanel;
+}
+
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  description?: string;
+  steps: readonly ApproachStep[];
+}
+
+const { eyebrow, heading, description, steps } = Astro.props;
+---
+
+<section id="approach" class="section-pad bg-[var(--color-bg)]">
+  <div class="container-wide">
+    <SectionHeading eyebrow={eyebrow} heading={heading} description={description} align="center" />
+
+    <div class="approach-stripes mt-10 lg:mt-14">
+      {
+        steps.map((step, index) => (
+          <FeatureStripe
+            {...step}
+            reverse={index % 2 === 1}
+            number={String(index + 1).padStart(2, "0")}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .approach-stripes > :global(article + article) {
+    border-top: 1px solid var(--color-border);
+  }
+</style>

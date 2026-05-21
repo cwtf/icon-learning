@@ -198,3 +198,76 @@ export const coursesShowcase = {
     },
   ],
 } as const;
+
+export const trainingApproach = {
+  eyebrow: "Training approach",
+  heading: "A practical path from need to follow-through",
+  description:
+    "Each engagement starts with the work your team needs to improve, then shapes the program around delivery format, audience, and practical next steps.",
+  steps: [
+    {
+      eyebrow: "Discover",
+      heading: "Understand the team need and business context",
+      body: "Before proposing a course, Icon Learning clarifies the audience, current challenges, and outcomes the team needs to see after training.",
+      points: [
+        "Map goals, roles, and constraints before choosing a program.",
+        "Separate must-have outcomes from nice-to-have topics.",
+        "Identify whether public, in-house, or blended delivery fits best.",
+      ],
+      media: {
+        eyebrow: "Needs map",
+        title: "Context before content",
+        items: ["Audience", "Goals", "Constraints", "Format"],
+        footer: "Discover",
+      },
+    },
+    {
+      eyebrow: "Customize",
+      heading: "Adapt the content to the workplace reality",
+      body: "Programs can be tuned for public runs, in-house teams, or focused workshops so examples and activities stay relevant to the people in the room.",
+      points: [
+        "Adjust emphasis without turning the program into a one-off maze.",
+        "Use workplace examples that make the learning easier to apply.",
+        "Keep HRD-claimable requirements visible where they are confirmed.",
+      ],
+      media: {
+        eyebrow: "Program fit",
+        title: "Right-sized delivery",
+        items: ["Public", "In-house", "Workshop", "Blended"],
+        footer: "Customize",
+      },
+    },
+    {
+      eyebrow: "Deliver",
+      heading: "Run practical workshops with clear participation",
+      body: "Delivery focuses on usable skills, guided discussion, exercises, and trainer-led structure rather than passive slide reading.",
+      points: [
+        "Keep sessions active through discussion, practice, and reflection.",
+        "Connect frameworks to decisions people make at work.",
+        "Give teams enough structure to leave with a shared language.",
+      ],
+      media: {
+        eyebrow: "Workshop flow",
+        title: "Practical session design",
+        items: ["Briefing", "Practice", "Discussion", "Action"],
+        footer: "Deliver",
+      },
+    },
+    {
+      eyebrow: "Reinforce",
+      heading: "Turn the session into action after training",
+      body: "The close of the program points learners back to application through action plans, assessments, or follow-up where the engagement calls for it.",
+      points: [
+        "Capture practical commitments while the learning is fresh.",
+        "Use assessments or follow-up only when they add value.",
+        "Help managers see what support learners may need next.",
+      ],
+      media: {
+        eyebrow: "Follow-through",
+        title: "From workshop to workplace",
+        items: ["Action plan", "Assessment", "Manager notes", "Follow-up"],
+        footer: "Reinforce",
+      },
+    },
+  ],
+} as const;
