@@ -1,0 +1,126 @@
+---
+import Button from "../primitives/Button.astro";
+import { contactPage } from "../../content/contact";
+import { site } from "../../content/site";
+
+interface Props {
+  heading?: string;
+}
+
+const { heading = "Contact details" } = Astro.props;
+---
+
+<aside class="contact-panel" aria-label={heading}>
+  <div class="contact-panel-inner" data-reveal>
+    <p class="eyebrow">Talk to Icon Learning</p>
+    <h2>{heading}</h2>
+    <p class="contact-panel-copy">
+      Use WhatsApp for the quickest path, or send an email when your inquiry needs attachments, approvals, or a written trail.
+    </p>
+
+    <div class="contact-actions">
+      <Button href={site.whatsappHref} variant="filled-ink" class="w-full">WhatsApp us</Button>
+      <Button href={site.emailHref} variant="outline" class="w-full">Email inquiry</Button>
+    </div>
+
+    <dl class="contact-methods">
+      {
+        contactPage.contactMethods.map((method) => (
+          <div>
+            <dt>{method.label}</dt>
+            <dd>
+              {method.href ? <a href={method.href}>{method.value}</a> : <span>{method.value}</span>}
+              <small>{method.note}</small>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</aside>
+
+<style>
+  .contact-panel {
+    min-width: 0;
+  }
+
+  .contact-panel-inner {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.25rem;
+  }
+
+  .contact-panel h2 {
+    color: var(--color-ink);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin: 1rem 0 0;
+  }
+
+  .contact-panel-copy {
+    color: var(--color-ink-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 1rem 0 0;
+  }
+
+  .contact-actions {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .contact-methods {
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    gap: 0;
+    margin: 1.25rem 0 0;
+  }
+
+  .contact-methods div {
+    border-bottom: 1px solid var(--color-border);
+    display: grid;
+    gap: 0.45rem;
+    padding: 0.9rem 0;
+  }
+
+  .contact-methods dt {
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .contact-methods dd {
+    color: var(--color-ink);
+    display: grid;
+    font-size: 0.92rem;
+    font-weight: 700;
+    gap: 0.3rem;
+    margin: 0;
+  }
+
+  .contact-methods a {
+    color: var(--color-accent);
+    overflow-wrap: anywhere;
+  }
+
+  .contact-methods small {
+    color: var(--color-ink-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  @media (min-width: 1024px) {
+    .contact-panel-inner {
+      position: sticky;
+      top: calc(var(--nav-height) + 2rem);
+    }
+  }
+</style>

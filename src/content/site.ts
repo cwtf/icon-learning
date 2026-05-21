@@ -11,6 +11,7 @@ export const site = {
   email: "jane@iconlearning.com.my",
   emailHref: "mailto:jane@iconlearning.com.my",
   phone: "+6012-3245 938",
+  phoneHref: "tel:+60123245938",
   whatsappHref: "https://wa.me/60123245938",
   address: "No 1, Jalan Radin 5, 57000 Sri Petaling, Kuala Lumpur",
   openingHours: "Monday to Friday, 09:00-18:00",
