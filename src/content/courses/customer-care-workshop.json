@@ -7,7 +7,7 @@
   "hrdClaimable": false,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
-  "whyThisMatters": "Customer experience is shaped by small moments: how teams listen, respond, recover, and follow through. This workshop helps service teams build practical habits for clearer communication, calmer complaint handling, and more consistent customer care.",
+  "whyThisMatters": "Customer experience is shaped by small moments: how teams listen, respond, recover, and follow through when pressure rises. This workshop helps service teams build practical habits for clearer communication, calmer complaint handling, stronger ownership, and more consistent customer care across everyday interactions.",
   "builtFor": [
     "Customer service and front-line teams",
     "Sales support or counter-service staff",
@@ -34,8 +34,8 @@
   "methodologyCaption": "Participants practise service conversations and complaint responses through role-play, feedback, and group reflection.",
   "sourceDoc": "course/documents/CUSTOMER CARE WORKSHOP.pdf",
   "relatedSlugs": [
-    "complaints-management",
-    "1st-class-hospitality-service",
-    "automobile-sales-training-realigning-the-drive-mindset"
+    "leadership-boot-camp-leading-with-impact",
+    "teambuilding-for-high-performance-3days",
+    "work-smarter-prompt-better"
   ]
 }

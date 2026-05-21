@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 12 Course Detail Pages implemented; ready for review.
+- **Phase:** PR 13 Bulk Content Review implemented for the current publishable course set; ready for review.
 - **Last touched:** 2026-05-21.
-- **Next action:** Review PR 12, then start PR 13 bulk content review and copy pass per [DESIGN.md Section 11 Phase 3](DESIGN.md).
-- **Working tree:** Homepage remains complete through PR 8. PR 12 adds `/programs/[category]/[course]` detail pages for the ten PR 9 course summaries, with summary-only sections, module titles, methodology bar, sticky inquiry panel, language-aware `<html lang>`, and Course/Breadcrumb structured data.
+- **Next action:** Review PR 13, then start PR 14 `/about-us` per [DESIGN.md Section 11 Phase 4](DESIGN.md).
+- **Working tree:** Homepage remains complete through PR 8. PR 13 adds a repeatable course review script/report, fixes current related-course links, polishes two public-facing titles, and keeps all HRD statuses explicitly unconfirmed.
 
 ---
 
 ## What's Done
 
+- **2026-05-21** - PR 13 bulk content review pass completed for the current 10 publishable course JSON files: added `npm run courses:review`, generated `src/content/courses/_curation/review-report.json`, fixed all broken `relatedSlugs`, corrected public-facing title polish, and verified zero hard review failures.
 - **2026-05-21** - PR 12 course detail pages added: all ten course JSON records render at `/programs/[category]/[course]` with hero badges, Why this matters, Built for, outcomes, module-title-only workshop view, methodology bar, closer, sticky inquiry panel, and Course/Breadcrumb JSON-LD.
 - **2026-05-21** - PR 11 program category pages added: all nine `/programs/[category]` routes render category hero, overview, available course list, audience, delivery formats, related categories, sticky inquiry panel, and BreadcrumbList/ItemList structured data.
 - **2026-05-21** - PR 10 programs catalog added: `/programs` renders grouped and flat views from top-level course JSON, with `ProgramCard`, category/duration/language chips, HRD Corp claimable toggle, keyword search, URL state, empty state, and production build verification.
@@ -41,13 +42,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 13: Bulk Content Review
+## Next Up - PR 14: About Us
 
-Per [DESIGN.md Section 11 Phase 3](DESIGN.md):
+Per [DESIGN.md Section 11 Phase 4](DESIGN.md):
 
-> Bulk content review and copy pass: walk through all ~180 rewritten summaries, ensure tone is consistent and on-brand, populate `relatedSlugs`, flag any course with missing/unconfirmed HRD claimable status.
+> `/about-us`.
 
-PR 13 should expand/review course JSON beyond the ten PR 9 samples and keep every published course aligned with the summary-only template.
+PR 14 should build the About page with verified company story, training philosophy, what Icon Learning does, values, and CTA without adding unverified claims.
 
 ---
 
@@ -69,7 +70,7 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 | 10 | Legacy URL redirects | PR 18 | OPEN |
 | 11 | Accessibility page language: EN, BM, or both | PR 17 | OPEN |
 | 12 | Canonical course outlines: PDF vs DOC dupes | PR 9 | PARTIAL - inventory groups 358 files into 175 course candidates; human curation still needed |
-| 13 | HRD claimable status per course | PR 9 | OPEN |
+| 13 | HRD claimable status per course | PR 9 | OPEN - PR 13 report flags all current course JSON as unconfirmed |
 | 14 | Bahasa Malaysia URL strategy | PR 9, PR 12 | PARTIAL - BM sample created as its own course JSON pending URL strategy |
 | 15 | Itinerary documents: published download or internal only | PR 9 | OPEN |
 | 16 | Course images per individual course | PR 12 | OPEN |
@@ -139,6 +140,14 @@ The course detail route renders only the summary fields in each course JSON: rew
 
 `BaseLayout` now accepts an optional `lang` prop. English and English+BM course pages render `en-MY`; standalone Bahasa Malaysia course pages render `ms-MY`.
 
+### 2026-05-21 - PR 13 course review is a content gate
+
+`npm run courses:review` validates publishable top-level course JSON for schema-adjacent content quality, valid `relatedSlugs`, explicit HRD confirmation, and summary-only module titles. Missing raw source docs are warnings because `course/documents/` is curation material and is not part of the shipped site.
+
+### 2026-05-21 - PR 13 covers the current publishable batch
+
+The bulk copy pass applies to the 10 current course JSON files from PR 9. The full ~180 course expansion still needs future import/rewrite work plus human review before those records become publishable.
+
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
 The category showcase now hides inactive panels after JavaScript enhancement instead of scroll-spying through all panels. All panels remain in the HTML and visible without JavaScript for fallback and crawlability.
@@ -184,13 +193,15 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 ## Gotchas
 
 - `npm run build` passes with Astro check and static build.
+- `npm run courses:review` currently reports 0 hard failures and 10 warnings, all because HRD claimable status remains unconfirmed on the current course set.
+- `src/content/courses/_curation/review-report.json` is generated review metadata. Treat `hrdClaimable: false` as unconfirmed/not claimable, not proof that a course is definitely ineligible.
+- PR 13 changed the finance course public slug from `business-financial-skills-for-non-financial-personnels` to `business-financial-skills-for-non-financial-personnel`. No redirect is needed pre-launch; add one if the old URL was ever shared publicly.
 - PR 12 builds ten `/programs/[category]/[course]/index.html` pages from the current course JSON set. The route will automatically scale as more top-level `src/content/courses/*.json` files are added.
 - `Get the full outline` currently routes to `/contact?training=...`; the actual contact page/form behavior is still PR 16.
 - PR 12 adds Course JSON-LD, but HRD credential schema is omitted unless `hrdClaimable === true`. Current sample courses all remain unclaimable/unconfirmed.
 - PR 11 builds all nine `/programs/[category]/index.html` pages, and their course cards now land on PR 12 detail pages where a matching course JSON exists.
 - Category page course grouping is currently flat because the PR 9 sample batch has 1-2 courses per category. Add sub-theme grouping when the bulk catalog creates categories with 15+ courses.
 - PR 10 builds `/programs/index.html` and imports the catalog client from `src/components/programs/`. Keep browser-only scripts out of `src/pages/`; Astro treats files there as routes.
-- PR 10 catalog cards link to the final `/programs/[category]/[course]` URL shape, but those detail routes are not implemented until PR 12.
 - The HRD Corp filter currently returns zero results because all PR 9 sample courses intentionally have `hrdClaimable: false` pending confirmation.
 - PR 9 inventory currently reports 358 supported source files, 181 PDFs, and 175 course candidate groups. It still flags 7 non-PDF canonicals, 10 itinerary canonicals, and 136 courses with no duration inferred from filename; these need human curation before bulk import.
 - `src/content/courses/_curation/inventory.json` is pipeline metadata. Do not treat it as a course in PR 10; import only top-level `src/content/courses/*.json`.
@@ -223,6 +234,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/components/primitives/` | Shared PR 1 primitives. | Yes |
 | `src/components/programs/` | Catalog cards and catalog client enhancement. | Yes |
 | `src/components/sections/` | Homepage sections. | Yes |
+| `scripts/course-review.mjs` | Course JSON review gate and report generator. | Yes |
 | `src/pages/programs/index.astro` | Programs catalog route. | Yes |
 | `src/pages/programs/[category].astro` | Program category detail route for all 9 categories. | Yes |
 | `src/pages/programs/[category]/[course].astro` | Summary-only course detail route. | Yes |
@@ -230,6 +242,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/styles/global.css` | Tailwind entry and global styles. | Yes |
 | `src/content/` | Site/navigation content. | Yes |
 | `src/content/courses/` | Summary-only course JSON, schema, and tracked curation metadata. | Yes |
+| `src/content/courses/_curation/review-report.json` | Latest generated course review report. | Yes |
 | `course/documents/*.pdf` | Canonical raw course outlines. | No - source material only |
 
 ---
@@ -241,6 +254,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - `npm run build` - Astro check + production build.
 - `npm run preview` - Astro preview server for the built site.
 - `npm run courses:inventory` - regenerate `src/content/courses/_curation/inventory.json` from ignored raw course documents.
+- `npm run courses:review` - validate publishable course JSON and regenerate `src/content/courses/_curation/review-report.json`.
 - `npm audit --omit=dev --audit-level=moderate` - production dependency audit.
 
 ---

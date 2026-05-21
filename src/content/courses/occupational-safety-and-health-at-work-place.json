@@ -1,6 +1,6 @@
 {
   "slug": "occupational-safety-and-health-at-work-place",
-  "title": "Occupational Safety and Health at Work Place",
+  "title": "Occupational Safety and Health at the Workplace",
   "subtitle": "A practical safety awareness course for reducing workplace risk and strengthening daily OSH habits.",
   "categorySlug": "safety-health-environment",
   "durationDays": 1,
@@ -34,8 +34,8 @@
   "methodologyCaption": "The workshop uses workplace examples, discussion, and practical hazard-recognition activities to make safety behavior concrete.",
   "sourceDoc": "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.pdf",
   "relatedSlugs": [
-    "occupational-safety-and-health-coordinator-osh-c",
-    "chemical-safe-and-right-use-of-ppe",
-    "hirarc"
+    "awareness-in-the-new-qms-iso-9001",
+    "kursus-pengendalian-makanan",
+    "understanding-the-labour-law"
   ]
 }

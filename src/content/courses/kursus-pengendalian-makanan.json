@@ -7,7 +7,7 @@
   "hrdClaimable": false,
   "language": "ms",
   "deliveryFormats": ["Public", "In-house", "Certification"],
-  "whyThisMatters": "Pengendalian makanan yang selamat melindungi pelanggan, pekerja, dan reputasi operasi makanan. Kursus ringkas ini membantu peserta memahami tanggungjawab asas kebersihan makanan dan mengamalkan prosedur kerja yang lebih selamat.",
+  "whyThisMatters": "Pengendalian makanan yang selamat melindungi pelanggan, pekerja, dan reputasi operasi makanan. Kursus ringkas ini membantu peserta memahami tanggungjawab asas kebersihan makanan, mengenal pasti risiko pencemaran biasa, dan mengamalkan prosedur kerja yang lebih bersih serta selamat setiap hari.",
   "builtFor": [
     "Pengendali makanan",
     "Kakitangan dapur, katering, kantin, dan premis makanan",
@@ -34,8 +34,8 @@
   "methodologyCaption": "Sesi ini menggabungkan penerangan ringkas, demonstrasi, dan semakan kefahaman supaya peserta boleh terus mengamalkan langkah asas di tempat kerja.",
   "sourceDoc": "course/documents/KURSUS PENGENDALIAN MAKANAN.pdf",
   "relatedSlugs": [
-    "food-handler-training",
-    "kursus-persijilan-halal",
-    "sertu-workshop"
+    "awareness-in-the-new-qms-iso-9001",
+    "occupational-safety-and-health-at-work-place",
+    "mastering-incoterms-2020-rulings"
   ]
 }

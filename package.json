@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "courses:inventory": "node scripts/course-inventory.mjs",
+    "courses:review": "node scripts/course-review.mjs",
     "typecheck": "astro check"
   },
   "dependencies": {

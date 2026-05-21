@@ -7,7 +7,7 @@
   "hrdClaimable": false,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop"],
-  "whyThisMatters": "Incoterms affect cost, risk, documentation, and responsibility across the shipping process. This course helps commercial and logistics teams use Incoterms 2020 more accurately so handovers are clearer and avoidable disputes are reduced.",
+  "whyThisMatters": "Incoterms affect cost, risk, documentation, responsibility, and customer commitments across the shipping process. This course helps commercial and logistics teams use Incoterms 2020 more accurately so handovers are clearer, documents are checked with better context, and avoidable disputes are reduced.",
   "builtFor": [
     "Shipping, logistics, and forwarding teams",
     "Procurement and purchasing staff",
@@ -34,8 +34,8 @@
   "methodologyCaption": "Participants work through practical trade scenarios and document examples to connect Incoterms rules with everyday shipping decisions.",
   "sourceDoc": "course/documents/MASTERING INCOTERMS 2020 RULINGS.pdf",
   "relatedSlugs": [
-    "fundamentals-of-shipping",
-    "warehouse-management-and-inventory-control",
-    "effective-store-and-warehouse-management"
+    "business-financial-skills-for-non-financial-personnel",
+    "awareness-in-the-new-qms-iso-9001",
+    "occupational-safety-and-health-at-work-place"
   ]
 }

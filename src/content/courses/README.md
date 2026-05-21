@@ -6,6 +6,7 @@ PR 9 starts with a representative reviewed-first batch, not the full catalog. Th
 
 ```bash
 npm run courses:inventory
+npm run courses:review
 ```
 
 Pipeline rules:
@@ -15,3 +16,4 @@ Pipeline rules:
 - Use `hrdClaimable: false` unless Icon Learning has confirmed the course is HRD Corp claimable from the source PDF or an authoritative list.
 - Keep detail pages summary-only: no topic-by-topic outline dumping from source PDFs.
 - Use `sourceDoc` to point back to the canonical raw outline under `course/documents/`.
+- Run `npm run courses:review` after editing course JSON. The generated review report lives at `src/content/courses/_curation/review-report.json`.

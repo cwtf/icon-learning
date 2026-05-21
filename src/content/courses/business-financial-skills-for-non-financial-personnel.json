@@ -1,6 +1,6 @@
 {
-  "slug": "business-financial-skills-for-non-financial-personnels",
-  "title": "Business Financial Skills for Non-Financial Personnels",
+  "slug": "business-financial-skills-for-non-financial-personnel",
+  "title": "Business Financial Skills for Non-Financial Personnel",
   "subtitle": "A finance essentials workshop for managers who need to read numbers and make better business decisions.",
   "categorySlug": "finance-taxation",
   "durationDays": 1,
@@ -34,8 +34,8 @@
   "methodologyCaption": "The session uses simple business examples and guided exercises so participants can practise interpreting financial information.",
   "sourceDoc": "course/documents/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.pdf",
   "relatedSlugs": [
-    "budgeting-and-cost-control",
-    "finance-for-non-finance",
-    "business-strategy-development-in-a-vuca-world"
+    "mastering-incoterms-2020-rulings",
+    "work-smarter-prompt-better",
+    "understanding-the-labour-law"
   ]
 }
