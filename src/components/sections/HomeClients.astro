@@ -4,6 +4,9 @@ import Button from "../primitives/Button.astro";
 
 // Flatten all logos from the groups into a single array for the marquee
 const allLogos = clientGroups.flatMap((group) => group.logos);
+const imageSrc = (logo: (typeof allLogos)[number]) => (typeof logo.src === "string" ? logo.src : logo.src.src);
+const imageWidth = (logo: (typeof allLogos)[number]) => (typeof logo.src === "string" ? undefined : logo.src.width);
+const imageHeight = (logo: (typeof allLogos)[number]) => (typeof logo.src === "string" ? undefined : logo.src.height);
 ---
 
 <section id="home-clients" class="section-pad bg-[var(--color-bg)] overflow-hidden">
@@ -18,13 +21,13 @@ const allLogos = clientGroups.flatMap((group) => group.logos);
         {/* Render the first set of logos */}
         {allLogos.map((logo) => (
           <div class="marquee-item">
-            <img src={logo.src} alt={logo.name} title={logo.name} loading="lazy" />
+            <img src={imageSrc(logo)} width={imageWidth(logo)} height={imageHeight(logo)} alt={logo.name} title={logo.name} loading="lazy" />
           </div>
         ))}
         {/* Render a duplicate set for seamless infinite scrolling */}
         {allLogos.map((logo) => (
           <div class="marquee-item" aria-hidden="true">
-            <img src={logo.src} alt={logo.name} title={logo.name} loading="lazy" />
+            <img src={imageSrc(logo)} width={imageWidth(logo)} height={imageHeight(logo)} alt={logo.name} title={logo.name} loading="lazy" />
           </div>
         ))}
       </div>

@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "courses:inventory": "node scripts/course-inventory.mjs",
     "courses:review": "node scripts/course-review.mjs",
+    "qa:launch": "node scripts/launch-qa.mjs",
     "typecheck": "astro check"
   },
   "dependencies": {

@@ -336,7 +336,7 @@ Same `--color-bg` as page (or `--color-surface-muted`). Single `--color-border-s
 | Program category showcase (`CoursesTabbed`) | `categories` |
 | Services / solutions bento | `services` |
 | Training approach | `approach` |
-| Outcomes & proof stats | `outcomes` |
+| Outcomes & proof stats | No public anchor; `ResultsGrid` intentionally does not use `id="outcomes"` |
 | Testimonials | `testimonials` |
 | CTA closer | `contact-cta` |
 

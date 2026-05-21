@@ -1,12 +1,4 @@
 import { site } from "./site";
-import acerLogo from "../../assets/source/logos/clients/acer.png";
-import dnpLogo from "../../assets/source/logos/clients/dnp.png";
-import ifrcLogo from "../../assets/source/logos/clients/ifrc.png";
-import peroduaLogo from "../../assets/source/logos/clients/perodua.png";
-import protonLogo from "../../assets/source/logos/clients/proton.png";
-import publicisLogo from "../../assets/source/logos/clients/publicis.png";
-import qlLogo from "../../assets/source/logos/clients/ql.png";
-import tescoLogo from "../../assets/source/logos/clients/tesco.png";
 
 export const homeHero = {
   eyebrow: "HRD Corp claimable training provider",
@@ -18,7 +10,7 @@ export const homeHero = {
   },
   secondaryCta: {
     label: "View programs",
-    href: "/programs",
+    href: "/programs?hrdClaimable=true",
   },
 };
 
@@ -34,17 +26,6 @@ export const ctaCloser = {
     href: site.emailHref,
   },
 };
-
-const clientLogos = [
-  { name: "Acer", src: acerLogo },
-  { name: "DNP", src: dnpLogo },
-  { name: "IFRC", src: ifrcLogo },
-  { name: "Perodua", src: peroduaLogo },
-  { name: "Proton", src: protonLogo },
-  { name: "Publicis", src: publicisLogo },
-  { name: "QL", src: qlLogo },
-  { name: "Tesco", src: tescoLogo },
-];
 
 export const proofBento = {
   eyebrow: "Proof in practice",

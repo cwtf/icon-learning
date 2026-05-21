@@ -21,6 +21,7 @@ export const footerGroups = [
   {
     title: "Programs",
     links: [
+      { label: "HRD claimable programs", href: "/programs?hrdClaimable=true" },
       { label: "Leadership & coaching", href: "/programs/leadership-management-coaching" },
       { label: "Quality & food safety", href: "/programs/quality-lean-food-safety" },
       { label: "Safety & health", href: "/programs/safety-health-environment" },

@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-21T07:46:01.447Z",
+  "generatedAt": "2026-05-21T12:53:22.589Z",
   "totals": {
     "coursesReviewed": 10,
     "hardFailures": 0,
-    "warnings": 10,
-    "hrdUnconfirmed": 10
+    "warnings": 0,
+    "hrdUnconfirmed": 0
   },
   "rules": {
     "summaryOnly": "Review checks enforce concise summary fields, module titles only, valid relatedSlugs, and explicit HRD confirmation before badges/schema appear.",
@@ -18,21 +18,15 @@
       "categorySlug": "quality-lean-food-safety",
       "path": "src/content/courses/awareness-in-the-new-qms-iso-9001.json",
       "sourceDoc": "course/documents/AWARENESS IN THE NEW QMS ISO 9001.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "kursus-pengendalian-makanan",
         "occupational-safety-and-health-at-work-place",
         "work-smarter-prompt-better"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "business-financial-skills-for-non-financial-personnel",
@@ -40,21 +34,15 @@
       "categorySlug": "finance-taxation",
       "path": "src/content/courses/business-financial-skills-for-non-financial-personnel.json",
       "sourceDoc": "course/documents/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "mastering-incoterms-2020-rulings",
         "work-smarter-prompt-better",
         "understanding-the-labour-law"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "customer-care-workshop",
@@ -62,21 +50,15 @@
       "categorySlug": "sales-marketing-customer-service",
       "path": "src/content/courses/customer-care-workshop.json",
       "sourceDoc": "course/documents/CUSTOMER CARE WORKSHOP.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "leadership-boot-camp-leading-with-impact",
         "teambuilding-for-high-performance-3days",
         "work-smarter-prompt-better"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "kursus-pengendalian-makanan",
@@ -84,21 +66,15 @@
       "categorySlug": "quality-lean-food-safety",
       "path": "src/content/courses/kursus-pengendalian-makanan.json",
       "sourceDoc": "course/documents/KURSUS PENGENDALIAN MAKANAN.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "awareness-in-the-new-qms-iso-9001",
         "occupational-safety-and-health-at-work-place",
         "mastering-incoterms-2020-rulings"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "leadership-boot-camp-leading-with-impact",
@@ -106,21 +82,15 @@
       "categorySlug": "leadership-management-coaching",
       "path": "src/content/courses/leadership-boot-camp-leading-with-impact.json",
       "sourceDoc": "course/documents/LEADERSHIP BOOT CAMP - LEADING WITH IMPACT.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "teambuilding-for-high-performance-3days",
         "understanding-the-labour-law",
         "customer-care-workshop"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "mastering-incoterms-2020-rulings",
@@ -128,21 +98,15 @@
       "categorySlug": "supply-chain-shipping-warehousing",
       "path": "src/content/courses/mastering-incoterms-2020-rulings.json",
       "sourceDoc": "course/documents/MASTERING INCOTERMS 2020 RULINGS.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "business-financial-skills-for-non-financial-personnel",
         "awareness-in-the-new-qms-iso-9001",
         "occupational-safety-and-health-at-work-place"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "occupational-safety-and-health-at-work-place",
@@ -150,21 +114,15 @@
       "categorySlug": "safety-health-environment",
       "path": "src/content/courses/occupational-safety-and-health-at-work-place.json",
       "sourceDoc": "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "awareness-in-the-new-qms-iso-9001",
         "kursus-pengendalian-makanan",
         "understanding-the-labour-law"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "teambuilding-for-high-performance-3days",
@@ -172,21 +130,15 @@
       "categorySlug": "communication-personal-effectiveness",
       "path": "src/content/courses/teambuilding-for-high-performance-3days.json",
       "sourceDoc": "course/documents/Teambuilding For High Performance  3days.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "leadership-boot-camp-leading-with-impact",
         "customer-care-workshop",
         "understanding-the-labour-law"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "understanding-the-labour-law",
@@ -194,21 +146,15 @@
       "categorySlug": "hr-employment-law",
       "path": "src/content/courses/understanding-the-labour-law.json",
       "sourceDoc": "course/documents/UNDERSTANDING THE LABOUR LAW.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "leadership-boot-camp-leading-with-impact",
         "business-financial-skills-for-non-financial-personnel",
         "occupational-safety-and-health-at-work-place"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "work-smarter-prompt-better",
@@ -216,21 +162,15 @@
       "categorySlug": "microsoft-ai-digital-skills",
       "path": "src/content/courses/work-smarter-prompt-better.json",
       "sourceDoc": "course/documents/Work Smarter^J Prompt Better - course outline.pdf",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "business-financial-skills-for-non-financial-personnel",
         "customer-care-workshop",
         "leadership-boot-camp-leading-with-impact"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     }
   ]
 }

@@ -26,7 +26,7 @@ import { site } from "./site";
 
 type ClientLogo = {
   name: string;
-  src: string;
+  src: string | { src: string; width?: number; height?: number };
   meta: string;
 };
 
@@ -101,19 +101,19 @@ export const clientGroups: ClientGroup[] = [
     summary:
       "Logos from industrial, automotive, engineering, building materials, electronics, and infrastructure-adjacent teams represented in the public client list.",
     logos: [
-      { name: "Acer", src: acerLogo.src, meta: "Technology" },
-      { name: "DNP", src: dnpLogo.src, meta: "Manufacturing" },
-      { name: "Freescale Semiconductor", src: freescaleLogo.src, meta: "Electronics" },
-      { name: "Kelington", src: kelingtonLogo.src, meta: "Engineering" },
-      { name: "Perodua", src: peroduaLogo.src, meta: "Automotive" },
-      { name: "Proton", src: protonLogo.src, meta: "Automotive" },
-      { name: "QL", src: qlLogo.src, meta: "Manufacturing" },
-      { name: "Recron", src: recronLogo.src, meta: "Manufacturing" },
-      { name: "Tanco", src: tancoLogo.src, meta: "Infrastructure" },
-      { name: "Tanjong Express", src: tanjongExpressLogo.src, meta: "Logistics" },
-      { name: "UAC Bhd", src: uacLogo.src, meta: "Building materials" },
-      { name: "DBE", src: dbeLogo.src, meta: "Industry" },
-      { name: "Zitron", src: zitronLogo.src, meta: "Technology" },
+      { name: "Acer", src: acerLogo, meta: "Technology" },
+      { name: "DNP", src: dnpLogo, meta: "Manufacturing" },
+      { name: "Freescale Semiconductor", src: freescaleLogo, meta: "Electronics" },
+      { name: "Kelington", src: kelingtonLogo, meta: "Engineering" },
+      { name: "Perodua", src: peroduaLogo, meta: "Automotive" },
+      { name: "Proton", src: protonLogo, meta: "Automotive" },
+      { name: "QL", src: qlLogo, meta: "Manufacturing" },
+      { name: "Recron", src: recronLogo, meta: "Manufacturing" },
+      { name: "Tanco", src: tancoLogo, meta: "Infrastructure" },
+      { name: "Tanjong Express", src: tanjongExpressLogo, meta: "Logistics" },
+      { name: "UAC Bhd", src: uacLogo, meta: "Building materials" },
+      { name: "DBE", src: dbeLogo, meta: "Industry" },
+      { name: "Zitron", src: zitronLogo, meta: "Technology" },
     ],
   },
   {
@@ -121,13 +121,13 @@ export const clientGroups: ClientGroup[] = [
     summary:
       "Selected logos from retail, food, hospitality, and consumer-facing organisations in the current public logo set.",
     logos: [
-      { name: "Cuckoo", src: cuckooLogo.src, meta: "Consumer" },
-      { name: "Foh San", src: fohSanLogo.src, meta: "Food" },
-      { name: "Harumi", src: harumiLogo.src, meta: "Consumer" },
-      { name: "Indofood", src: indofoodLogo.src, meta: "Food" },
-      { name: "Jin Xuan", src: jinXuanLogo.src, meta: "Food" },
-      { name: "Polo Club", src: poloClubLogo.src, meta: "Retail" },
-      { name: "Tesco", src: tescoLogo.src, meta: "Retail" },
+      { name: "Cuckoo", src: cuckooLogo, meta: "Consumer" },
+      { name: "Foh San", src: fohSanLogo, meta: "Food" },
+      { name: "Harumi", src: harumiLogo, meta: "Consumer" },
+      { name: "Indofood", src: indofoodLogo, meta: "Food" },
+      { name: "Jin Xuan", src: jinXuanLogo, meta: "Food" },
+      { name: "Polo Club", src: poloClubLogo, meta: "Retail" },
+      { name: "Tesco", src: tescoLogo, meta: "Retail" },
     ],
   },
   {
@@ -135,10 +135,10 @@ export const clientGroups: ClientGroup[] = [
     summary:
       "Public-sector, nonprofit, and agency logos shown in Icon Learning's existing public client presentation.",
     logos: [
-      { name: "FFKR", src: ffkrLogo.src, meta: "Organisation" },
-      { name: "IFRC", src: ifrcLogo.src, meta: "Nonprofit" },
-      { name: "Jabatan Perumahan Negara", src: jabatanPerumahanLogo.src, meta: "Public sector" },
-      { name: "Publicis", src: publicisLogo.src, meta: "Agency" },
+      { name: "FFKR", src: ffkrLogo, meta: "Organisation" },
+      { name: "IFRC", src: ifrcLogo, meta: "Nonprofit" },
+      { name: "Jabatan Perumahan Negara", src: jabatanPerumahanLogo, meta: "Public sector" },
+      { name: "Publicis", src: publicisLogo, meta: "Agency" },
     ],
   },
 ];

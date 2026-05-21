@@ -8,10 +8,10 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 17 Accessibility Statement implemented; ready for review.
+- **Phase:** PR 18 QA & Launch implemented; ready for review.
 - **Last touched:** 2026-05-21.
-- **Next action:** Review PR 17, then start PR 18 responsive QA, accessibility audit, performance audit, SEO audit, redirect plan, and content proofread per [DESIGN.md Section 11 Phase 5](DESIGN.md).
-- **Working tree:** Homepage remains complete through PR 8. PR 17 adds `/accessibility-statement`, replaces template accessibility content, adds global Organization/WebSite schema, and adds default OG/Twitter image metadata in `BaseLayout`.
+- **Next action:** Review PR 18, then confirm deploy target, install redirects on the chosen host, and run browser-based Lighthouse/Rich Results checks against the final preview URL.
+- **Working tree:** PR 18 adds launch QA automation, robots/sitemaps, redirect planning docs, HRD-filter entry links, image dimension cleanup for logo surfaces, refreshed course review output, keeps the homepage ResultsGrid without a public `#outcomes` anchor, and removes the temporary GitHub Pages base path for canonical launch URLs.
 
 ---
 
@@ -20,6 +20,7 @@
 - **2026-05-21** - CI/CD setup: Added GitHub Actions workflow (`deploy.yml`) using Node 22, and configured `base` path in `astro.config.mjs` for temporary GitHub Pages hosting.
 - **2026-05-21** - Programs update: Updated all 10 sample course JSON files to `hrdClaimable: true` and set the HRD Corp claimable toggle on `/programs` to be checked by default.
 - **2026-05-21** - Homepage updates: Added infinite scrolling marquee for "Our Clients" segment, adjusted wording to "Companies across Malaysia", and refined mask gradient.
+- **2026-05-21** - PR 18 QA & Launch pass added: `npm run qa:launch` checks built metadata, JSON-LD syntax, H1 counts, internal links/anchors, image alt/dimensions, crawl files, and script gzip budget; `robots.txt`, sitemap index, pages/courses sitemap splits, launch QA report, and seed redirect plan were added. Removed the temporary GitHub Pages `base` path so built canonicals and assets target the root domain. Kept `ResultsGrid` rendered without `id="outcomes"` because that anchor was intentionally removed. Launch gates pass: course review 0 failures/0 warnings, build 25 pages with 0 errors/warnings/hints, launch QA 0 issues/0 warnings with 22 KB total script gzip, production audit 0 vulnerabilities.
 - **2026-05-21** - PR 17 Accessibility Statement added: `/accessibility-statement` renders WCAG 2.2 AA target copy, last-updated date, accessibility measures, known limitations, feedback contacts, Breadcrumb/WebPage JSON-LD, and global Organization/WebSite metadata/schema through `BaseLayout`.
 - **2026-05-21** - PR 16 Contact page added: `/contact` renders a split inquiry form and contact cards, mobile contact actions before the form, WhatsApp/email/phone/address/hours, `?training=` prefill behavior, email-draft submit behavior, buyer FAQs, and Breadcrumb/LocalBusiness/FAQPage JSON-LD.
 - **2026-05-21** - PR 15 Clients page added: `/clients` renders the verified public client logo set via `LogoWall`, broad sector groupings, engagement types, CTA, and Breadcrumb/LocalBusiness JSON-LD while avoiding client counts, testimonials, and outcome claims.
@@ -49,13 +50,14 @@ _Nothing._
 
 ---
 
-## Next Up - PR 18: QA & Launch
+## Next Up
 
-Per [DESIGN.md Section 11 Phase 5](DESIGN.md):
+Launch readiness review:
 
-> Responsive QA, a11y audit, perf audit, SEO audit, redirect plan from legacy URLs, content proofread.
-
-PR 18 should run the final launch checks across pages, confirm responsive behavior, audit accessibility/SEO/performance, identify redirects from legacy URLs, and proofread the public content.
+- Confirm the deploy target and DNS cutover path for `www.iconlearning.com.my`.
+- Install the redirect rules from `docs/launch/redirect-plan.md` using the chosen host's syntax.
+- Run Lighthouse and Google's Rich Results test against the final preview URL.
+- Submit `https://www.iconlearning.com.my/sitemap.xml` to Google Search Console and Bing Webmaster Tools after cutover.
 
 ---
 
@@ -73,11 +75,11 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 | 6 | Primary inquiry destination: WhatsApp, email, or form | PR 2, PR 16 | CLOSED - WhatsApp first for homepage CTA; email secondary |
 | 7 | Testimonials approved for public use | PR 6 | OPEN |
 | 8 | Verified stats beyond "since 2011" | PR 6 | OPEN |
-| 9 | Domain / deploy target | PR 18 | OPEN |
-| 10 | Legacy URL redirects | PR 18 | OPEN |
+| 9 | Domain / deploy target | PR 18 | OPEN - final host/DNS target still needs confirmation; temporary GitHub Pages base was removed for root-domain launch output |
+| 10 | Legacy URL redirects | PR 18 | PARTIAL - seed plan added in `docs/launch/redirect-plan.md`; host-specific install pending |
 | 11 | Accessibility page language: EN, BM, or both | PR 17 | CLOSED - English page under `en-MY`; BM remains course-specific |
 | 12 | Canonical course outlines: PDF vs DOC dupes | PR 9 | PARTIAL - inventory groups 358 files into 175 course candidates; human curation still needed |
-| 13 | HRD claimable status per course | PR 9 | OPEN - PR 13 report flags all current course JSON as unconfirmed |
+| 13 | HRD claimable status per course | PR 9 | PARTIAL - current 10 sample courses are marked claimable; future catalog expansion still needs source confirmation |
 | 14 | Bahasa Malaysia URL strategy | PR 9, PR 12 | PARTIAL - BM sample created as its own course JSON pending URL strategy |
 | 15 | Itinerary documents: published download or internal only | PR 9 | OPEN |
 | 16 | Course images per individual course | PR 12 | OPEN |
@@ -97,7 +99,7 @@ Workshop photos are still unavailable, so `FeatureStripe` uses structured CSS pa
 
 ### 2026-05-21 - PR 6 avoids fabricated outcomes and quotes
 
-`ResultsGrid` only counts facts derived from the current catalog/site structure (`9` categories, `6` homepage families, `3` engagement lanes) plus a non-counted "Since 2011" card. `Testimonials` is implemented but gated by `approvedTestimonials`, which remains empty until Icon Learning confirms public-use quotes.
+`ResultsGrid` only counts facts derived from the current catalog/site structure (`9` categories, `6` homepage families, `3` engagement lanes) plus a non-counted "Since 2011" card. It is intentionally not exposed as a public `#outcomes` anchor. `Testimonials` is implemented but gated by `approvedTestimonials`, which remains empty until Icon Learning confirms public-use quotes.
 
 ### 2026-05-21 - PR 7 motion is progressive enhancement
 
@@ -187,6 +189,18 @@ The accessibility statement uses English with the default `en-MY` page language,
 
 `BaseLayout` now emits default OG/Twitter image metadata using the real Icon Learning wordmark asset, plus global Organization and WebSite/SearchAction JSON-LD. Page-specific structured data still lives in individual routes.
 
+### 2026-05-21 - PR 18 launch QA is static-output based
+
+`npm run qa:launch` audits the built `dist/` output instead of source files, so it catches real emitted metadata, JSON-LD syntax, H1 counts, internal links/anchors, image alt/dimension attributes, crawl files, and shipped JS. Browser-only checks such as Lighthouse scoring, visual responsive inspection, and Rich Results validation still need a preview URL with browser tooling.
+
+### 2026-05-21 - PR 18 sitemap is a launch seed
+
+Static `public/sitemap.xml`, `public/sitemap-pages.xml`, and `public/sitemap-courses.xml` cover the current 25-page MVP build. Replace this with generated sitemap automation when the course catalog expands beyond the current 10 published course pages.
+
+### 2026-05-21 - PR 18 redirects need host installation
+
+`docs/launch/redirect-plan.md` records the seed redirect map from indexed legacy URLs into the new IA. The repo does not enforce those redirects yet because the final host/server syntax is still open.
+
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
 The category showcase now hides inactive panels after JavaScript enhancement instead of scroll-spying through all panels. All panels remain in the HTML and visible without JavaScript for fallback and crawlability.
@@ -231,6 +245,12 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 
 ## Gotchas
 
+- PR 18 launch gates pass on 2026-05-21: `npm run courses:review` (10 courses, 0 hard failures, 0 warnings), `npm run build` (25 pages, 0 errors/warnings/hints), `npm run qa:launch` (25 pages, 0 issues, 0 warnings, 22 KB total script gzip including inline enhancements), and `npm audit --omit=dev --audit-level=moderate` (0 vulnerabilities).
+- `npm run qa:launch` writes `dist/launch-qa-report.json`; it is build output and is not tracked.
+- `public/robots.txt` points to `https://www.iconlearning.com.my/sitemap.xml`; sitemap files are static launch seeds for the current MVP page set.
+- `docs/launch/redirect-plan.md` is a redirect seed list, not an installed redirect config. Final implementation depends on the deploy host.
+- The homepage ResultsGrid is rendered without `id="outcomes"`. Do not re-add that anchor unless navigation/content strategy changes.
+- Logo and HRD images now emit width/height attributes through `LogoWall`, `HomeClients`, `BentoMasonry`, `ServicesBento`, and `/about-us` to keep the static image audit clean.
 - `npm run build` passes with Astro check and static build.
 - PR 17 builds `/accessibility-statement/index.html` and raises the static build output to 25 pages.
 - `/accessibility-statement` contains no legacy/template placeholders and states a WCAG 2.2 AA target rather than claiming completed conformance.
@@ -239,12 +259,12 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - PR 15 builds `/clients/index.html` and raises the static build output to 23 pages.
 - Client sector labels are broad scan labels based on the public logo set; confirm exact industry/engagement labels with Icon Learning before launch if they need to be contractual.
 - PR 14 builds `/about-us/index.html` and raises the static build output to 22 pages.
-- `npm run courses:review` currently reports 0 hard failures and 10 warnings, all because HRD claimable status remains unconfirmed on the current course set.
-- `src/content/courses/_curation/review-report.json` is generated review metadata. Treat `hrdClaimable: false` as unconfirmed/not claimable, not proof that a course is definitely ineligible.
+- `npm run courses:review` currently reports 0 hard failures and 0 warnings because the 10 current sample courses have been updated to `hrdClaimable: true`.
+- `src/content/courses/_curation/review-report.json` is generated review metadata. Treat future `hrdClaimable: false` entries as unconfirmed/not claimable, not proof that a course is definitely ineligible.
 - PR 13 changed the finance course public slug from `business-financial-skills-for-non-financial-personnels` to `business-financial-skills-for-non-financial-personnel`. No redirect is needed pre-launch; add one if the old URL was ever shared publicly.
 - PR 12 builds ten `/programs/[category]/[course]/index.html` pages from the current course JSON set. The route will automatically scale as more top-level `src/content/courses/*.json` files are added.
 - `Get the full outline` routes to `/contact?training=...`; PR 16 pre-fills the contact form but does not auto-attach source outline PDFs.
-- PR 12 adds Course JSON-LD, but HRD credential schema is omitted unless `hrdClaimable === true`. Current sample courses all remain unclaimable/unconfirmed.
+- PR 12 adds Course JSON-LD, and HRD credential schema appears only when `hrdClaimable === true`. Current sample courses are marked claimable; future imports must still be confirmed before toggling.
 - PR 11 builds all nine `/programs/[category]/index.html` pages, and their course cards now land on PR 12 detail pages where a matching course JSON exists.
 - Category page course grouping is currently flat because the PR 9 sample batch has 1-2 courses per category. Add sub-theme grouping when the bulk catalog creates categories with 15+ courses.
 - PR 10 builds `/programs/index.html` and imports the catalog client from `src/components/programs/`. Keep browser-only scripts out of `src/pages/`; Astro treats files there as routes.
@@ -252,7 +272,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - PR 9 inventory currently reports 358 supported source files, 181 PDFs, and 175 course candidate groups. It still flags 7 non-PDF canonicals, 10 itinerary canonicals, and 136 courses with no duration inferred from filename; these need human curation before bulk import.
 - `src/content/courses/_curation/inventory.json` is pipeline metadata. Do not treat it as a course in PR 10; import only top-level `src/content/courses/*.json`.
 - The 10 PR 9 course JSON files are representative summary drafts, not final Icon Learning-approved copy. HRD claimable is intentionally false everywhere.
-- PR 8 static QA confirms `#hero`, `#proof`, `#categories`, `#services`, `#approach`, `#outcomes`, and `#contact-cta` render in `dist/index.html`; `#testimonials` remains intentionally absent until approved quotes exist.
+- PR 8 static QA confirms `#hero`, `#proof`, `#categories`, `#services`, `#approach`, and `#contact-cta` render in `dist/index.html`; `#outcomes` is intentionally not present, and `#testimonials` remains intentionally absent until approved quotes exist.
 - Production dependency audit is clean via `npm audit --omit=dev --audit-level=moderate`.
 - Lighthouse CLI is not installed in this workspace, so the PR 7 Lighthouse pass still needs to be run in an environment with Lighthouse/browser automation available.
 - PR 6 adds `src/content/testimonials.ts` with an empty `approvedTestimonials` export; the homepage intentionally omits `#testimonials` until that array has approved entries.
@@ -274,7 +294,13 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 |---|---|---|
 | `DESIGN.md` | The spec and source of truth. | Yes - update when scope/architecture changes |
 | `PROJECT_BRAIN.md` | Running state log. | Yes - update every PR |
+| `docs/launch/qa-report.md` | PR 18 launch QA summary and remaining manual launch tasks. | Yes |
+| `docs/launch/redirect-plan.md` | Seed redirect map from legacy public URLs into the new IA. | Yes |
 | `assets/` | Source and web-ready asset library. | Yes |
+| `public/robots.txt` | Crawl policy pointing to the sitemap index. | Yes |
+| `public/sitemap.xml` | Sitemap index for pages/courses splits. | Yes - replace with generated sitemap when catalog expands |
+| `public/sitemap-pages.xml` | Static MVP page sitemap seed. | Yes |
+| `public/sitemap-courses.xml` | Static current-course sitemap seed. | Yes |
 | `src/layouts/BaseLayout.astro` | Global HTML shell and metadata. | Yes |
 | `src/components/layout/` | `Nav` and `Footer`. | Yes |
 | `src/components/contact/ContactPanel.astro` | Reusable contact methods panel. | Yes |
@@ -284,6 +310,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/components/programs/` | Catalog cards and catalog client enhancement. | Yes |
 | `src/components/sections/` | Homepage sections. | Yes |
 | `scripts/course-review.mjs` | Course JSON review gate and report generator. | Yes |
+| `scripts/launch-qa.mjs` | Static `dist/` launch QA gate for metadata, links, JSON-LD, images, crawl files, and JS budget. | Yes |
 | `src/pages/about-us.astro` | About page route with company story and LocalBusiness JSON-LD. | Yes |
 | `src/pages/accessibility-statement.astro` | Accessibility statement route with WCAG target and WebPage JSON-LD. | Yes |
 | `src/pages/clients.astro` | Clients page route with logo wall and LocalBusiness JSON-LD. | Yes |
@@ -312,6 +339,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - `npm run preview` - Astro preview server for the built site.
 - `npm run courses:inventory` - regenerate `src/content/courses/_curation/inventory.json` from ignored raw course documents.
 - `npm run courses:review` - validate publishable course JSON and regenerate `src/content/courses/_curation/review-report.json`.
+- `npm run qa:launch` - audit the built `dist/` output for metadata, JSON-LD syntax, H1 counts, broken internal links/anchors, image alt/dimensions, crawl files, and total script gzip.
 - `npm audit --omit=dev --audit-level=moderate` - production dependency audit.
 
 ---

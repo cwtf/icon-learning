@@ -156,7 +156,7 @@ for (const { file, path: coursePath, data } of courses) {
     sourceDoc: data.sourceDoc,
     hrdClaimable: data.hrdClaimable,
     relatedSlugs,
-    status: issues.length === 0 ? "review-pass-with-warnings" : "review-fail",
+    status: issues.length > 0 ? "review-fail" : warnings.length > 0 ? "review-pass-with-warnings" : "review-pass",
     issues,
     warnings,
   });

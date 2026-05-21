@@ -1,7 +1,9 @@
 ---
+type ImageLike = string | { src: string; width?: number; height?: number };
+
 interface Logo {
   name: string;
-  src?: string;
+  src?: ImageLike;
   href?: string;
   meta?: string;
 }
@@ -13,6 +15,9 @@ interface Props {
 }
 
 const { logos, class: className, ariaLabel = "Client logos" } = Astro.props;
+const imageSrc = (image: ImageLike) => (typeof image === "string" ? image : image.src);
+const imageWidth = (image: ImageLike) => (typeof image === "string" ? undefined : image.width);
+const imageHeight = (image: ImageLike) => (typeof image === "string" ? undefined : image.height);
 ---
 
 <ul class:list={["logo-wall", className]} aria-label={ariaLabel}>
@@ -23,10 +28,10 @@ const { logos, class: className, ariaLabel = "Client logos" } = Astro.props;
           {logo.src ? (
             logo.href ? (
               <a href={logo.href} aria-label={logo.name}>
-                <img src={logo.src} alt={logo.name} loading="lazy" />
+                <img src={imageSrc(logo.src)} width={imageWidth(logo.src)} height={imageHeight(logo.src)} alt={logo.name} loading="lazy" />
               </a>
             ) : (
-              <img src={logo.src} alt={logo.name} loading="lazy" />
+              <img src={imageSrc(logo.src)} width={imageWidth(logo.src)} height={imageHeight(logo.src)} alt={logo.name} loading="lazy" />
             )
           ) : (
             <span>{logo.name}</span>
