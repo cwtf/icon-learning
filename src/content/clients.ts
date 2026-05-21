@@ -39,7 +39,7 @@ type ClientGroup = {
 export const clientsPage = {
   title: "Trusted by Malaysian Teams - Icon Learning Clients",
   description:
-    "See selected client logos from Icon Learning's public client list and explore how teams work with Icon Learning through training, ISO consultancy, and technical programmes.",
+    "See selected public client logos and how teams work with Icon Learning through training, ISO consultancy, and technical programmes.",
   hero: {
     eyebrow: "Clients",
     heading: "Trusted by teams across Malaysia",

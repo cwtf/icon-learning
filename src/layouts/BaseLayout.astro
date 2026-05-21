@@ -4,17 +4,54 @@ import "../styles/global.css";
 import Nav from "../components/layout/Nav.astro";
 import Footer from "../components/layout/Footer.astro";
 import { site } from "../content/site";
+import ogImage from "../../assets/source/brand/logo/icon-learning-black.png";
 
 interface Props {
   title?: string;
   description?: string;
   lang?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const pageTitle = Astro.props.title ?? site.title;
 const pageDescription = Astro.props.description ?? site.description;
 const lang = Astro.props.lang ?? "en-MY";
 const canonical = new URL(Astro.url.pathname, site.url);
+const metaImage = new URL(Astro.props.image ?? ogImage.src, site.url);
+const metaImageAlt = Astro.props.imageAlt ?? `${site.name} logo`;
+const globalStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    legalName: site.legalName,
+    url: site.url,
+    logo: metaImage.toString(),
+    email: site.email,
+    telephone: site.phone,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: site.phone,
+        email: site.email,
+        contactType: "training inquiry",
+        areaServed: "MY",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${site.url}/programs?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  },
+];
 ---
 
 <!doctype html>
@@ -30,7 +67,12 @@ const canonical = new URL(Astro.url.pathname, site.url);
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content={metaImage} />
+    <meta property="og:image:alt" content={metaImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={metaImage} />
+    <meta name="twitter:image:alt" content={metaImageAlt} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(globalStructuredData)} />
   </head>
   <body>
     <Nav />

@@ -8,15 +8,16 @@
 
 ## Status Snapshot
 
-- **Phase:** PR 16 Contact implemented; ready for review.
+- **Phase:** PR 17 Accessibility Statement implemented; ready for review.
 - **Last touched:** 2026-05-21.
-- **Next action:** Review PR 16, then start PR 17 `/accessibility-statement` cleanup plus structured data and metadata pass per [DESIGN.md Section 11 Phase 4](DESIGN.md).
-- **Working tree:** Homepage remains complete through PR 8. PR 16 adds `/contact`, `ContactPanel`, static email-draft form behavior, training-interest query prefill, buyer FAQs, and Breadcrumb/LocalBusiness/FAQPage JSON-LD.
+- **Next action:** Review PR 17, then start PR 18 responsive QA, accessibility audit, performance audit, SEO audit, redirect plan, and content proofread per [DESIGN.md Section 11 Phase 5](DESIGN.md).
+- **Working tree:** Homepage remains complete through PR 8. PR 17 adds `/accessibility-statement`, replaces template accessibility content, adds global Organization/WebSite schema, and adds default OG/Twitter image metadata in `BaseLayout`.
 
 ---
 
 ## What's Done
 
+- **2026-05-21** - PR 17 Accessibility Statement added: `/accessibility-statement` renders WCAG 2.2 AA target copy, last-updated date, accessibility measures, known limitations, feedback contacts, Breadcrumb/WebPage JSON-LD, and global Organization/WebSite metadata/schema through `BaseLayout`.
 - **2026-05-21** - PR 16 Contact page added: `/contact` renders a split inquiry form and contact cards, mobile contact actions before the form, WhatsApp/email/phone/address/hours, `?training=` prefill behavior, email-draft submit behavior, buyer FAQs, and Breadcrumb/LocalBusiness/FAQPage JSON-LD.
 - **2026-05-21** - PR 15 Clients page added: `/clients` renders the verified public client logo set via `LogoWall`, broad sector groupings, engagement types, CTA, and Breadcrumb/LocalBusiness JSON-LD while avoiding client counts, testimonials, and outcome claims.
 - **2026-05-21** - PR 14 About Us page added: `/about-us` renders verified company story, 15 December 2011 establishment date, company registration number, services, training philosophy, trainer expertise, values, sticky company details, CTA, brand-logo visual, and Breadcrumb/LocalBusiness JSON-LD.
@@ -45,13 +46,13 @@ _Nothing._
 
 ---
 
-## Next Up - PR 17: Accessibility Statement
+## Next Up - PR 18: QA & Launch
 
-Per [DESIGN.md Section 11 Phase 4](DESIGN.md):
+Per [DESIGN.md Section 11 Phase 5](DESIGN.md):
 
-> `/accessibility-statement` cleanup; structured data + metadata pass.
+> Responsive QA, a11y audit, perf audit, SEO audit, redirect plan from legacy URLs, content proofread.
 
-PR 17 should replace the legacy/template accessibility text with verified WCAG target copy, contact details, last-updated date, and metadata/schema cleanup.
+PR 18 should run the final launch checks across pages, confirm responsive behavior, audit accessibility/SEO/performance, identify redirects from legacy URLs, and proofread the public content.
 
 ---
 
@@ -71,7 +72,7 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 | 8 | Verified stats beyond "since 2011" | PR 6 | OPEN |
 | 9 | Domain / deploy target | PR 18 | OPEN |
 | 10 | Legacy URL redirects | PR 18 | OPEN |
-| 11 | Accessibility page language: EN, BM, or both | PR 17 | OPEN |
+| 11 | Accessibility page language: EN, BM, or both | PR 17 | CLOSED - English page under `en-MY`; BM remains course-specific |
 | 12 | Canonical course outlines: PDF vs DOC dupes | PR 9 | PARTIAL - inventory groups 358 files into 175 course candidates; human curation still needed |
 | 13 | HRD claimable status per course | PR 9 | OPEN - PR 13 report flags all current course JSON as unconfirmed |
 | 14 | Bahasa Malaysia URL strategy | PR 9, PR 12 | PARTIAL - BM sample created as its own course JSON pending URL strategy |
@@ -175,6 +176,14 @@ There is no backend form endpoint yet. `ContactForm.client.ts` progressively enh
 
 Course detail `Get the full outline` links now land on a real contact form with the course prefilled. The separate question of auto-attaching source outlines versus manual follow-up remains open for PR 16/launch operations.
 
+### 2026-05-21 - PR 17 accessibility statement is English
+
+The accessibility statement uses English with the default `en-MY` page language, matching the site-wide primary language. Bahasa Malaysia handling remains per-course until Icon Learning requests a full BM policy page.
+
+### 2026-05-21 - PR 17 adds global metadata/schema
+
+`BaseLayout` now emits default OG/Twitter image metadata using the real Icon Learning wordmark asset, plus global Organization and WebSite/SearchAction JSON-LD. Page-specific structured data still lives in individual routes.
+
 ### 2026-05-20 - CoursesTabbed changed to true tabs
 
 The category showcase now hides inactive panels after JavaScript enhancement instead of scroll-spying through all panels. All panels remain in the HTML and visible without JavaScript for fallback and crawlability.
@@ -220,6 +229,8 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 ## Gotchas
 
 - `npm run build` passes with Astro check and static build.
+- PR 17 builds `/accessibility-statement/index.html` and raises the static build output to 25 pages.
+- `/accessibility-statement` contains no legacy/template placeholders and states a WCAG 2.2 AA target rather than claiming completed conformance.
 - PR 16 builds `/contact/index.html` and raises the static build output to 24 pages.
 - `/contact` submit behavior opens a prefilled email draft. It does not store inquiries, send server email, or auto-attach course PDFs.
 - PR 15 builds `/clients/index.html` and raises the static build output to 23 pages.
@@ -271,6 +282,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/components/sections/` | Homepage sections. | Yes |
 | `scripts/course-review.mjs` | Course JSON review gate and report generator. | Yes |
 | `src/pages/about-us.astro` | About page route with company story and LocalBusiness JSON-LD. | Yes |
+| `src/pages/accessibility-statement.astro` | Accessibility statement route with WCAG target and WebPage JSON-LD. | Yes |
 | `src/pages/clients.astro` | Clients page route with logo wall and LocalBusiness JSON-LD. | Yes |
 | `src/pages/contact.astro` | Contact page route with form, contact cards, FAQPage, and LocalBusiness JSON-LD. | Yes |
 | `src/pages/programs/index.astro` | Programs catalog route. | Yes |
@@ -279,6 +291,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/styles/tokens.css` | Design tokens. | Yes |
 | `src/styles/global.css` | Tailwind entry and global styles. | Yes |
 | `src/content/` | Site/navigation content. | Yes |
+| `src/content/accessibility.ts` | Accessibility statement copy and feedback contacts. | Yes |
 | `src/content/about.ts` | About page copy and section data. | Yes |
 | `src/content/clients.ts` | Clients page copy, logo imports, and group data. | Yes |
 | `src/content/contact.ts` | Contact page copy, form options, methods, and FAQs. | Yes |

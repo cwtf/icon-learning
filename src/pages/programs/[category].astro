@@ -22,7 +22,8 @@ const categoryCourses = coursesByCategory[category.slug] ?? [];
 const relatedCategories = category.relatedCategorySlugs
   .map((slug) => programCategoryMap.get(slug))
   .filter((related): related is ProgramCategory => Boolean(related));
-const title = `${category.title} Training Malaysia | Icon Learning`;
+const seoCategoryTitle = category.shortTitle === "Supply chain" ? "Supply Chain" : category.shortTitle;
+const title = `${seoCategoryTitle} Training Malaysia | Icon Learning`;
 const description = `${category.summary} Browse ${categoryCourses.length} course${categoryCourses.length === 1 ? "" : "s"} for Malaysian teams.`;
 const categoryUrl = new URL(`/programs/${category.slug}`, site.url).toString();
 const emailHref = `${site.emailHref}?subject=${encodeURIComponent(`Training inquiry: ${category.title}`)}`;
