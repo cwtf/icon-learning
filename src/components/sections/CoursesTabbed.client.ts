@@ -5,6 +5,7 @@ const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-course-p
 const desktopTabs = window.matchMedia("(min-width: 1024px)");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const panelTransitionMs = 540;
+const scrollHold = 0.64;
 
 const hideTimers = new WeakMap<HTMLElement, number>();
 
@@ -17,6 +18,19 @@ const clearHideTimer = (panel: HTMLElement) => {
   }
 };
 
+const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
+const easeOut = (value: number) => 1 - Math.pow(1 - value, 3);
+
+const setLabelActivity = (visualIndex: number) => {
+  labels.forEach((label, index) => {
+    const activity = clamp(1 - Math.abs(index - visualIndex), 0, 1);
+    const shift = easeOut(activity);
+
+    label.style.setProperty("--label-activity", activity.toFixed(3));
+    label.style.setProperty("--label-shift", shift.toFixed(3));
+  });
+};
+
 const updateActiveIndicator = () => {
   if (!labelList || !desktopTabs.matches) return;
 
@@ -26,9 +40,32 @@ const updateActiveIndicator = () => {
 
   labelList.style.setProperty("--active-y", `${activeLabel.offsetTop}px`);
   labelList.style.setProperty("--active-height", `${activeLabel.offsetHeight}px`);
+  setLabelActivity(Math.max(0, labels.indexOf(activeLabel)));
 };
 
-const setActive = (id: string, immediate = false) => {
+const updateScrollMotion = (visualIndex: number) => {
+  if (!labelList || !desktopTabs.matches || reducedMotion.matches) {
+    setLabelActivity(activeIndex());
+    return;
+  }
+
+  const lowerIndex = Math.floor(visualIndex);
+  const upperIndex = Math.min(labels.length - 1, lowerIndex + 1);
+  const mix = visualIndex - lowerIndex;
+  const lowerLabel = labels[lowerIndex];
+  const upperLabel = labels[upperIndex];
+
+  if (!lowerLabel || !upperLabel) return;
+
+  const y = lowerLabel.offsetTop + (upperLabel.offsetTop - lowerLabel.offsetTop) * mix;
+  const height = lowerLabel.offsetHeight + (upperLabel.offsetHeight - lowerLabel.offsetHeight) * mix;
+
+  labelList.style.setProperty("--active-y", `${y.toFixed(2)}px`);
+  labelList.style.setProperty("--active-height", `${height.toFixed(2)}px`);
+  setLabelActivity(visualIndex);
+};
+
+const setActive = (id: string, immediate = false, updateIndicator = true) => {
   const nextPanel = panels.find((panel) => panel.id === id);
   const currentPanel = panels.find((panel) => panel.classList.contains("is-active"));
 
@@ -58,8 +95,10 @@ const setActive = (id: string, immediate = false) => {
       panel.toggleAttribute("inert", !active);
     });
 
-    window.requestAnimationFrame(updateActiveIndicator);
-    window.setTimeout(updateActiveIndicator, 280);
+    if (updateIndicator) {
+      window.requestAnimationFrame(updateActiveIndicator);
+      window.setTimeout(updateActiveIndicator, 280);
+    }
     return;
   }
 
@@ -84,20 +123,22 @@ const setActive = (id: string, immediate = false) => {
 
   window.requestAnimationFrame(() => {
     nextPanel.classList.add("is-active");
-    updateActiveIndicator();
-    window.setTimeout(updateActiveIndicator, 280);
+    if (updateIndicator) {
+      updateActiveIndicator();
+      window.setTimeout(updateActiveIndicator, 280);
+    }
   });
 };
 
 const activeIndex = () => labels.findIndex((label) => label.classList.contains("is-active"));
 
-const setActiveByIndex = (index: number, focus = false, syncScroll = false) => {
+const setActiveByIndex = (index: number, focus = false, syncScroll = false, updateIndicator = true) => {
   const nextLabel = labels[index];
   const targetId = nextLabel?.dataset.target;
 
   if (!targetId) return;
 
-  setActive(targetId);
+  setActive(targetId, false, updateIndicator);
 
   if (focus) {
     nextLabel.focus();
@@ -107,7 +148,8 @@ const setActiveByIndex = (index: number, focus = false, syncScroll = false) => {
     const rect = section.getBoundingClientRect();
     const absoluteTop = window.scrollY + rect.top;
     const maxScroll = rect.height - window.innerHeight;
-    const targetScroll = absoluteTop + (maxScroll / labels.length) * index + 10;
+    const segmentCount = Math.max(1, labels.length - 1);
+    const targetScroll = absoluteTop + maxScroll * (index / segmentCount) + (index === labels.length - 1 ? -10 : 10);
     window.scrollTo({ top: targetScroll, behavior: "smooth" });
   }
 };
@@ -120,14 +162,18 @@ const onScroll = () => {
 
   if (maxScroll <= 0) return;
 
-  let progress = -rect.top / maxScroll;
-  progress = Math.max(0, Math.min(1, progress));
+  const progress = clamp(-rect.top / maxScroll, 0, 1);
+  const rawIndex = progress * (labels.length - 1);
+  const baseIndex = clamp(Math.floor(rawIndex), 0, labels.length - 1);
+  const segmentProgress = baseIndex === labels.length - 1 ? 0 : rawIndex - baseIndex;
+  const transitionProgress = segmentProgress <= scrollHold ? 0 : clamp((segmentProgress - scrollHold) / (1 - scrollHold), 0, 1);
+  const visualIndex = baseIndex + easeOut(transitionProgress);
+  const index = transitionProgress > 0.56 ? Math.min(baseIndex + 1, labels.length - 1) : baseIndex;
 
-  let index = Math.floor(progress * labels.length);
-  if (index >= labels.length) index = labels.length - 1;
+  updateScrollMotion(visualIndex);
 
   if (activeIndex() !== index) {
-    setActiveByIndex(index, false, false);
+    setActiveByIndex(index, false, false, false);
   }
 };
 

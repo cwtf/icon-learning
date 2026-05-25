@@ -332,26 +332,48 @@ const previewHref = (category: Category, course: Category["courses"][number]) =>
       top: 0;
       transform: translateY(var(--active-y, 0px));
       transition:
-        height 420ms var(--ease-enter),
-        transform 420ms var(--ease-enter);
+        height 180ms var(--ease-standard),
+        transform 180ms var(--ease-standard);
       width: 0.25rem;
       z-index: 0;
     }
 
     .course-label {
+      --label-activity: 0;
+      --label-shift: 0;
       background: transparent;
       border-color: transparent;
       border-radius: 0;
+      opacity: calc(0.56 + (var(--label-activity) * 0.44));
       min-width: 0;
       padding: 0.85rem 0 0.85rem 0.25rem;
       position: relative;
+      transform: translateX(calc(var(--label-shift) * 0.35rem));
       width: 100%;
       z-index: 1;
     }
 
+    .course-label::before {
+      background: color-mix(in srgb, var(--color-accent-soft), transparent 42%);
+      border-radius: 14px;
+      content: "";
+      inset: 0.2rem -0.85rem 0.2rem -0.55rem;
+      opacity: calc(var(--label-activity) * 0.72);
+      position: absolute;
+      transform: scaleX(calc(0.96 + (var(--label-activity) * 0.04)));
+      transform-origin: left center;
+      transition:
+        opacity 260ms var(--ease-standard),
+        transform 260ms var(--ease-standard);
+      z-index: -1;
+    }
+
+    .course-label-title {
+      opacity: calc(0.82 + (var(--label-activity) * 0.18));
+    }
+
     .course-label.is-active {
       border-color: transparent;
-      transform: translateX(0.35rem);
     }
 
     .course-label.is-active .course-label-rule,
