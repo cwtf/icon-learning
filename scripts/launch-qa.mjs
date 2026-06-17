@@ -216,6 +216,38 @@ for (const publicFile of expectedPublicFiles) {
   }
 }
 
+const courseRoutes = [...routeSet].filter((route) => /^\/programs\/[^/]+\/[^/]+\/$/.test(route));
+const courseSitemapFile = files.find((file) => path.relative(distDir, file).replaceAll("\\", "/") === "sitemap-courses.xml");
+if (courseSitemapFile) {
+  const sitemap = await readFile(courseSitemapFile, "utf8");
+  const sitemapCourseRoutes = new Set(
+    [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)]
+      .map((match) => decodeEntities(match[1]))
+      .map((loc) => {
+        try {
+          const url = new URL(loc);
+          return url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`;
+        } catch {
+          issues.push({ route: "/", code: "invalid-sitemap-url", message: `Invalid course sitemap URL: ${loc}` });
+          return null;
+        }
+      })
+      .filter(Boolean)
+  );
+
+  for (const route of courseRoutes) {
+    if (!sitemapCourseRoutes.has(route)) {
+      issues.push({ route, code: "missing-course-sitemap-url", message: "Course route is missing from sitemap-courses.xml." });
+    }
+  }
+
+  for (const route of sitemapCourseRoutes) {
+    if (!routeExists(routeSet, route)) {
+      issues.push({ route, code: "stale-course-sitemap-url", message: "Course sitemap URL does not match a built route." });
+    }
+  }
+}
+
 const report = {
   generatedAt: new Date().toISOString(),
   totals: {

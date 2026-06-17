@@ -1,7 +1,7 @@
 {
   "slug": "hearing-loss-prevention",
   "title": "Hearing Loss Prevention",
-  "subtitle": "A practical workplace safety and health programme focused on hearing loss prevention.",
+  "subtitle": "A 1-day HRD Corp-claimable safety programme for strengthening awareness and practice in hearing loss prevention.",
   "categorySlug": "safety-health-environment",
   "durationDays": 1,
   "hrdClaimable": true,
@@ -10,7 +10,7 @@
     "In-house",
     "Workshop"
   ],
-  "whyThisMatters": "Hearing Loss Prevention helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to risk awareness, prevention, and responsible workplace behavior and apply the learning with more confidence after the workshop.",
+  "whyThisMatters": "Hearing Loss Prevention helps workplace teams recognize hazards, apply controls, and make hearing loss prevention part of everyday operations. Participants explore cooperation towards the managements efforts, introduction to sound and noise, and Introduction To FMA (Noise Exposure Regulation) 1989 so safety expectations become easier to understand, discuss, and act on.",
   "builtFor": [
     "Employees in operational, site-based, or technical roles",
     "Supervisors responsible for daily safety practices",

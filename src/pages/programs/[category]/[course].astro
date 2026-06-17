@@ -30,19 +30,61 @@ const category = Astro.props.category ?? programCategoryMap.get(course.categoryS
 const categoryTitle = category?.title ?? course.categorySlug;
 const seoCourseTitle = course.title
   .replace("Business Financial Skills for Non-Financial Personnel", "Financial Skills for Non-Finance")
-  .replace("Occupational Safety and Health", "OSH");
-const title = `${seoCourseTitle} - ${formatDuration(course.durationDays)} | Icon Learning`;
-const makeMetaDescription = (value: string) => {
+  .replace("Occupational Safety and Health", "OSH")
+  .replace("English for the Workplace: The Importance of English Language Skills for Effective Performance", "English for Workplace Performance")
+  .replace("Understanding The Implication and The Impact Of E-Invoicing", "E-Invoicing Impact")
+  .replace("AI Implementation in Accounting and Finance: From Strategy To Optimization", "AI for Accounting and Finance")
+  .replace("ISO 9001:2015 Internal Quality Auditing & Audit Report Writing", "ISO 9001 Internal Auditing")
+  .replace("Understanding & Applications of Employment Act 1955", "Employment Act 1955")
+  .replace("Change Management- Managing Mindset for Peak Performance", "Change Management Mindset")
+  .replace("Critical Thinking In Problem Solving & Decision Making", "Critical Thinking and Decision Making")
+  .replace("Critical Thinking in Problem Solving and Decision Making", "Critical Thinking and Decision Making")
+  .replace("Critical Thinking in Problem Solving and Decision-Making", "Critical Thinking and Decision Making")
+  .replace("Automobile Sales Training - Realigning The Drive Mindset", "Automobile Sales Training")
+  .replace("Business Strategy Development in a VUCA World", "Business Strategy in a VUCA World")
+  .replace("Leading & Managing The Whole New Self - MOVING FORWARD", "Leading and Managing Change")
+  .replace("Leading and Managing The Whole New Self", "Leading and Managing Change")
+  .replace("Maximizing Microsoft Excel Tools for Fast & Accurate", "Microsoft Excel Productivity Tools")
+  .replace("Maximizing Microsoft Excel Tools For Fast and Accurate", "Microsoft Excel Productivity Tools")
+  .replace("GMP & Allergen Management Awareness", "GMP and Allergen Management")
+  .replace("Telephone Courtesies & Effectiveness", "Telephone Courtesy Training")
+  .replace("Telephone Courtesies and Effectiveness", "Telephone Courtesy Training");
+
+const clipSentence = (value: string, maxLength = 154) => {
   const normalized = value.replace(/\s+/g, " ").trim();
   const firstSentence = normalized.match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() ?? normalized;
-  const clipped = firstSentence.length <= 154 ? firstSentence : firstSentence.slice(0, 152).replace(/\s+\S*$/, "");
+  const clipped = firstSentence.length <= maxLength ? firstSentence : firstSentence.slice(0, maxLength - 2).replace(/\s+\S*$/, "");
   return /[.!?]$/.test(clipped) ? clipped : `${clipped}.`;
 };
-const description = makeMetaDescription(course.whyThisMatters);
+const makePageTitle = () => {
+  const suffix = course.hrdClaimable ? "HRD Claimable Training Malaysia" : "Training Malaysia";
+  const candidates = [
+    `${seoCourseTitle} ${suffix} | Icon Learning`,
+    `${seoCourseTitle} Training Malaysia | Icon Learning`,
+    `${seoCourseTitle} Training | Icon Learning`,
+    `${seoCourseTitle} | Icon Learning`,
+  ];
+  return candidates.find((candidate) => candidate.length <= 70) ?? `${clipSentence(seoCourseTitle, 54).replace(/[.!?]$/, "")} | Icon Learning`;
+};
+const makeMetaDescription = () => {
+  const audience = course.builtFor[0]?.replace(/\.$/, "").toLowerCase() ?? "Malaysian teams";
+  const moduleTopics = course.modules
+    .map((module) => module.title.replace(/\s+/g, " ").replace(/[.!?]$/, "").trim())
+    .filter((module) => !/^(course introduction|workplace context|core skills|practical application)$/i.test(module))
+    .slice(0, 2)
+    .join(" and ");
+  const hrdText = course.hrdClaimable ? "HRD Corp claimable " : "";
+  const base = `${course.title} is a ${formatDuration(course.durationDays)} ${hrdText}${category?.shortTitle.toLowerCase() ?? "corporate"} training programme in Malaysia for ${audience}`;
+  const withTopics = moduleTopics ? `${base}, covering ${moduleTopics}.` : `${base}.`;
+  return clipSentence(withTopics, 150);
+};
+const title = makePageTitle();
+const description = makeMetaDescription();
 const pageLang = course.language === "ms" ? "ms-MY" : "en-MY";
 const contactHref = `/contact?training=${encodeURIComponent(course.title)}`;
 const emailHref = `${site.emailHref}?subject=${encodeURIComponent(`Training outline: ${course.title}`)}`;
 const whatsappHref = `${site.whatsappHref}?text=${encodeURIComponent(`Hi Icon Learning, I would like the full outline for ${course.title}.`)}`;
+const pageUrl = new URL(courseUrl(course), site.url).toString();
 
 const methodologyLabels: Array<{ key: keyof CourseMethodologyMix; label: string }> = [
   { key: "interactiveLectures", label: "Interactive" },
@@ -106,7 +148,7 @@ const structuredData = [
         "@type": "ListItem",
         position: 3,
         name: course.title,
-        item: new URL(courseUrl(course), site.url).toString(),
+        item: pageUrl,
       },
     ],
   },
@@ -114,7 +156,9 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": "Course",
     name: course.title,
+    url: pageUrl,
     description: course.whyThisMatters,
+    about: categoryTitle,
     provider: {
       "@type": "Organization",
       name: site.name,

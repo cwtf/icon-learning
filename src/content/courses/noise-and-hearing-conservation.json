@@ -1,7 +1,7 @@
 {
   "slug": "noise-and-hearing-conservation",
   "title": "Noise and Hearing Conservation",
-  "subtitle": "A practical workplace safety and health programme focused on noise and hearing conservation.",
+  "subtitle": "A 1-day HRD Corp-claimable safety programme for strengthening awareness and practice in noise and hearing conservation.",
   "categorySlug": "safety-health-environment",
   "durationDays": 1,
   "hrdClaimable": true,
@@ -10,7 +10,7 @@
     "In-house",
     "Workshop"
   ],
-  "whyThisMatters": "Noise and Hearing Conservation helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to risk awareness, prevention, and responsible workplace behavior and apply the learning with more confidence after the workshop.",
+  "whyThisMatters": "Noise and Hearing Conservation helps workplace teams recognize hazards, apply controls, and make noise and hearing conservation part of everyday operations. Participants explore introduction to sound and noise, Introduction To FMA (Noise Exposure Regulation) 1989 OSHA 1994, and hearing protectors and its application so safety expectations become easier to understand, discuss, and act on.",
   "builtFor": [
     "Employees in operational, site-based, or technical roles",
     "Supervisors responsible for daily safety practices",
