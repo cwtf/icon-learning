@@ -14,6 +14,7 @@ const pageEntries = [
   { path: "/about-us/", priority: "0.7" },
   { path: "/clients/", priority: "0.7" },
   { path: "/contact/", priority: "0.8" },
+  { path: "/register/ai-implementation-in-accounting-and-finance-from-strategy-to-optimization/", priority: "0.8" },
   { path: "/accessibility-statement/", priority: "0.3" },
   { path: "/programs/leadership-management-coaching/", priority: "0.8" },
   { path: "/programs/quality-lean-food-safety/", priority: "0.8" },

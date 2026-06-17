@@ -1,0 +1,167 @@
+---
+import Button from "../primitives/Button.astro";
+import type { featuredPublicTraining } from "../../content/publicTraining";
+import workshopImage from "../../../assets/web/photos/ai-workshop-hero-01.jpg";
+
+interface Props {
+  training: typeof featuredPublicTraining;
+}
+
+const { training } = Astro.props;
+---
+
+<section class="featured-training section-pad" aria-labelledby="featured-training-heading">
+  <div class="container-wide">
+    <div class="featured-training-grid">
+      <div class="featured-training-media" data-reveal>
+        <img
+          src={workshopImage.src}
+          width={workshopImage.width}
+          height={workshopImage.height}
+          alt=""
+          loading="lazy"
+        />
+      </div>
+
+      <div class="featured-training-copy" data-reveal>
+        <p class="eyebrow">{training.eyebrow}</p>
+        <h2 id="featured-training-heading" class="display-lg mt-4 text-balance">{training.shortTitle}</h2>
+        <p class="body-lg mt-5 text-[var(--color-ink-muted)]">{training.summary}</p>
+
+        <dl class="featured-training-facts mt-7">
+          <div>
+            <dt>Date</dt>
+            <dd>{training.date}</dd>
+          </div>
+          <div>
+            <dt>Time</dt>
+            <dd>{training.time}</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>{training.mode}</dd>
+          </div>
+          <div>
+            <dt>Category</dt>
+            <dd>{training.category}</dd>
+          </div>
+        </dl>
+
+        <ul class="featured-training-points mt-7">
+          {training.points.map((point) => <li>{point}</li>)}
+        </ul>
+
+        <div class="featured-training-actions mt-8">
+          <Button href={training.registrationHref} size="lg">Register interest</Button>
+          <Button href={training.courseHref} variant="outline" size="lg">View course outline</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured-training {
+    background:
+      linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface-muted) 100%);
+  }
+
+  .featured-training-grid {
+    align-items: stretch;
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .featured-training-media {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    min-height: 20rem;
+    overflow: hidden;
+  }
+
+  .featured-training-media img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .featured-training-copy {
+    min-width: 0;
+    padding-block: clamp(0.5rem, 3vw, 1.5rem);
+  }
+
+  .featured-training-facts {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 0;
+  }
+
+  .featured-training-facts div {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.85rem;
+  }
+
+  .featured-training-facts dt {
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .featured-training-facts dd {
+    color: var(--color-ink);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0.3rem 0 0;
+  }
+
+  .featured-training-points {
+    display: grid;
+    gap: 0.85rem;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .featured-training-points li {
+    align-items: start;
+    color: var(--color-ink-muted);
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 0.5rem 1fr;
+    line-height: 1.55;
+  }
+
+  .featured-training-points li::before {
+    background: var(--color-accent);
+    border-radius: 999px;
+    content: "";
+    height: 0.5rem;
+    margin-top: 0.5rem;
+    width: 0.5rem;
+  }
+
+  .featured-training-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 520px) {
+    .featured-training-facts {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .featured-training-grid {
+      grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
+    }
+  }
+</style>

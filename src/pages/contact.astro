@@ -3,6 +3,7 @@ import Button from "../components/primitives/Button.astro";
 import ContactPanel from "../components/contact/ContactPanel.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { contactPage } from "../content/contact";
+import { featuredPublicTraining } from "../content/publicTraining";
 import { site } from "../content/site";
 import contactHeroImage from "../../assets/web/photos/ai-contact-hero-01.jpg";
 
@@ -111,6 +112,16 @@ const structuredData = [
         <p class="eyebrow">{contactPage.form.eyebrow}</p>
         <h2 class="display-md mt-4">{contactPage.form.heading}</h2>
         <p class="body-copy mt-4 max-w-3xl text-[var(--color-ink-muted)]">{contactPage.form.note}</p>
+
+        <div class="registration-feature mt-6" aria-labelledby="registration-feature-heading">
+          <div>
+            <p class="eyebrow">{featuredPublicTraining.eyebrow}</p>
+            <h3 id="registration-feature-heading">{featuredPublicTraining.shortTitle}</h3>
+            <p>{featuredPublicTraining.scheduleLabel} / {featuredPublicTraining.mode}</p>
+          </div>
+          <Button href={featuredPublicTraining.registrationHref} variant="outline">Open registration form</Button>
+        </div>
+
         <p class="contact-status body-sm mt-4" data-contact-status hidden aria-live="polite"></p>
 
         <form
@@ -254,6 +265,31 @@ const structuredData = [
     padding: 0.75rem 0.85rem;
   }
 
+  .registration-feature {
+    align-items: center;
+    background: var(--color-accent-soft);
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 70%);
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .registration-feature h3 {
+    color: var(--color-ink);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0.75rem 0 0;
+  }
+
+  .registration-feature p:not(.eyebrow) {
+    color: var(--color-ink-muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin: 0.45rem 0 0;
+  }
+
   .contact-form {
     display: grid;
     gap: 1rem;
@@ -349,6 +385,12 @@ const structuredData = [
     .contact-field-grid,
     .contact-faq-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 640px) {
+    .registration-feature {
+      grid-template-columns: minmax(0, 1fr) auto;
     }
   }
 

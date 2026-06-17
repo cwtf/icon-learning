@@ -1,0 +1,499 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/primitives/Button.astro";
+import ContactPanel from "../../components/contact/ContactPanel.astro";
+import { featuredPublicTraining } from "../../content/publicTraining";
+import { site } from "../../content/site";
+import registrationHeroImage from "../../../assets/web/photos/ai-contact-hero-01.jpg";
+
+export function getStaticPaths() {
+  return [
+    {
+      params: {
+        course: "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+      },
+    },
+  ];
+}
+
+const sheetEndpoint = import.meta.env.PUBLIC_GOOGLE_SHEET_REGISTRATION_ENDPOINT ?? "";
+const pageTitle = `${featuredPublicTraining.shortTitle} Registration | Icon Learning`;
+const pageDescription = `Register for ${featuredPublicTraining.title}, an online public training programme on ${featuredPublicTraining.date}, ${featuredPublicTraining.time}.`;
+const pageUrl = new URL(featuredPublicTraining.registrationHref, site.url).toString();
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Register",
+        item: pageUrl,
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: featuredPublicTraining.title,
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    startDate: "2026-08-13T09:00:00+08:00",
+    endDate: "2026-08-13T17:00:00+08:00",
+    location: {
+      "@type": "VirtualLocation",
+      url: pageUrl,
+    },
+    organizer: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+    description: featuredPublicTraining.summary,
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <section
+    class="registration-hero photo-hero"
+    style={`--photo-hero-image: url("${registrationHeroImage.src}"); --photo-hero-position: center right; --photo-hero-mobile-position: 64% center;`}
+  >
+    <div class="container-wide">
+      <div class="registration-breadcrumb body-sm" data-reveal>
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>Register</span>
+      </div>
+
+      <div class="mt-8 max-w-4xl">
+        <p class="eyebrow" data-reveal>{featuredPublicTraining.eyebrow}</p>
+        <h1 class="display-xl mt-4 text-balance" data-reveal>{featuredPublicTraining.shortTitle}</h1>
+        <p class="body-lg mt-5 max-w-3xl text-[var(--color-ink-muted)]" data-reveal>{featuredPublicTraining.summary}</p>
+        <div class="registration-hero-facts mt-7" data-reveal>
+          <span>{featuredPublicTraining.date}</span>
+          <span>{featuredPublicTraining.time}</span>
+          <span>{featuredPublicTraining.mode}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad pt-0">
+    <div class="container-wide registration-layout">
+      <div class="registration-form-shell" data-reveal>
+        <p class="eyebrow">Registration form</p>
+        <h2 class="display-md mt-4">Reserve a seat for this public run</h2>
+        <p class="body-copy mt-4 max-w-3xl text-[var(--color-ink-muted)]">
+          Submit company and participant details. Your response will be sent to Icon Learning's registration sheet for follow-up.
+        </p>
+        <p class="registration-status body-sm mt-4" data-registration-status hidden aria-live="polite"></p>
+
+        <form
+          class="registration-form mt-7"
+          action={sheetEndpoint || "#"}
+          method="post"
+          data-registration-form
+          data-sheet-endpoint={sheetEndpoint}
+        >
+          <input type="hidden" name="courseTitle" value={featuredPublicTraining.title} />
+          <input type="hidden" name="courseCategory" value={featuredPublicTraining.category} />
+          <input type="hidden" name="courseDate" value={featuredPublicTraining.date} />
+          <input type="hidden" name="courseTime" value={featuredPublicTraining.time} />
+          <input type="hidden" name="courseFormat" value={featuredPublicTraining.mode} />
+          <input type="hidden" name="sourcePage" value={featuredPublicTraining.registrationHref} />
+          <input type="hidden" name="submittedAt" value="" data-submitted-at />
+          <input type="hidden" name="registrationPayload" value="" data-registration-payload />
+
+          <label class="registration-honeypot" aria-hidden="true">
+            <span>Website</span>
+            <input name="website" type="text" tabindex="-1" autocomplete="off" />
+          </label>
+
+          <div class="registration-field-grid">
+            <label>
+              <span>Company</span>
+              <input name="company" type="text" autocomplete="organization" required />
+            </label>
+
+            <label>
+              <span>Number of seats</span>
+              <input name="seats" type="number" min="1" max="50" step="1" value="1" inputmode="numeric" data-seat-count required />
+            </label>
+          </div>
+
+          <div class="participant-list" data-participant-list aria-live="polite">
+            <fieldset class="participant-card" data-participant-index="1">
+              <legend>Participant 1</legend>
+              <div class="registration-field-grid">
+                <label>
+                  <span>Full name</span>
+                  <input name="participantName" type="text" autocomplete="name" required />
+                </label>
+
+                <label>
+                  <span>NRIC</span>
+                  <input name="participantNric" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 900101-10-1234" required />
+                </label>
+
+                <label>
+                  <span>Email</span>
+                  <input name="participantEmail" type="email" autocomplete="email" required />
+                </label>
+
+                <label>
+                  <span>Phone/WhatsApp</span>
+                  <input name="participantPhone" type="tel" autocomplete="tel" required />
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <label>
+            <span>Notes</span>
+            <textarea name="notes" rows="5" placeholder="Share HRD claim details, participant names, purchase order notes, or questions."></textarea>
+          </label>
+
+          <label class="registration-consent">
+            <input name="consent" type="checkbox" value="Yes" required />
+            <span>I agree for Icon Learning to contact me about this registration.</span>
+          </label>
+
+          <div class="registration-submit-row">
+            <Button type="submit" variant="filled-ink" data-registration-submit="">Submit registration</Button>
+            <p class="body-sm text-[var(--color-ink-muted)]">
+              Need help? <a href={site.whatsappHref}>WhatsApp Icon Learning</a>.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <aside class="registration-aside" aria-label="Training details">
+        <div class="registration-summary" data-reveal>
+          <p class="eyebrow">Training details</p>
+          <h2>{featuredPublicTraining.shortTitle}</h2>
+
+          <dl>
+            <div>
+              <dt>Date</dt>
+              <dd>{featuredPublicTraining.date}</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>{featuredPublicTraining.time}</dd>
+            </div>
+            <div>
+              <dt>Format</dt>
+              <dd>{featuredPublicTraining.mode}</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>{featuredPublicTraining.category}</dd>
+            </div>
+          </dl>
+
+          <div class="mt-6 grid gap-3">
+            <Button href={featuredPublicTraining.courseHref} variant="outline" class="w-full">View course outline</Button>
+          </div>
+        </div>
+
+        <ContactPanel heading="Need help registering?" />
+      </aside>
+    </div>
+  </section>
+
+  <script>
+    import "../../components/register/GoogleSheetRegistration.client";
+  </script>
+</BaseLayout>
+
+<style>
+  .registration-hero {
+    padding-block: calc(var(--nav-height) + 4.5rem) clamp(3rem, 7vw, 5.5rem);
+  }
+
+  .registration-breadcrumb {
+    align-items: center;
+    color: var(--color-ink-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .registration-breadcrumb a {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+
+  .registration-hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .registration-hero-facts span {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-ink);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.6rem 0.85rem;
+  }
+
+  .registration-layout {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .registration-form-shell,
+  .registration-summary {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .registration-status {
+    background: var(--color-accent-soft);
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 70%);
+    border-radius: 8px;
+    color: var(--color-ink);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .registration-status[data-tone="success"] {
+    background: var(--color-success-soft);
+    border-color: color-mix(in srgb, var(--color-success-soft), var(--color-ink) 16%);
+  }
+
+  .registration-status[data-tone="error"] {
+    background: var(--color-warning-soft);
+    border-color: color-mix(in srgb, var(--color-warning-soft), var(--color-ink) 18%);
+  }
+
+  .registration-form {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .registration-field-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .participant-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .participant-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .participant-card[hidden] {
+    display: none;
+  }
+
+  .participant-card legend {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding-inline: 0.35rem;
+    text-transform: uppercase;
+  }
+
+  .registration-form :global(.participant-card) {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .registration-form :global(.participant-card legend) {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding-inline: 0.35rem;
+    text-transform: uppercase;
+  }
+
+  .registration-form :global(.participant-card .registration-field-grid) {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .registration-form :global(.participant-card label) {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .registration-form :global(.participant-card label span) {
+    color: var(--color-ink);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .registration-form :global(.participant-card input) {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-ink);
+    min-height: 3rem;
+    padding: 0.8rem 0.95rem;
+    width: 100%;
+  }
+
+  .registration-form :global(.participant-card input::placeholder) {
+    color: var(--color-ink-dim);
+  }
+
+  .registration-form label {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .registration-form label span {
+    color: var(--color-ink);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .registration-form input,
+  .registration-form select,
+  .registration-form textarea {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-ink);
+    min-height: 3rem;
+    padding: 0.8rem 0.95rem;
+    width: 100%;
+  }
+
+  .registration-form textarea {
+    min-height: 8rem;
+    resize: vertical;
+  }
+
+  .registration-form input::placeholder,
+  .registration-form textarea::placeholder {
+    color: var(--color-ink-dim);
+  }
+
+  .registration-honeypot {
+    left: -9999px;
+    position: absolute;
+  }
+
+  .registration-consent {
+    align-items: start;
+    display: flex !important;
+    gap: 0.75rem !important;
+  }
+
+  .registration-consent input {
+    min-height: 1rem;
+    margin-top: 0.25rem;
+    width: 1rem;
+  }
+
+  .registration-submit-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .registration-submit-row a {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .registration-aside {
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .registration-summary h2 {
+    color: var(--color-ink);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem 0 0;
+  }
+
+  .registration-summary dl {
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    gap: 0;
+    margin: 1.25rem 0 0;
+  }
+
+  .registration-summary dl div {
+    border-bottom: 1px solid var(--color-border);
+    display: grid;
+    gap: 0.45rem;
+    padding: 0.85rem 0;
+  }
+
+  .registration-summary dt {
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .registration-summary dd {
+    color: var(--color-ink);
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .registration-field-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .registration-form :global(.participant-card .registration-field-grid) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .registration-layout {
+      align-items: start;
+      grid-template-columns: minmax(0, 0.64fr) minmax(18rem, 0.36fr);
+    }
+
+    .registration-aside {
+      position: sticky;
+      top: calc(var(--nav-height) + 2rem);
+    }
+  }
+</style>

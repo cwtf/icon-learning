@@ -8,6 +8,7 @@ interface Props {
   size?: Size;
   class?: string;
   type?: "button" | "submit" | "reset";
+  [key: string]: unknown;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   size = "md",
   class: className,
   type = "button",
+  ...rest
 } = Astro.props;
 
 const base =
@@ -42,11 +44,11 @@ const classes = [base, variants[variant], sizes[size], className].filter(Boolean
 
 {
   href ? (
-    <a class={classes} href={href}>
+    <a {...rest} class={classes} href={href}>
       <slot />
     </a>
   ) : (
-    <button class={classes} type={type}>
+    <button {...rest} class={classes} type={type}>
       <slot />
     </button>
   )

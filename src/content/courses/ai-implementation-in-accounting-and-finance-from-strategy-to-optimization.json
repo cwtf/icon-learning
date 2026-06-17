@@ -7,6 +7,7 @@
   "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": [
+    "Public",
     "In-house",
     "Workshop"
   ],
