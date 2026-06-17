@@ -349,10 +349,10 @@
       "warnings": []
     },
     {
-      "slug": "corporate-image-and-grooming-training-jannette",
-      "title": "CORPORATE IMAGE AND GROOMING TRAINING - Jannette",
+      "slug": "corporate-image-and-grooming-training",
+      "title": "CORPORATE IMAGE AND GROOMING TRAINING",
       "categorySlug": "communication-personal-effectiveness",
-      "path": "src/content/courses/corporate-image-and-grooming-training-jannette.json",
+      "path": "src/content/courses/corporate-image-and-grooming-training.json",
       "sourceDoc": "course/documents-markdown/CORPORATE IMAGE AND GROOMING TRAINING - Jannette.md",
       "hrdClaimable": true,
       "relatedSlugs": [
