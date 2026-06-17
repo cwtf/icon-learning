@@ -16,7 +16,9 @@ export function getStaticPaths() {
   ];
 }
 
-const sheetEndpoint = import.meta.env.PUBLIC_GOOGLE_SHEET_REGISTRATION_ENDPOINT ?? "";
+const defaultSheetEndpoint =
+  "https://script.google.com/macros/s/AKfycbziPt8sD7uZRYNnwaCZrrnF5O1RczNqHNfWCKNQrzTTCQB3e6kvlvxwEk_hjziT5HMQjA/exec";
+const sheetEndpoint = import.meta.env.PUBLIC_GOOGLE_SHEET_REGISTRATION_ENDPOINT || defaultSheetEndpoint;
 const pageTitle = `${featuredPublicTraining.shortTitle} Registration | Icon Learning`;
 const pageDescription = `Register for ${featuredPublicTraining.title}, an online public training programme on ${featuredPublicTraining.date}, ${featuredPublicTraining.time}.`;
 const pageUrl = new URL(featuredPublicTraining.registrationHref, site.url).toString();
