@@ -1,5 +1,5 @@
 const SHEET_NAME = "Registrations";
-const SCRIPT_VERSION = "participant-rows-v3";
+const SCRIPT_VERSION = "participant-rows-v6";
 
 function doGet() {
   return ContentService.createTextOutput(`Icon Learning registration endpoint: ${SCRIPT_VERSION}`);
@@ -43,7 +43,7 @@ function doPost(event) {
         phone: participantPhones[index] || "",
       }));
   const submittedAt = values.submittedAt || new Date().toISOString();
-  const seatCount = Number(payload.seats || values.seats || participants.length || 1);
+  const seatCount = Number(values.seats || payload.seats || participants.length || 1);
   const rowCount = Math.max(
     Number.isFinite(seatCount) ? seatCount : 1,
     participants.length
@@ -57,7 +57,7 @@ function doPost(event) {
     values.courseTime || "",
     values.courseFormat || "",
     values.company || "",
-    values.seats || payload.seats || "",
+    seatCount,
     index + 1,
     participants[index]?.name || "",
     participants[index]?.nric || "",
