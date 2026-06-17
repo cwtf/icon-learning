@@ -8,6 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "courses:inventory": "node scripts/course-inventory.mjs",
+    "courses:checklist": "node scripts/course-markdown-checklist.mjs",
+    "documents:markdown": "node scripts/pandoc-documents.mjs",
     "courses:review": "node scripts/course-review.mjs",
     "qa:launch": "node scripts/launch-qa.mjs",
     "typecheck": "astro check"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-21T12:53:22.589Z",
+  "generatedAt": "2026-06-17T09:52:45.185Z",
   "totals": {
     "coursesReviewed": 10,
     "hardFailures": 0,
@@ -17,7 +17,7 @@
       "title": "Awareness in the New QMS ISO 9001",
       "categorySlug": "quality-lean-food-safety",
       "path": "src/content/courses/awareness-in-the-new-qms-iso-9001.json",
-      "sourceDoc": "course/documents/AWARENESS IN THE NEW QMS ISO 9001.pdf",
+      "sourceDoc": "course/documents/PDF/AWARENESS IN THE NEW QMS ISO 9001.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "kursus-pengendalian-makanan",
@@ -33,7 +33,7 @@
       "title": "Business Financial Skills for Non-Financial Personnel",
       "categorySlug": "finance-taxation",
       "path": "src/content/courses/business-financial-skills-for-non-financial-personnel.json",
-      "sourceDoc": "course/documents/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.pdf",
+      "sourceDoc": "course/documents/PDF/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "mastering-incoterms-2020-rulings",
@@ -49,7 +49,7 @@
       "title": "Customer Care Workshop",
       "categorySlug": "sales-marketing-customer-service",
       "path": "src/content/courses/customer-care-workshop.json",
-      "sourceDoc": "course/documents/CUSTOMER CARE WORKSHOP.pdf",
+      "sourceDoc": "course/documents/PDF/CUSTOMER CARE WORKSHOP.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "leadership-boot-camp-leading-with-impact",
@@ -65,7 +65,7 @@
       "title": "Kursus Pengendalian Makanan",
       "categorySlug": "quality-lean-food-safety",
       "path": "src/content/courses/kursus-pengendalian-makanan.json",
-      "sourceDoc": "course/documents/KURSUS PENGENDALIAN MAKANAN.pdf",
+      "sourceDoc": "course/documents/PDF/KURSUS PENGENDALIAN MAKANAN.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "awareness-in-the-new-qms-iso-9001",
@@ -81,7 +81,7 @@
       "title": "Leadership Boot Camp: Leading With Impact",
       "categorySlug": "leadership-management-coaching",
       "path": "src/content/courses/leadership-boot-camp-leading-with-impact.json",
-      "sourceDoc": "course/documents/LEADERSHIP BOOT CAMP - LEADING WITH IMPACT.pdf",
+      "sourceDoc": "course/documents/PDF/Leadership Boot Camp - Leading With Impact.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "teambuilding-for-high-performance-3days",
@@ -97,7 +97,7 @@
       "title": "Mastering Incoterms 2020 Rulings",
       "categorySlug": "supply-chain-shipping-warehousing",
       "path": "src/content/courses/mastering-incoterms-2020-rulings.json",
-      "sourceDoc": "course/documents/MASTERING INCOTERMS 2020 RULINGS.pdf",
+      "sourceDoc": "course/documents/PDF/MASTERING INCOTERMS 2020 RULINGS.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "business-financial-skills-for-non-financial-personnel",
@@ -113,7 +113,7 @@
       "title": "Occupational Safety and Health at the Workplace",
       "categorySlug": "safety-health-environment",
       "path": "src/content/courses/occupational-safety-and-health-at-work-place.json",
-      "sourceDoc": "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.pdf",
+      "sourceDoc": "course/documents/PDF/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "awareness-in-the-new-qms-iso-9001",
@@ -129,7 +129,7 @@
       "title": "Teambuilding for High Performance",
       "categorySlug": "communication-personal-effectiveness",
       "path": "src/content/courses/teambuilding-for-high-performance-3days.json",
-      "sourceDoc": "course/documents/Teambuilding For High Performance  3days.pdf",
+      "sourceDoc": "course/documents/PDF/Teambuilding For High Performance  3days.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "leadership-boot-camp-leading-with-impact",
@@ -145,7 +145,7 @@
       "title": "Understanding the Labour Law",
       "categorySlug": "hr-employment-law",
       "path": "src/content/courses/understanding-the-labour-law.json",
-      "sourceDoc": "course/documents/UNDERSTANDING THE LABOUR LAW.pdf",
+      "sourceDoc": "course/documents/PDF/UNDERSTANDING THE LABOUR LAW.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "leadership-boot-camp-leading-with-impact",
@@ -161,7 +161,7 @@
       "title": "Work Smarter, Prompt Better",
       "categorySlug": "microsoft-ai-digital-skills",
       "path": "src/content/courses/work-smarter-prompt-better.json",
-      "sourceDoc": "course/documents/Work Smarter^J Prompt Better - course outline.pdf",
+      "sourceDoc": "course/documents/PDF/Work Smarter^J Prompt Better - course outline.pdf",
       "hrdClaimable": true,
       "relatedSlugs": [
         "business-financial-skills-for-non-financial-personnel",

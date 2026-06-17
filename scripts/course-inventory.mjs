@@ -1,7 +1,9 @@
-import { mkdir, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const documentsDir = path.join("course", "documents");
+const sourceDirectories = [
+  path.join("course", "documents-markdown"),
+];
 const curationDir = path.join("src", "content", "courses", "_curation");
 const outputPath = path.join(curationDir, "inventory.json");
 
@@ -148,11 +150,10 @@ const categoryRules = [
 ];
 
 const extensionRank = new Map([
-  [".pdf", 4],
-  [".docx", 3],
-  [".doc", 2],
-  [".pptx", 1],
+  [".md", 2],
+  [".markdown", 1],
 ]);
+const ignoredSourceFiles = new Set(["course_checklist.md", "readme.md"]);
 
 function tidyName(value) {
   return value
@@ -230,18 +231,38 @@ function candidateScore(file) {
   return sourceBoost + extScore * 100_000_000 + file.size;
 }
 
-const entries = await readdir(documentsDir, { withFileTypes: true });
-const files = entries
-  .filter((entry) => entry.isFile())
-  .map((entry) => entry.name)
-  .filter((name) => extensionRank.has(path.extname(name).toLowerCase()))
+async function listSourceFiles(dir) {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      files.push(...(await listSourceFiles(fullPath)));
+    } else if (
+      entry.isFile() &&
+      extensionRank.has(path.extname(entry.name).toLowerCase()) &&
+      !ignoredSourceFiles.has(entry.name.toLowerCase())
+    ) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
+const files = (
+  await Promise.all(sourceDirectories.map((sourceDirectory) => listSourceFiles(sourceDirectory)))
+)
+  .flat()
   .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
 
 const groups = new Map();
 
-for (const filename of files) {
-  const fullPath = path.join(documentsDir, filename);
-  const stat = await import("node:fs/promises").then(({ stat }) => stat(fullPath));
+for (const fullPath of files) {
+  const filename = path.basename(fullPath);
+  const fileStat = await stat(fullPath);
   const title = baseTitle(filename);
   const slug = slugify(title);
   const file = {
@@ -249,7 +270,7 @@ for (const filename of files) {
     path: fullPath.replaceAll("\\", "/"),
     extension: path.extname(filename).toLowerCase(),
     kind: isItinerary(filename) ? "itinerary" : "source",
-    size: stat.size,
+    size: fileStat.size,
     inferredDurationDays: inferDurationDays(filename),
     inferredLanguage: inferLanguage(filename),
   };
@@ -287,7 +308,7 @@ const courses = [...groups.values()]
       inferredLanguage: canonical.inferredLanguage,
       duplicateOrSupportingSources: duplicates,
       flags: [
-        ...(canonical.extension !== ".pdf" ? ["canonical-is-not-pdf"] : []),
+        ...(!extensionRank.has(canonical.extension) ? ["canonical-is-not-markdown"] : []),
         ...(canonical.kind === "itinerary" ? ["canonical-is-itinerary"] : []),
         ...(duplicates.length > 0 ? ["has-duplicates-or-supporting-sources"] : []),
         ...(inferredDurationDays === null ? ["duration-not-inferred"] : []),
@@ -298,19 +319,19 @@ const courses = [...groups.values()]
 
 const inventory = {
   schemaVersion: 1,
-  sourceDirectory: documentsDir.replaceAll("\\", "/"),
+  sourceDirectories: sourceDirectories.map((sourceDirectory) => sourceDirectory.replaceAll("\\", "/")),
   rules: {
     canonicalPreference: [
       "Prefer non-itinerary outlines over itinerary files.",
-      "Prefer PDF over DOCX, then DOC, then PPTX.",
-      "Within the same format, prefer the larger file as the richer outline.",
+      "Use generated Markdown files under course/documents-markdown as the curation source.",
+      "Within the same title group, prefer the larger file as the richer outline.",
     ],
     hrdClaimable: "Not inferred here. Course JSON must stay false unless confirmed from source review.",
   },
   totals: {
     sourceFiles: files.length,
     courseGroups: courses.length,
-    pdfFiles: files.filter((name) => path.extname(name).toLowerCase() === ".pdf").length,
+    markdownFiles: files.filter((file) => extensionRank.has(path.extname(file).toLowerCase())).length,
   },
   courses,
 };

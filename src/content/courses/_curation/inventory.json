@@ -1,34 +1,33 @@
 {
   "schemaVersion": 1,
-  "sourceDirectory": "course/documents",
+  "sourceDirectories": [
+    "course/documents-markdown"
+  ],
   "rules": {
     "canonicalPreference": [
       "Prefer non-itinerary outlines over itinerary files.",
-      "Prefer PDF over DOCX, then DOC, then PPTX.",
-      "Within the same format, prefer the larger file as the richer outline."
+      "Use generated Markdown files under course/documents-markdown as the curation source.",
+      "Within the same title group, prefer the larger file as the richer outline."
     ],
     "hrdClaimable": "Not inferred here. Course JSON must stay false unless confirmed from source review."
   },
   "totals": {
-    "sourceFiles": 358,
-    "courseGroups": 175,
-    "pdfFiles": 181
+    "sourceFiles": 116,
+    "courseGroups": 107,
+    "markdownFiles": 116
   },
   "courses": [
     {
       "slug": "10-key-tools-for-work-success",
       "title": "10 Key Tools For Work Success",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/10 Key Tools For Work Success.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/10 Key Tools For Work Success.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/10 Key Tools For Work Success.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -36,17 +35,14 @@
       "slug": "1st-class-hospitality-service",
       "title": "1st Class Hospitality Service",
       "categorySlug": "sales-marketing-customer-service",
-      "canonicalSource": "course/documents/1st Class Hospitality Service.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/1st Class Hospitality Service.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 1,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [
-        "course/documents/1st Class Hospitality Service - 1 day.pdf",
-        "course/documents/1st Class Hospitality Service - 1 day (Itinerary).pdf",
-        "course/documents/1st Class Hospitality Service.docx",
-        "course/documents/1st Class Hospitality Service - 1 day.docx",
-        "course/documents/1st Class Hospitality Service - 1 day (Itinerary).docx"
+        "course/documents-markdown/1st Class Hospitality Service - 1 day.md",
+        "course/documents-markdown/1st Class Hospitality Service - 1 day (Itinerary).md"
       ],
       "flags": [
         "has-duplicates-or-supporting-sources"
@@ -56,16 +52,13 @@
       "slug": "5s-best-practices-for-organized",
       "title": "5S Best Practices for Organized",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/5S Best Practices for Organized.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/5S Best Practices for Organized.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/5S Best Practices for Organized.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -73,102 +66,37 @@
       "slug": "6s-toward-a-quality-management",
       "title": "6S TOWARD A QUALITY MANAGEMENT",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/6S TOWARD A QUALITY MANAGEMENT ITINERARY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/6S TOWARD A QUALITY MANAGEMENT ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/6S TOWARD A QUALITY MANAGEMENT ITINERARY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "6s-towards-a-quality-management",
-      "title": "6S Towards A Quality Management",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/6S Towards A Quality Management - 1D.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/6S Towards A Quality Management.pdf",
-        "course/documents/6S Towards A Quality Management.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
       ]
     },
     {
       "slug": "7qc-tools",
       "title": "7QC Tools",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/7QC Tools.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/7QC Tools.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/7QC Tools.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
     {
-      "slug": "ai-marketing",
-      "title": "AI Marketing",
+      "slug": "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+      "title": "AI Implementation in Accounting and Finance_ From Strategy to Optimization",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/AI Marketing- 1D.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [],
-      "flags": []
-    },
-    {
-      "slug": "ai-marketing-docx",
-      "title": "AI Marketing- .docx",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/AI Marketing- 1D.docx.doc",
-      "sourceFormat": "doc",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [],
-      "flags": [
-        "canonical-is-not-pdf"
-      ]
-    },
-    {
-      "slug": "anti-bribery-and-anti-corruption",
-      "title": "ANTI-BRIBERY AND ANTI-CORRUPTION",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/ANTI-BRIBERY AND ANTI-CORRUPTION (1 day) .pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/ANTI-BRIBERY AND ANTI-CORRUPTION (1 day) -Rev.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "application-of-employment-act-absenteeism-and-misconduct",
-      "title": "Application of Employment Act - Absenteeism and Misconduct",
-      "categorySlug": "hr-employment-law",
-      "canonicalSource": "course/documents/Application of Employment Act - Absenteeism and Misconduct.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/AI Implementation in Accounting ^0 Finance_ From Strategy to Optimization.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
@@ -181,16 +109,13 @@
       "slug": "authentic",
       "title": "AUTHENTIC",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/AUTHENTIC.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/AUTHENTIC.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/AUTHENTIC.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -198,17 +123,13 @@
       "slug": "automobile-sales-training-realigning-the-drive-mindset",
       "title": "Automobile Sales Training - Realigning The Drive Mindset",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Automobile Sales Training - Realigning The Drive Mindset.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Automobile Sales Training - Realigning The Drive Mindset.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Automobile Sales Training - Realigning The Drive Mindset.docx",
-        "course/documents/Automobile Sales Training - Realigning The Drive Mindset.doc"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -216,16 +137,13 @@
       "slug": "awareness-in-the-new-qms-iso-9001",
       "title": "AWARENESS IN THE NEW QMS ISO 9001",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/AWARENESS IN THE NEW QMS ISO 9001.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/AWARENESS IN THE NEW QMS ISO 9001.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/AWARENESS IN THE NEW QMS ISO 9001.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -233,16 +151,13 @@
       "slug": "awareness-of-environmental-management-systems-iso-14001",
       "title": "Awareness of Environmental Management Systems ISO 14001",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Awareness of Environmental Management Systems ISO 14001.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Awareness of Environmental Management Systems ISO 14001.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Awareness of Environmental Management Systems ISO 14001.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -250,32 +165,25 @@
       "slug": "building-an-engaged-team",
       "title": "Building An Engaged Team",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Building An Engaged Team (2D).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Building An Engaged Team (2D).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Building An Engaged Team (2D).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "building-positive-influence",
       "title": "Building Positive Influence",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Building Positive Influence.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Building Positive Influence.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Building Positive Influence.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -283,16 +191,13 @@
       "slug": "building-positive-influence-itinarery",
       "title": "BUILDING POSITIVE INFLUENCE ITINARERY",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/BUILDING POSITIVE INFLUENCE ITINARERY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/BUILDING POSITIVE INFLUENCE ITINARERY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/BUILDING POSITIVE INFLUENCE ITINARERY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -300,16 +205,13 @@
       "slug": "business-financial-skills-for-non-financial-personnels",
       "title": "BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS",
       "categorySlug": "finance-taxation",
-      "canonicalSource": "course/documents/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/BUSINESS FINANCIAL SKILLS for NON FINANCIAL PERSONNELS.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -317,41 +219,20 @@
       "slug": "business-strategy-development-in-a-vuca-world",
       "title": "BUSINESS STRATEGY DEVELOPMENT IN A VUCA WORLD",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/BUSINESS STRATEGY DEVELOPMENT IN A VUCA WORLD ( 2 DAYS).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/BUSINESS STRATEGY DEVELOPMENT IN A VUCA WORLD ( 2 DAYS).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/BUSINESS STRATEGY DEVELOPMENT IN A VUCA WORLD ( 2 DAYS).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "change-management-managing-mindset-for-peak-performance",
       "title": "Change Management- Managing Mindset for Peak Performance",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Change Management- Managing Mindset for Peak Performance.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Change Management- Managing Mindset for Peak Performance.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "change-your-habits-change-your-life",
-      "title": "Change Your Habits Change Your Life",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Change Your Habits  Change Your Life.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Change Management- Managing Mindset for Peak Performance.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
@@ -364,14 +245,13 @@
       "slug": "change-your-habits-change-yur-life",
       "title": "Change Your Habits Change Yur Life",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Change Your Habits  Change Yur Life.docx",
-      "sourceFormat": "docx",
+      "canonicalSource": "course/documents-markdown/Change Your Habits  Change Yur Life.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
       "flags": [
-        "canonical-is-not-pdf",
         "duration-not-inferred"
       ]
     },
@@ -379,82 +259,27 @@
       "slug": "chemical-safe-and-right-use-of-ppe",
       "title": "CHEMICAL SAFE AND RIGHT USE OF PPE",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/CHEMICAL SAFE AND RIGHT  USE OF PPE.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/CHEMICAL SAFE  AND RIGHT USE OF PPE.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/CHEMICAL SAFE  AND RIGHT USE OF PPE.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "coaching-and-mentoring-for-leadership-success",
-      "title": "COACHING & MENTORING - FOR LEADERSHIP SUCCESS",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/COACHING & MENTORING - FOR LEADERSHIP SUCCESS.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/COACHING & MENTORING - FOR LEADERSHIP SUCCESS.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "coaching-and-mentoring-for-organization-effectiveness",
-      "title": "COACHING & MENTORING - FOR ORGANIZATION EFFECTIVENESS",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/COACHING & MENTORING - FOR ORGANIZATION EFFECTIVENESS 3 DAYS (1).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 3,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/COACHING & MENTORING - FOR ORGANIZATION EFFECTIVENESS 3 DAYS.pdf",
-        "course/documents/ITINERARY - COACHING ^0 MENTORING - FOR ORGANIZATION EFFECTIVENESS 3 DAYS (1).doc",
-        "course/documents/COACHING ^L0 MENTORING - FOR ORGANIZATION EFFECTIVENESS 3 DAYS (1) - ITINERARY.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "coaching-ll0-mentoring-for-organization-effectiveness",
-      "title": "COACHING LL0 MENTORING - FOR ORGANIZATION EFFECTIVENESS",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/COACHING ^LL0 MENTORING - FOR ORGANIZATION EFFECTIVENESS 3 DAYS (1) - ITINERARY.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 3,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
       "flags": [
-        "canonical-is-itinerary"
+        "duration-not-inferred"
       ]
     },
     {
       "slug": "coaching-skill-how-to-develop-your-people",
       "title": "COACHING SKILL - HOW TO DEVELOP YOUR PEOPLE",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/COACHING SKILL – HOW TO DEVELOP YOUR PEOPLE.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/COACHING SKILL – HOW TO DEVELOP YOUR PEOPLE.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/COACHING SKILL – HOW TO DEVELOP YOUR PEOPLE.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -462,17 +287,14 @@
       "slug": "coaching-skill-how-to-developoment-your-people",
       "title": "COACHING SKILL- How to Developoment Your People",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/COACHING SKILL- How to Developoment Your People Itinerary.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/COACHING SKILL- How to Developoment Your People Itinerary.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/COACHING SKILL- How to Developoment Your People Itinerary.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -480,16 +302,13 @@
       "slug": "communicate-and-engage-using-nlp",
       "title": "Communicate And Engage Using NLP",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Communicate And Engage Using NLP.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Communicate And Engage Using NLP.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Communicate And Engage Using NLP.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -497,16 +316,13 @@
       "slug": "complaints-management",
       "title": "Complaints Management",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Complaints Management.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Complaints Management.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Complaints Management.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -514,16 +330,13 @@
       "slug": "conflict-management-and-resolution-in-the-workplace",
       "title": "Conflict Management & Resolution In The Workplace",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Conflict Management & Resolution In The Workplace.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Conflict Management & Resolution In The Workplace.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Conflict Management & Resolution In The Workplace.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -531,31 +344,14 @@
       "slug": "conflict-management-and-resolution-inthe-workplace",
       "title": "CONFLICT MANAGEMENT AND RESOLUTION INTHE WORKPLACE",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/CONFLICT MANAGEMENT AND RESOLUTION INTHE WORKPLACE ITINERARY.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/CONFLICT MANAGEMENT AND RESOLUTION INTHE WORKPLACE ITINERARY.docx"
-      ],
-      "flags": [
-        "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "corporate-image-and-grooming-training",
-      "title": "CORPORATE IMAGE AND GROOMING TRAINING",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/CORPORATE IMAGE AND GROOMING TRAINING .pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/CONFLICT MANAGEMENT AND RESOLUTION INTHE WORKPLACE ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
       "flags": [
+        "canonical-is-itinerary",
         "duration-not-inferred"
       ]
     },
@@ -563,14 +359,13 @@
       "slug": "corporate-image-and-grooming-training-jannette",
       "title": "CORPORATE IMAGE AND GROOMING TRAINING - Jannette",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/CORPORATE IMAGE AND GROOMING TRAINING - Jannette.docx",
-      "sourceFormat": "docx",
+      "canonicalSource": "course/documents-markdown/CORPORATE IMAGE AND GROOMING TRAINING - Jannette.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
       "flags": [
-        "canonical-is-not-pdf",
         "duration-not-inferred"
       ]
     },
@@ -578,16 +373,13 @@
       "slug": "credit-control-management",
       "title": "Credit Control Management",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Credit Control Management.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Credit Control Management.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Credit Control Management.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -595,15 +387,13 @@
       "slug": "critical-thinking-in-problem-solving",
       "title": "CRITICAL THINKING IN PROBLEM SOLVING",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/CRITICAL THINKING IN PROBLEM SOLVING -ITINERARY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/CRITICAL THINKING IN PROBLEM SOLVING -ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [
-        "course/documents/CRITICAL THINKING IN PROBLEM SOLVING - ITINERARY.pdf",
-        "course/documents/CRITICAL THINKING IN PROBLEM SOLVING - ITINERARY.docx",
-        "course/documents/CRITICAL THINKING IN PROBLEM SOLVING -ITINERARY.docx"
+        "course/documents-markdown/CRITICAL THINKING IN PROBLEM SOLVING - ITINERARY.md"
       ],
       "flags": [
         "canonical-is-itinerary",
@@ -615,16 +405,13 @@
       "slug": "critical-thinking-in-problem-solving-and-decision-making",
       "title": "Critical Thinking In Problem Solving & Decision Making",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Critical Thinking In Problem Solving & Decision Making.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Critical Thinking In Problem Solving & Decision Making.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Critical Thinking In Problem Solving & Decision Making.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -632,25 +419,8 @@
       "slug": "customer-care-workshop",
       "title": "CUSTOMER CARE WORKSHOP",
       "categorySlug": "sales-marketing-customer-service",
-      "canonicalSource": "course/documents/CUSTOMER CARE WORKSHOP.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/CUSTOMER CARE WORKSHOP.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "customer-centric-development-program-3-days",
-      "title": "CUSTOMER_CENTRIC_DEVELOPMENT_PROGRAM_3 DAYS",
-      "categorySlug": "sales-marketing-customer-service",
-      "canonicalSource": "course/documents/CUSTOMER_CENTRIC_DEVELOPMENT_PROGRAM_3 DAYS.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/CUSTOMER CARE WORKSHOP.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
@@ -660,86 +430,16 @@
       ]
     },
     {
-      "slug": "cybersecurity-best-practies",
-      "title": "CyberSecurity Best Practies",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/CyberSecurity Best Practies (1 day).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/CyberSecurity Best Practies (1 day).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "dealing-with-disciplinary-action-at-workplace-ges",
-      "title": "Dealing with Disciplinary Action at Workplace-GES",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Dealing with Disciplinary Action at Workplace-GES.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Dealing with Disciplinary Action at Workplace-GES.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "defensive-driving",
-      "title": "Defensive Driving",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Defensive Driving 1 Day (1).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Defensive Driving 1 Day.pdf",
-        "course/documents/Defensive Driving 1 Day (1).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
       "slug": "defensive-driving-osh-practice-for-truck-drivers",
       "title": "DEFENSIVE DRIVING OSH PRACTICE FOR TRUCK DRIVERS",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/DEFENSIVE DRIVING OSH PRACTICE FOR TRUCK DRIVERS.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/DEFENSIVE DRIVING OSH PRACTICE FOR TRUCK DRIVERS.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/DEFENSIVE DRIVING OSH PRACTICE FOR TRUCK DRIVERS.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "developing-effective-time-management",
-      "title": "Developing Effective Time Management,",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Developing Effective Time Management,.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Developing Effective Time Management,.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -747,32 +447,25 @@
       "slug": "digital-marketing-zero-to-hero",
       "title": "Digital Marketing Zero To Hero",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Digital Marketing Zero To Hero-2 days.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Digital Marketing Zero To Hero-2 days.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Digital Marketing Zero To Hero-2 days.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "digital-transformation-ir4",
       "title": "Digital Transformation- IR4",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Digital Transformation- IR4.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Digital Transformation- IR4.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Digital Transformation- IR4.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -780,66 +473,28 @@
       "slug": "dynamic-personal-development-for-work-excellence",
       "title": "DYNAMIC PERSONAL DEVELOPMENT FOR WORK EXCELLENCE",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/DYNAMIC PERSONAL DEVELOPMENT FOR WORK EXCELLENCE.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/DYNAMIC PERSONAL DEVELOPMENT FOR WORK EXCELLENCE.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/DYNAMIC PERSONAL DEVELOPMENT FOR WORK EXCELLENCE.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "effective-filing",
-      "title": "Effective Filing",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Effective Filing 1 Day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Effective Filing 1 Day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "effective-management-and-office-administration",
-      "title": "Effective Management and Office Administration",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Effective Management and Office Administration 1 day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Effective Management and Office Administration 1 day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
       ]
     },
     {
       "slug": "effective-report-writing-for-business",
       "title": "Effective Report Writing for Business",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Effective Report Writing for Business - Itinerary.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Effective Report Writing for Business - Itinerary.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Effective Report Writing for Business - Itinerary.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -847,33 +502,13 @@
       "slug": "effective-reports-writing-for-business",
       "title": "Effective Reports Writing For Business",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Effective Reports Writing For Business.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Effective Reports Writing For Business.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Effective Reports Writing For Business.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "effective-store-and-warehouse-management-1d",
-      "title": "Effective Store and Warehouse Management_1D",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Effective Store and Warehouse Management_1D.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Effective Store and Warehouse Management_1D.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -881,49 +516,38 @@
       "slug": "elec-safety-awareness-and-risk-management",
       "title": "Elec. Safety Awareness & Risk Management",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Elec. Safety Awareness & Risk Management (2 Days.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Elec. Safety Awareness & Risk Management (2 Days.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Elec. Safety Awareness & Risk Management (2 Days.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "embracing-change",
       "title": "Embracing Change",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Embracing Change (2D).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Embracing Change (2D).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Embracing Change (2D).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "emergency-response-planning",
       "title": "EMERGENCY RESPONSE PLANNING",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/EMERGENCY RESPONSE PLANNING - ITINERARY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/EMERGENCY RESPONSE PLANNING - ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/EMERGENCY RESPONSE PLANNING - ITINERARY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -931,33 +555,13 @@
       "slug": "emergency-response-planning-new-version",
       "title": "EMERGENCY RESPONSE PLANNING NEW VERSION",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/EMERGENCY RESPONSE PLANNING NEW VERSION.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/EMERGENCY RESPONSE PLANNING NEW VERSION.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/EMERGENCY RESPONSE PLANNING NEW VERSION.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "employee-handbook",
-      "title": "EMPLOYEE HANDBOOK",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/EMPLOYEE HANDBOOK.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/EMPLOYEE HANDBOOK.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -965,77 +569,25 @@
       "slug": "english-for-the-workplace-the-importance-of-english-language-skills-for-effective-performance",
       "title": "English for the Workplace The Importance of English Language Skills for Effective Performance",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/English for the Workplace  The Importance of English Language Skills for Effective Performance (3 Days).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/English for the Workplace  The Importance of English Language Skills for Effective Performance (3 Days).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 3,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/English for the Workplace  The Importance of English Language Skills for Effective Performance (3 Days).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "environmental-health-and-safety-ehs-committee-workshop",
-      "title": "ENVIRONMENTAL, HEALTH & SAFETY (EHS) COMMITTEE WORKSHOP",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/ENVIRONMENTAL, HEALTH & SAFETY (EHS) COMMITTEE WORKSHOP.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
-      "flags": [
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "environmental-health-and-safety-ehs-committee-workshop-edward-chong",
-      "title": "ENVIRONMENTAL, HEALTH & SAFETY (EHS) COMMITTEE WORKSHOP-EDWARD CHONG",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/ENVIRONMENTAL, HEALTH & SAFETY (EHS) COMMITTEE WORKSHOP-EDWARD CHONG.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/ENVIRONMENTAL, HEALTH & SAFETY (EHS) COMMITTEE WORKSHOP-EDWARD CHONG.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "excel-advanced-conditional-formatting",
-      "title": "EXCEL ADVANCED CONDITIONAL FORMATTING",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/EXCEL ADVANCED CONDITIONAL FORMATTING.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [],
-      "flags": [
-        "duration-not-inferred"
-      ]
+      "flags": []
     },
     {
       "slug": "excel-functions-and-formulas",
       "title": "Excel Functions & Formulas",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Excel Functions & Formulas.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Excel Functions & Formulas.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Excel Functions & Formulas.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1043,16 +595,13 @@
       "slug": "excel-visualize-dashboard",
       "title": "EXCEL VISUALIZE DASHBOARD",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/EXCEL VISUALIZE DASHBOARD.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/EXCEL VISUALIZE DASHBOARD.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/EXCEL VISUALIZE DASHBOARD.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1060,16 +609,13 @@
       "slug": "excellent-interaction-skills",
       "title": "EXCELLENT INTERACTION SKILLS",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/EXCELLENT INTERACTION SKILLS.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/EXCELLENT INTERACTION SKILLS.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/EXCELLENT INTERACTION SKILLS.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1077,116 +623,27 @@
       "slug": "excellent-interaction-skills-itinarery",
       "title": "EXCELLENT INTERACTION SKILLS ITINARERY",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/EXCELLENT INTERACTION SKILLS ITINARERY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/EXCELLENT INTERACTION SKILLS ITINARERY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/EXCELLENT INTERACTION SKILLS ITINARERY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "failure-mode-and-effects-analysis-fmea",
-      "title": "FAILURE MODE & EFFECTS ANALYSIS (FMEA",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/FAILURE MODE & EFFECTS ANALYSIS (FMEA).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/FAILURE MODE & EFFECTS ANALYSIS (FMEA).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "fire-safety-training-for-fire-squad",
-      "title": "Fire Safety Training For Fire Squad",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/Fire Safety Training For Fire Squad.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Fire Safety Training For Fire Squad.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "first-aid-cpr-at-work-1day",
-      "title": "FIRST AID CPR AT WORK_1day",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/FIRST AID  CPR AT WORK_1day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/FIRST AID  CPR AT WORK_1day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "food-handler-training",
-      "title": "Food Handler Training",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/Food Handler Training (4 hrs).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 0.5,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Food Handler Training (4 hrs).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "forklift-truck-safety",
-      "title": "Forklift Truck Safety",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/Forklift Truck Safety - 1 day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Forklift Truck Safety - 1 day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
       ]
     },
     {
       "slug": "fssc-22000-v6",
       "title": "FSSC 22000 V6",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/FSSC 22000 V6 Training Outline.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/FSSC 22000 V6 Training Outline.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/FSSC 22000 V6 Training Outline.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1194,16 +651,13 @@
       "slug": "fundamental-analysis-for-stock-market",
       "title": "FUNDAMENTAL ANALYSIS FOR STOCK MARKET",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/FUNDAMENTAL ANALYSIS FOR STOCK MARKET.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/FUNDAMENTAL ANALYSIS FOR STOCK MARKET.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/FUNDAMENTAL ANALYSIS FOR STOCK MARKET.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1211,16 +665,13 @@
       "slug": "fundamentals-of-shipping",
       "title": "FUNDAMENTALS OF SHIPPING",
       "categorySlug": "supply-chain-shipping-warehousing",
-      "canonicalSource": "course/documents/FUNDAMENTALS OF SHIPPING.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/FUNDAMENTALS OF SHIPPING.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/FUNDAMENTALS OF SHIPPING.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1228,49 +679,25 @@
       "slug": "gd-and-t",
       "title": "GD&T",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/GD&T (3days).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/GD&T (3days).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 3,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/GD&T (3days).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "get-more-retail-and-walk-in-sales-with-the-power-of-tiktok",
-      "title": "GET MORE RETAIL & WALK IN SALES WITH THE POWER OF TIKTOK",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/GET MORE RETAIL & WALK IN SALES WITH THE POWER OF TIKTOK.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/GET MORE RETAIL & WALK IN SALES WITH THE POWER OF TIKTOK.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "gmp",
       "title": "GMP",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/GMP Outline.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/GMP Outline.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/GMP Outline.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1278,16 +705,13 @@
       "slug": "gmp-and-allergen-management-awareness",
       "title": "GMP & Allergen Management Awareness",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/GMP & Allergen Management Awareness.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/GMP & Allergen Management Awareness.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/GMP & Allergen Management Awareness.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1295,17 +719,14 @@
       "slug": "good-manufacturing-practices",
       "title": "GOOD MANUFACTURING PRACTICES",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/GOOD MANUFACTURING PRACTICES  ITINERARY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/GOOD MANUFACTURING PRACTICES  ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/GOOD MANUFACTURING PRACTICES  ITINERARY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1313,95 +734,25 @@
       "slug": "haccp-internal-quality-audit",
       "title": "HACCP INTERNAL QUALITY AUDIT",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/HACCP INTERNAL QUALITY AUDIT  (2 days).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/HACCP INTERNAL QUALITY AUDIT  (2 days).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/HACCP INTERNAL QUALITY AUDIT  (2 days).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "haccp-principles-and-hazard-analysis-and-haccp-plan",
-      "title": "HACCP Principles and Hazard Analysis and HACCP Plan",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/HACCP Principles^J Hazard Analysis ^0 HACCP Plan (1).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
-      "flags": [
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "haccp-principles-hazard-analysis-and-haccp-plan",
-      "title": "HACCP Principles, Hazard Analysis & HACCP Plan",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/HACCP Principles, Hazard Analysis & HACCP Plan (1).doc",
-      "sourceFormat": "doc",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [],
-      "flags": [
-        "canonical-is-not-pdf",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "halal-competency-training",
-      "title": "Halal Competency Training",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/Halal Competency Training.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "ms",
-      "duplicateOrSupportingSources": [
-        "course/documents/Halal Competency Training.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
+      "flags": []
     },
     {
       "slug": "hazard-analysis-critical-control-point-haccp",
       "title": "HAZARD ANALYSIS CRITICAL CONTROL POINT (HACCP",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/HAZARD ANALYSIS CRITICAL CONTROL POINT (HACCP).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/HAZARD ANALYSIS CRITICAL CONTROL POINT (HACCP).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/HAZARD ANALYSIS CRITICAL CONTROL POINT (HACCP).docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "hazard-identification-risk-assessment-and-risk-control",
-      "title": "Hazard Identification Risk Assessment & Risk Control",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Hazard Identification Risk Assessment & Risk Control.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Hazard Identification Risk Assessment & Risk Control.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1409,16 +760,13 @@
       "slug": "healthy-workplace-happier-employees",
       "title": "HEALTHY WORKPLACE HAPPIER EMPLOYEES",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/HEALTHY WORKPLACE HAPPIER EMPLOYEES.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/HEALTHY WORKPLACE HAPPIER EMPLOYEES.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/HEALTHY WORKPLACE HAPPIER EMPLOYEES.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1426,16 +774,13 @@
       "slug": "hearing-loss-prevention",
       "title": "Hearing Loss Prevention",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Hearing Loss Prevention.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Hearing Loss Prevention.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Hearing Loss Prevention.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1443,100 +788,25 @@
       "slug": "high-impact-selling-skills",
       "title": "High Impact Selling Skills",
       "categorySlug": "sales-marketing-customer-service",
-      "canonicalSource": "course/documents/High Impact Selling Skills (2D).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/High Impact Selling Skills (2D).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/High Impact Selling Skills (2D).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "how-marketing-works-to-build-business",
-      "title": "How Marketing Works To Build Business",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/How Marketing Works To Build Business.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/How Marketing Works To Build Business.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "how-to-conduct-a-domestic-inquiry-and-handle-misconducts1",
-      "title": "How to Conduct a Domestic Inquiry and Handle Misconducts1",
-      "categorySlug": "hr-employment-law",
-      "canonicalSource": "course/documents/How to Conduct a Domestic Inquiry and Handle Misconducts1.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/How to Conduct a Domestic Inquiry and Handle Misconducts1.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "hr-for-non-hr-managers",
-      "title": "HR for Non HR Managers",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/HR for Non HR Managers.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/HR for Non HR Managers.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "human-firewall-course-outline",
-      "title": "human_firewall_course_outline",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/human_firewall_course_outline.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/human_firewall_course_outline.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "improving-negotiation",
       "title": "Improving Negotiation",
       "categorySlug": "sales-marketing-customer-service",
-      "canonicalSource": "course/documents/Improving Negotiation.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Improving Negotiation.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Improving Negotiation.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1544,16 +814,13 @@
       "slug": "iso-9001-2015-internal-quality-auditing-and-audit-report-writing",
       "title": "ISO 9001 2015 Internal Quality Auditing and Audit Report Writing",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/ISO 9001 2015 Internal Quality Auditing and Audit Report Writing.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/ISO 9001 2015 Internal Quality Auditing and Audit Report Writing.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/ISO 9001 2015 Internal Quality Auditing and Audit Report Writing.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1561,32 +828,25 @@
       "slug": "iso-9001-awareness",
       "title": "ISO 9001 Awareness",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/ISO 9001 Awareness 1 day.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/ISO 9001 Awareness 1 day.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 1,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/ISO 9001 Awareness 1 day.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "iso-9001-quality-management-system",
       "title": "ISO 9001 Quality Management System",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/ISO 9001 Quality Management System.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/ISO 9001 Quality Management System.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/ISO 9001 Quality Management System.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1594,65 +854,27 @@
       "slug": "iso-9001-strategic-approach-to-risk-based-thinking",
       "title": "ISO 9001 STRATEGIC APPROACH TO RISK- BASED THINKING",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/ISO 9001 STRATEGIC APPROACH TO RISK- BASED THINKING.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/ISO 9001 STRATEGIC APPROACH TO RISK- BASED THINKING.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/ISO 9001 STRATEGIC APPROACH TO RISK- BASED THINKING.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "key-competencies-for-manager",
-      "title": "Key Competencies for Manager",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Key Competencies for Manager.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Key Competencies for Manager.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "key-performance-indicators-awareness",
-      "title": "KEY PERFORMANCE INDICATORS AWARENESS",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/KEY PERFORMANCE INDICATORS AWARENESS  1 Day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/KEY PERFORMANCE INDICATORS AWARENESS  1 Day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
       ]
     },
     {
       "slug": "kursus-pengendalian-makanan",
       "title": "KURSUS PENGENDALIAN MAKANAN",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/KURSUS PENGENDALIAN MAKANAN.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/KURSUS PENGENDALIAN MAKANAN-converted.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "ms",
       "duplicateOrSupportingSources": [
-        "course/documents/KURSUS PENGENDALIAN MAKANAN - Itinerary.pdf",
-        "course/documents/KURSUS PENGENDALIAN MAKANAN-converted.docx",
-        "course/documents/KURSUS PENGENDALIAN MAKANAN - Itinerary.docx"
+        "course/documents-markdown/KURSUS PENGENDALIAN MAKANAN - Itinerary.md"
       ],
       "flags": [
         "has-duplicates-or-supporting-sources",
@@ -1663,16 +885,13 @@
       "slug": "kursus-persijilan-halal",
       "title": "KURSUS PERSIJILAN HALAL",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/KURSUS PERSIJILAN HALAL.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/KURSUS PERSIJILAN HALAL.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "ms",
-      "duplicateOrSupportingSources": [
-        "course/documents/KURSUS PERSIJILAN HALAL.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1680,16 +899,13 @@
       "slug": "lead-auditor-iso-14001",
       "title": "Lead Auditor ISO 14001",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/Lead Auditor ISO 14001.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Lead Auditor ISO 14001.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Lead Auditor ISO 14001.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1697,32 +913,25 @@
       "slug": "lead-generation-using-social-media-marketing",
       "title": "Lead Generation Using Social Media Marketing",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Lead Generation Using Social Media Marketing - 1 day.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Lead Generation Using Social Media Marketing - 1 day.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 1,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Lead Generation Using Social Media Marketing - 1 day.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "leaders-of-tomorrow-by-icon",
       "title": "Leaders of Tomorrow by Icon",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Leaders of Tomorrow by Icon.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Leaders of Tomorrow by Icon.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Leaders of Tomorrow by Icon.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1730,16 +939,13 @@
       "slug": "leadership-people-management",
       "title": "Leadership + People Management",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Leadership + People Management (2).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Leadership + People Management (2).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Leadership + People Management (2).docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1747,33 +953,13 @@
       "slug": "leadership-boot-camp-leading-with-impact",
       "title": "Leadership Boot Camp - Leading With Impact",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Leadership Boot Camp - Leading With Impact.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Leadership Boot Camp - Leading With Impact.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Leadership Boot Camp - Leading With Impact.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "leadership-skills-of-highly-effective-supervisors",
-      "title": "Leadership Skills Of Highly Effective Supervisors",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Leadership Skills Of Highly Effective Supervisors.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Leadership Skills Of Highly Effective Supervisors.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1781,17 +967,14 @@
       "slug": "leading-and-managing-the-whole-new-self",
       "title": "Leading & Managing The Whole New Self",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Leading & Managing The Whole New Self ITINERARY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Leading & Managing The Whole New Self ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Leading & Managing The Whole New Self ITINERARY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -1799,16 +982,14 @@
       "slug": "leading-and-managing-the-whole-new-self-moving-forward",
       "title": "Leading & Managing The Whole New Self - MOVING FORWARD",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Leading & Managing The Whole New Self - MOVING FORWARD.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Leading & Managing The Whole New Self - MOVING FORWARD.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [
-        "course/documents/Leading & Managing The Whole New Self – MOVING FORWARD (Itinerary).pdf",
-        "course/documents/Leading & Managing The Whole New Self - MOVING FORWARD.docx",
-        "course/documents/Leading & Managing The Whole New Self – MOVING FORWARD (Itinerary).docx",
-        "course/documents/Leading & Managing The Whole New Self – MOVING FORWARD (Itinerary.docx"
+        "course/documents-markdown/Leading & Managing The Whole New Self – MOVING FORWARD (Itinerary.md",
+        "course/documents-markdown/Leading & Managing The Whole New Self – MOVING FORWARD (Itinerary).md"
       ],
       "flags": [
         "has-duplicates-or-supporting-sources",
@@ -1819,245 +1000,8 @@
       "slug": "lean-manufacturing",
       "title": "Lean Manufacturing",
       "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/Lean Manufacturing.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Lean Manufacturing.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "ledaership-and-motivation-for-high-performance",
-      "title": "Ledaership & Motivation For High Performance",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Ledaership & Motivation For High Performance.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Ledaership & Motivation For High Performance.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "legal-compliances-for-employment-contract-stamping",
-      "title": "Legal Compliances for Employment Contract Stamping",
-      "categorySlug": "hr-employment-law",
-      "canonicalSource": "course/documents/Legal Compliances for Employment Contract Stamping  (1 day).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Legal Compliances for Employment Contract Stamping  (1 day).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "management-development-program",
-      "title": "Management Development Program",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Management Development Program.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Management Development Program.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "managing-business-focus",
-      "title": "Managing Business Focus",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Managing Business Focus (1).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Managing Business Focus (1).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "managing-self-and-others-with-dc-psychology",
-      "title": "Managing Self and Others with DC Psychology",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Managing Self and Others with DC Psychology.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Managing Self and Others with DC Psychology.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "mastering-incoterms-2020-rulings",
-      "title": "MASTERING INCOTERMS 2020 RULINGS",
-      "categorySlug": "supply-chain-shipping-warehousing",
-      "canonicalSource": "course/documents/MASTERING INCOTERMS 2020 RULINGS.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/MASTERING INCOTERMS 2020 RULINGS.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "maximizing-microsoft-excel-tools-for-fast-and-accurate",
-      "title": "Maximizing Microsoft® Excel Tools for Fast & Accurate",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Maximizing Microsoft® Excel Tools for Fast & Accurate.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Maximizing Microsoft® Excel Tools for Fast & Accurate.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "microsoft-excel-intermediate-level",
-      "title": "Microsoft Excel - Intermediate Level",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Microsoft Excel -Intermediate Level.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Microsoft Excel  – Intermediate Level 1 Day.pdf",
-        "course/documents/Microsoft Excel Intermediate Level.docx",
-        "course/documents/Microsoft Excel  – Intermediate Level 1 Day.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "microsoft-excel-intermediate",
-      "title": "Microsoft Excel -Intermediate",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Microsoft Excel -Intermediate 2D.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 2,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Microsoft Excel -Intermediate 2D.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "microsoft-excel-begineer",
-      "title": "Microsoft Excel Begineer",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Microsoft Excel Begineer 1 Day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Microsoft Excel Begineer 1 Day.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "microsoft-outlook",
-      "title": "Microsoft Outlook",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Microsoft Outlook.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Microsoft Outlook.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "mindset-change-for-high-performance-one-day",
-      "title": "Mindset Change for High Performance - One Day",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Mindset Change for High Performance - One Day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Mindset Change for High Performance - One Day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "motivation-for-high-performance",
-      "title": "Motivation for High Performance",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Motivation for High  Performance-1 day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/MOTIVATION FOR HIGH PERFORMANCE - Itinerary.pdf",
-        "course/documents/MOTIVATION FOR HIGH PERFORMANCE - Itinerary.docx",
-        "course/documents/Motivation for High  Performance-1 day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "ms-1514-good-manufacturing-practices-gmp",
-      "title": "MS 1514 Good Manufacturing Practices (GMP",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/MS 1514 Good Manufacturing Practices (GMP).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Lean Manufacturing.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
@@ -2067,36 +1011,129 @@
       ]
     },
     {
-      "slug": "ms-1514-2022-good-manufacturing-practices-gmp",
-      "title": "MS 1514-2022 Good Manufacturing Practices (GMP",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/MS 1514-2022 Good Manufacturing Practices (GMP).pdf",
-      "sourceFormat": "pdf",
+      "slug": "management-development-program",
+      "title": "Management Development Program",
+      "categorySlug": "leadership-management-coaching",
+      "canonicalSource": "course/documents-markdown/Management Development Program.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/MS 1514-2022 Good Manufacturing Practices (GMP).docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
     {
-      "slug": "new-quota-application-and-recruitment-process",
-      "title": "NEW QUOTA APPLICATION & RECRUITMENT PROCESS",
+      "slug": "managing-business-focus",
+      "title": "Managing Business Focus",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/NEW QUOTA APPLICATION & RECRUITMENT PROCESS.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Managing Business Focus (1).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": [
+        "duration-not-inferred"
+      ]
+    },
+    {
+      "slug": "mastering-incoterms-2020-rulings",
+      "title": "MASTERING INCOTERMS 2020 RULINGS",
+      "categorySlug": "supply-chain-shipping-warehousing",
+      "canonicalSource": "course/documents-markdown/MASTERING INCOTERMS 2020 RULINGS.md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": null,
+      "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": [
+        "duration-not-inferred"
+      ]
+    },
+    {
+      "slug": "maximizing-microsoft-excel-tools-for-fast-and-accurate",
+      "title": "Maximizing Microsoft® Excel Tools for Fast & Accurate",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "canonicalSource": "course/documents-markdown/Maximizing Microsoft® Excel Tools for Fast & Accurate.md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": null,
+      "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": [
+        "duration-not-inferred"
+      ]
+    },
+    {
+      "slug": "microsoft-excel-intermediate-level",
+      "title": "Microsoft Excel - Intermediate Level",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "canonicalSource": "course/documents-markdown/Microsoft Excel  – Intermediate Level 1 Day.md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": 1,
+      "inferredLanguage": "en",
       "duplicateOrSupportingSources": [
-        "course/documents/NEW QUOTA APPLICATION & RECRUITMENT PROCESS.doc"
+        "course/documents-markdown/Microsoft Excel Intermediate Level.md"
       ],
       "flags": [
-        "has-duplicates-or-supporting-sources",
+        "has-duplicates-or-supporting-sources"
+      ]
+    },
+    {
+      "slug": "microsoft-excel-begineer",
+      "title": "Microsoft Excel Begineer",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "canonicalSource": "course/documents-markdown/Microsoft Excel Begineer 1 Day.md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": 1,
+      "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": []
+    },
+    {
+      "slug": "microsoft-outlook",
+      "title": "Microsoft Outlook",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "canonicalSource": "course/documents-markdown/Microsoft Outlook.md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": null,
+      "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": [
+        "duration-not-inferred"
+      ]
+    },
+    {
+      "slug": "motivation-for-high-performance",
+      "title": "MOTIVATION FOR HIGH PERFORMANCE",
+      "categorySlug": "leadership-management-coaching",
+      "canonicalSource": "course/documents-markdown/MOTIVATION FOR HIGH PERFORMANCE - Itinerary.md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": null,
+      "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": [
+        "canonical-is-itinerary",
+        "duration-not-inferred"
+      ]
+    },
+    {
+      "slug": "ms-1514-2022-good-manufacturing-practices-gmp",
+      "title": "MS 1514-2022 Good Manufacturing Practices (GMP",
+      "categorySlug": "quality-lean-food-safety",
+      "canonicalSource": "course/documents-markdown/MS 1514-2022 Good Manufacturing Practices (GMP).md",
+      "sourceFormat": "md",
+      "reviewStatus": "needs-human-review",
+      "inferredDurationDays": null,
+      "inferredLanguage": "en",
+      "duplicateOrSupportingSources": [],
+      "flags": [
         "duration-not-inferred"
       ]
     },
@@ -2104,15 +1141,13 @@
       "slug": "noise-and-hearing-conservation",
       "title": "NOISE AND HEARING CONSERVATION",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/NOISE AND HEARING CONSERVATION.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/NOISE AND HEARING CONSERVATION.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [
-        "course/documents/NOISE AND HEARING CONSERVATION - Itinerary.pdf",
-        "course/documents/NOISE AND HEARING CONSERVATION.docx",
-        "course/documents/NOISE AND HEARING CONSERVATION - Itinerary.docx"
+        "course/documents-markdown/NOISE AND HEARING CONSERVATION - Itinerary.md"
       ],
       "flags": [
         "has-duplicates-or-supporting-sources",
@@ -2123,132 +1158,30 @@
       "slug": "occupational-safety-and-health-at-work-place",
       "title": "OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [
-        "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE - ITINERARY.pdf",
-        "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE.docx",
-        "course/documents/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE - ITINERARY.docx"
+        "course/documents-markdown/OCCUPATIONAL SAFETY AND HEALTH AT WORK PLACE - ITINERARY.md"
       ],
       "flags": [
         "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "occupational-safety-and-health-coordinator-osh-c",
-      "title": "Occupational Safety And Health Coordinator (OSH-C",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/Occupational Safety And Health Coordinator (OSH-C).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Occupational Safety And Health Coordinator (OSH-C).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "osh-practice-for-truck-drivers",
-      "title": "OSH PRACTICE FOR TRUCK DRIVERS",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/OSH PRACTICE FOR TRUCK DRIVERS.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [],
-      "flags": [
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "overhead-crane-operation-safety",
-      "title": "Overhead Crane Operation Safety",
-      "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/Overhead Crane Operation Safety  - 1 Day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Overhead Crane Operation Safety  - 1 Day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
       ]
     },
     {
       "slug": "payroll-management-and-compliances",
       "title": "Payroll Management and Compliances",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Payroll Management and Compliances.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Payroll Management and Compliances.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Payroll Management and Compliances.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "pdpa",
-      "title": "PDPA",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/PDPA outline (1 Day).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/PDPA outline (1 Day).doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "performance-management",
-      "title": "Performance Management",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Performance Management.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Performance Management.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "performance-management-via-kra-and-kpi",
-      "title": "Performance Management Via KRA and KPI",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Performance Management Via KRA and KPI.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Performance Management Via KRA and KPI.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2256,33 +1189,13 @@
       "slug": "positive-work-attitude",
       "title": "POSITIVE WORK ATTITUDE",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/POSITIVE WORK ATTITUDE.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/POSITIVE WORK ATTITUDE.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/POSITIVE WORK ATTITUDE.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "power-bi-desktop-write-up-others3",
-      "title": "Power BI Desktop write up others3",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Power BI Desktop write up others3 (1).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Power BI Desktop write up others3 (1).pptx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2290,16 +1203,13 @@
       "slug": "power-of-emotional-intelligence-in-conflict-management",
       "title": "Power of Emotional Intelligence in Conflict Management",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Power of Emotional Intelligence in Conflict Management.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Power of Emotional Intelligence in Conflict Management.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Power of Emotional Intelligence in Conflict Management.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2307,80 +1217,13 @@
       "slug": "reader-centric-business-writing",
       "title": "Reader-Centric Business Writing",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Reader-Centric Business Writing.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Reader-Centric Business Writing.docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "realigning-the-drive-mindset",
-      "title": "Realigning The Drive Mindset",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Realigning The Drive Mindset.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Reader-Centric Business Writing.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
       "flags": [
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "record-filing",
-      "title": "Record Filing",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Record Filing 2 Days.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 2,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Record Filing 2 Days.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "regex-ai-course-outline-sme",
-      "title": "Regex_AI_Course_Outline_SME",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Regex_AI_Course_Outline_SME.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Regex_AI_Course_Outline_SME.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "root-cause-analysis",
-      "title": "Root Cause Analysis",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Root Cause Analysis.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Root Cause Analysis.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2388,16 +1231,13 @@
       "slug": "safety-and-health-awareness",
       "title": "SAfety & Health Awareness",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/SAfety & Health Awareness.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/SAfety & Health Awareness.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/SAfety & Health Awareness.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2405,16 +1245,13 @@
       "slug": "safety-and-health-committe",
       "title": "Safety & Health Committe",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/Safety & Health Committe.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Safety & Health Committe.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Safety & Health Committe.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2422,16 +1259,13 @@
       "slug": "safety-signage",
       "title": "Safety Signage",
       "categorySlug": "safety-health-environment",
-      "canonicalSource": "course/documents/Safety Signage.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Safety Signage.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Safety Signage.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2439,48 +1273,13 @@
       "slug": "schedule-waste-management",
       "title": "Schedule Waste Management",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Schedule Waste Management (1).pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Schedule Waste Management (1).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "sertu-workshop",
-      "title": "SERTU WORKSHOP",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/SERTU WORKSHOP.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "ms",
-      "duplicateOrSupportingSources": [
-        "course/documents/SERTU WORKSHOP.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "six-sigma-awareness-2days-outline-revised",
-      "title": "Six Sigma Awareness 2Days_Outline (Revised",
-      "categorySlug": "quality-lean-food-safety",
-      "canonicalSource": "course/documents/Six Sigma Awareness 2Days_Outline (Revised).doc",
-      "sourceFormat": "doc",
+      "canonicalSource": "course/documents-markdown/Schedule Waste Management (1).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
       "flags": [
-        "canonical-is-not-pdf",
         "duration-not-inferred"
       ]
     },
@@ -2488,33 +1287,13 @@
       "slug": "statistical-process-control",
       "title": "Statistical Process Control",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Statistical Process Control Course Outline.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Statistical Process Control Course Outline.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Statistical Process Control Course Outline.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "stay-resilient-and-bouncing-back",
-      "title": "Stay Resilient and Bouncing Back",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Stay Resilient and Bouncing Back.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Stay Resilient and Bouncing Back.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2522,33 +1301,13 @@
       "slug": "strategic-management-and-execution",
       "title": "Strategic Management & Execution",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Strategic Management & Execution.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Strategic Management & Execution.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Strategic Management & Execution.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "strategic-planning-mission",
-      "title": "Strategic Planning Mission",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Strategic Planning Mission.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Strategic Planning Mission.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2556,16 +1315,13 @@
       "slug": "supervisory-development-program",
       "title": "Supervisory Development Program",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Supervisory Development Program.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Supervisory Development Program.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Supervisory Development Program.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2573,49 +1329,13 @@
       "slug": "synergized-problem-solving-using-analytical",
       "title": "Synergized Problem Solving Using Analytical",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Synergized Problem Solving Using Analytical.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Synergized Problem Solving Using Analytical.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Synergized Problem Solving Using Analytical.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "team-building-dynamic-team",
-      "title": "Team-Building Dynamic Team",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Team-Building Dynamic Team 1 Day.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 1,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Team-Building Dynamic Team 1 Day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "team-building-dynamic-team-itinarery",
-      "title": "Team-Building Dynamic Team Itinarery",
-      "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Team-Building Dynamic Team Itinarery.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Team-Building Dynamic Team Itinarery.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2623,52 +1343,26 @@
       "slug": "teambuilding-teamwork-that-works",
       "title": "Teambuilding - Teamwork That Works!",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Teambuilding - Teamwork That Works! (2D).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Teambuilding - Teamwork That Works! (2D).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Teambuilding - Teamwork That Works! (2D).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "teambuilding-for-high-performance",
-      "title": "Teambuilding For High Performance",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Teambuilding For High Performance  3days.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": 3,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Teambuilding For High Performance  2days ..pdf",
-        "course/documents/Teambuilding For High Performance  2days ..doc",
-        "course/documents/Teambuilding For High Performance  3days ..doc",
-        "course/documents/Teambuilding For High Performance  3days.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "telephone-courtesies",
       "title": "TELEPHONE COURTESIES",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/TELEPHONE COURTESIES ITINERARY.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/TELEPHONE COURTESIES ITINERARY.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/TELEPHONE COURTESIES ITINERARY.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
         "canonical-is-itinerary",
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2676,16 +1370,13 @@
       "slug": "telephone-courtesies-and-effectiveness",
       "title": "Telephone Courtesies & Effectiveness",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Telephone Courtesies & Effectiveness.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Telephone Courtesies & Effectiveness.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Telephone Courtesies & Effectiveness.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2693,16 +1384,13 @@
       "slug": "the-power-of-effective-communication",
       "title": "THE POWER OF EFFECTIVE COMMUNICATION",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/THE POWER OF EFFECTIVE COMMUNICATION.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/THE POWER OF EFFECTIVE COMMUNICATION.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/THE POWER OF EFFECTIVE COMMUNICATION.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2710,65 +1398,25 @@
       "slug": "tiktok-marketing-training",
       "title": "TikTok Marketing Training",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/TikTok Marketing Training - 1 day.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/TikTok Marketing Training - 1 day.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 1,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/TikTok Marketing Training - 1 day.docx",
-        "course/documents/TikTok Marketing Training - 1 day.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "time-stress-and-anger-management-1",
-      "title": "Time,_Stress_and_Anger_Management[1]",
-      "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/Time,_Stress_and_Anger_Management[1].pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Time,_Stress_and_Anger_Management[1].doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "total-productive-maintenance-outline",
-      "title": "Total Productive Maintenance_Outline",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Total Productive Maintenance_Outline.doc",
-      "sourceFormat": "doc",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
-      "flags": [
-        "canonical-is-not-pdf",
-        "duration-not-inferred"
-      ]
+      "flags": []
     },
     {
       "slug": "trainer-skill-enhancement-workshop",
       "title": "Trainer Skill Enhancement Workshop",
       "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Trainer Skill Enhancement Workshop.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Trainer Skill Enhancement Workshop.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Trainer Skill Enhancement Workshop.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2776,16 +1424,13 @@
       "slug": "transforming-your-life-to-a-new-norm",
       "title": "Transforming Your Life to a New Norm",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/Transforming Your Life to a New Norm.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Transforming Your Life to a New Norm.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Transforming Your Life to a New Norm.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2793,16 +1438,13 @@
       "slug": "ubs-accounting-and-billing",
       "title": "UBS ACCOUNTING & BILLING",
       "categorySlug": "finance-taxation",
-      "canonicalSource": "course/documents/UBS ACCOUNTING & BILLING.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/UBS ACCOUNTING & BILLING.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/UBS ACCOUNTING & BILLING.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2810,49 +1452,25 @@
       "slug": "understanding-and-applications-of-employment-act-1955",
       "title": "Understanding & Applications of Employment Act 1955",
       "categorySlug": "hr-employment-law",
-      "canonicalSource": "course/documents/Understanding & Applications of Employment Act 1955 (1 Day) (2).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/Understanding & Applications of Employment Act 1955 (1 Day).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 1,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/Understanding & Applications of Employment Act 1955 (1 Day).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
+      "duplicateOrSupportingSources": [],
+      "flags": []
     },
     {
       "slug": "understanding-the-implication-and-the-impact-of-e-invoicing",
       "title": "UNDERSTANDING THE IMPLICATION AND THE IMPACT OF E-INVOICING",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/UNDERSTANDING THE IMPLICATION AND THE IMPACT  OF E-INVOICING.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/UNDERSTANDING THE IMPLICATION AND THE IMPACT  OF E-INVOICING.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/UNDERSTANDING THE IMPLICATION AND THE IMPACT  OF E-INVOICING.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "understanding-the-labour-law",
-      "title": "UNDERSTANDING THE LABOUR LAW",
-      "categorySlug": "hr-employment-law",
-      "canonicalSource": "course/documents/UNDERSTANDING THE LABOUR LAW.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/UNDERSTANDING THE LABOUR LAW.doc"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2860,16 +1478,13 @@
       "slug": "understanding-transfer-pricing-fundamentals",
       "title": "UNDERSTANDING TRANSFER PRICING FUNDAMENTALS",
       "categorySlug": "communication-personal-effectiveness",
-      "canonicalSource": "course/documents/UNDERSTANDING TRANSFER PRICING FUNDAMENTALS.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/UNDERSTANDING TRANSFER PRICING FUNDAMENTALS.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/UNDERSTANDING TRANSFER PRICING FUNDAMENTALS.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2877,16 +1492,13 @@
       "slug": "warehouse-management-and-inventory-control",
       "title": "WAREHOUSE MANAGEMENT AND INVENTORY CONTROL",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/WAREHOUSE MANAGEMENT AND INVENTORY CONTROL.pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/WAREHOUSE MANAGEMENT AND INVENTORY CONTROL.md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": null,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/WAREHOUSE MANAGEMENT AND INVENTORY CONTROL.docx"
-      ],
+      "duplicateOrSupportingSources": [],
       "flags": [
-        "has-duplicates-or-supporting-sources",
         "duration-not-inferred"
       ]
     },
@@ -2894,46 +1506,13 @@
       "slug": "what-it-takes-to-be-an-effective-manager",
       "title": "What it takes to be an Effective Manager",
       "categorySlug": "leadership-management-coaching",
-      "canonicalSource": "course/documents/What it takes to be an Effective Manager - 2 Days (1).pdf",
-      "sourceFormat": "pdf",
+      "canonicalSource": "course/documents-markdown/What it takes to be an Effective Manager - 2 Days (1).md",
+      "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
       "inferredDurationDays": 2,
       "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [
-        "course/documents/What it takes to be an Effective Manager - 2 Days (1).docx"
-      ],
-      "flags": [
-        "has-duplicates-or-supporting-sources"
-      ]
-    },
-    {
-      "slug": "work-smarter-and-prompt-better",
-      "title": "Work Smarter and Prompt Better",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Work Smarter^J Prompt Better - course outline.pdf",
-      "sourceFormat": "pdf",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
       "duplicateOrSupportingSources": [],
-      "flags": [
-        "duration-not-inferred"
-      ]
-    },
-    {
-      "slug": "work-smarter-prompt-better",
-      "title": "Work Smarter, Prompt Better",
-      "categorySlug": "microsoft-ai-digital-skills",
-      "canonicalSource": "course/documents/Work Smarter, Prompt Better - course outline.doc",
-      "sourceFormat": "doc",
-      "reviewStatus": "needs-human-review",
-      "inferredDurationDays": null,
-      "inferredLanguage": "en",
-      "duplicateOrSupportingSources": [],
-      "flags": [
-        "canonical-is-not-pdf",
-        "duration-not-inferred"
-      ]
+      "flags": []
     }
   ]
 }
