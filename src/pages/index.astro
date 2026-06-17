@@ -11,13 +11,14 @@ import Testimonials from "../components/sections/Testimonials.astro";
 import HomeClients from "../components/sections/HomeClients.astro";
 import { coursesShowcase, ctaCloser, homeHero, proofBento, serviceSolutions, trainingApproach } from "../content/home";
 import { featuredPublicTraining } from "../content/publicTraining";
+const showFeaturedTraining = new Date() < new Date(featuredPublicTraining.sunsetAt);
 import { approvedTestimonials, testimonialShowcase } from "../content/testimonials";
 import workshopHeroImage from "../../assets/web/photos/ai-workshop-hero-03.jpg";
 ---
 
 <BaseLayout>
   <Hero {...homeHero} backgroundImage={workshopHeroImage.src} />
-  <FeaturedPublicTraining training={featuredPublicTraining} />
+  {showFeaturedTraining && <FeaturedPublicTraining training={featuredPublicTraining} />}
   <BentoMasonry {...proofBento} />
   <CoursesTabbed {...coursesShowcase} />
   <ServicesBento {...serviceSolutions} />

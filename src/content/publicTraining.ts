@@ -22,4 +22,5 @@ export const featuredPublicTraining = {
     "Plan system development and integration around practical controls.",
     "Leave with a guided project-planning workshop output.",
   ],
+  sunsetAt: "2026-08-14T00:00:00+08:00",
 } as const;
