@@ -3,7 +3,7 @@ import path from "node:path";
 
 const markdownDir = path.join("course", "documents-markdown");
 const coursesDir = path.join("src", "content", "courses");
-const outputPath = path.join(markdownDir, "COURSE_CHECKLIST.md");
+const outputPath = path.join("course", "COURSE_CHECKLIST.md");
 const ignoredMarkdownFiles = new Set([path.basename(outputPath).toLowerCase(), "readme.md"]);
 
 function tidyName(value) {
@@ -57,7 +57,11 @@ function slugify(value) {
 }
 
 function markdownLink(label, target) {
-  const encodedTarget = target
+  const relativeTarget = path.relative(
+    path.dirname(outputPath),
+    path.join(markdownDir, target)
+  );
+  const encodedTarget = relativeTarget
     .replaceAll("\\", "/")
     .split("/")
     .map((part) => encodeURIComponent(part))
@@ -228,13 +232,6 @@ const checklistItems = markdownFiles.map((file) => ({
   match: findWebsiteMatch(file, websiteCourses),
 }));
 const similarNameGroups = findSimilarNameGroups(checklistItems);
-const similarGroupByFile = new Map();
-
-similarNameGroups.forEach((group, index) => {
-  for (const item of group) {
-    similarGroupByFile.set(item.file, index + 1);
-  }
-});
 
 const matchedWebsiteSlugs = new Set(
   checklistItems.filter((item) => item.match).map((item) => item.match.slug)
@@ -261,13 +258,10 @@ const lines = [
   ...checklistItems.map((item) => {
     const checkbox = item.match ? "[x]" : "[ ]";
     const link = markdownLink(item.title, item.file);
-    const similarGroup = similarGroupByFile.has(item.file)
-      ? ` - **similar name group ${similarGroupByFile.get(item.file)}**`
-      : "";
     const website = item.match
       ? ` - website: \`${item.match.slug}\` (${item.match.title})`
       : "";
-    return `- ${checkbox} ${link}${similarGroup}${website}`;
+    return `- ${checkbox} ${link}${website}`;
   }),
   "",
   "## Courses With Very Similar Names",
