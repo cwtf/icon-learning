@@ -1,3 +1,11 @@
+// Post-build QA check on the dist/ output: validates meta tags, JSON-LD, links, and images.
+// Output: dist/launch-qa-report.json
+// Run this after `npm run build` to catch SEO or broken-link issues before deploying.
+//
+// Usage:
+//   npm run qa:launch
+//   node scripts/launch-qa.mjs
+
 import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import zlib from "node:zlib";

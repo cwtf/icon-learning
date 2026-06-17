@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "courses:draft": "node scripts/course-draft.mjs",
     "courses:inventory": "node scripts/course-inventory.mjs",
     "courses:checklist": "node scripts/course-markdown-checklist.mjs",
     "documents:markdown": "node scripts/pandoc-documents.mjs",

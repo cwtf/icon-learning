@@ -1,3 +1,11 @@
+// Scan course/documents-markdown/ and produce a grouped inventory of all source files.
+// Output: src/content/courses/_curation/inventory.json
+// Infers category, duration, and language from filenames and groups duplicates by title similarity.
+//
+// Usage:
+//   npm run courses:inventory
+//   node scripts/course-inventory.mjs
+
 import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 

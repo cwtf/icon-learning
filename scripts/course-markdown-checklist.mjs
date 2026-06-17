@@ -1,3 +1,11 @@
+// Compare markdown source files against published course JSONs and report gaps.
+// Output: course/COURSE_CHECKLIST.md
+// Uses Jaccard similarity and Levenshtein distance to detect equivalent courses across naming variations.
+//
+// Usage:
+//   npm run courses:checklist
+//   node scripts/course-markdown-checklist.mjs
+
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 

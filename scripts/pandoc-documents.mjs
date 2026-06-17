@@ -1,3 +1,18 @@
+// Convert course documents (docx, odt, html, etc.) to Markdown using Pandoc.
+// Reads from course/documents/converted-to-markdown/ and writes to course/documents-markdown/.
+// Requires Pandoc to be installed: https://pandoc.org/installing.html
+//
+// Usage:
+//   npm run documents:markdown
+//   npm run documents:markdown -- --source <dir> --out <dir> --force --no-media
+//   node scripts/pandoc-documents.mjs [--source <dir>] [--out <dir>] [--force] [--no-media]
+//
+// Options:
+//   --source <dir>  Source directory (default: course/documents/converted-to-markdown)
+//   --out <dir>     Output directory (default: course/documents-markdown)
+//   --force         Overwrite existing .md files
+//   --no-media      Skip extracting embedded media from .docx etc.
+
 import { existsSync } from "node:fs";
 import { mkdir, readdir } from "node:fs/promises";
 import { spawn } from "node:child_process";

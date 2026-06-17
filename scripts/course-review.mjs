@@ -1,3 +1,11 @@
+// Validate all published course JSONs in src/content/courses/ against schema rules.
+// Output: src/content/courses/_curation/review-report.json
+// Exits with code 1 if any hard errors are found (run after adding or editing a course JSON).
+//
+// Usage:
+//   npm run courses:review
+//   node scripts/course-review.mjs
+
 import { existsSync } from "node:fs";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
