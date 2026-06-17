@@ -1,0 +1,52 @@
+{
+  "slug": "10-key-tools-for-work-success",
+  "title": "10 Key Tools For Work Success",
+  "subtitle": "A practical workplace effectiveness workshop focused on 10 key tools for work success.",
+  "categorySlug": "communication-personal-effectiveness",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "10 Key Tools For Work Success helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to personal effectiveness, communication, and everyday performance and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Executives, officers, and administrative teams",
+    "Employees who need stronger communication or personal effectiveness habits",
+    "Supervisors supporting everyday workplace performance"
+  ],
+  "walkAwayWith": [
+    "Communicate and organize work with more clarity and confidence.",
+    "Apply practical tools to improve decisions, writing, planning, or collaboration.",
+    "Recognize habits that affect personal and team performance.",
+    "Build action steps for better day-to-day effectiveness."
+  ],
+  "modules": [
+    {
+      "title": "Course Introduction"
+    },
+    {
+      "title": "How to get organized task & workload management"
+    },
+    {
+      "title": "Mastering the key steps to developing creative thinking skills"
+    },
+    {
+      "title": "Learning 3 ready to use, effective creative techniques"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 30,
+    "groupActivities": 25,
+    "selfAssessment": 20
+  },
+  "methodologyCaption": "The workshop combines short inputs, practical exercises, and reflection so participants can translate the topic into everyday work habits.",
+  "sourceDoc": "course/documents-markdown/10 Key Tools For Work Success.md",
+  "relatedSlugs": [
+    "teambuilding-for-high-performance-3days",
+    "authentic",
+    "change-management-managing-mindset-for-peak-performance"
+  ]
+}

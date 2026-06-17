@@ -1,0 +1,49 @@
+{
+  "slug": "credit-control-management",
+  "title": "Credit Control Management",
+  "subtitle": "A practical finance and business-control workshop covering credit control management.",
+  "categorySlug": "finance-taxation",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Credit Control Management helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to financial awareness, control, and better business decisions and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Managers, executives, and finance-facing teams",
+    "Department heads responsible for budgets, records, or controls",
+    "Business owners who want stronger financial awareness"
+  ],
+  "walkAwayWith": [
+    "Understand the key financial concepts and business implications.",
+    "Read information with clearer awareness of cost, risk, and performance.",
+    "Ask better questions when reviewing records, reports, or decisions.",
+    "Use finance thinking to support planning and follow-through."
+  ],
+  "modules": [
+    {
+      "title": "CREDIT CONTROL MANAGEMENT"
+    },
+    {
+      "title": "You will understand the objective, purpose and concepts of accounting"
+    },
+    {
+      "title": "Illustration with credit control policy"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 35,
+    "groupActivities": 20,
+    "selfAssessment": 10
+  },
+  "methodologyCaption": "The session uses practical business examples and guided exercises so participants can apply financial thinking to workplace decisions.",
+  "sourceDoc": "course/documents-markdown/Credit Control Management.md",
+  "relatedSlugs": [
+    "business-financial-skills-for-non-financial-personnel",
+    "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+    "fundamental-analysis-for-stock-market"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "critical-thinking-in-problem-solving-and-decision-making",
+  "title": "Critical Thinking In Problem Solving & Decision Making",
+  "subtitle": "A practical workplace effectiveness workshop focused on critical thinking in problem solving & decision making.",
+  "categorySlug": "communication-personal-effectiveness",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Critical Thinking In Problem Solving & Decision Making helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to personal effectiveness, communication, and everyday performance and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Executives, officers, and administrative teams",
+    "Employees who need stronger communication or personal effectiveness habits",
+    "Supervisors supporting everyday workplace performance"
+  ],
+  "walkAwayWith": [
+    "Communicate and organize work with more clarity and confidence.",
+    "Apply practical tools to improve decisions, writing, planning, or collaboration.",
+    "Recognize habits that affect personal and team performance.",
+    "Build action steps for better day-to-day effectiveness."
+  ],
+  "modules": [
+    {
+      "title": "Problem solving techniques"
+    },
+    {
+      "title": "Create depth in the thinking process"
+    },
+    {
+      "title": "Implementation and monitoring"
+    },
+    {
+      "title": "Tool \\#7: 3D Action Planning and Tool \\#8: Considerations, Pros & Cons"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 30,
+    "groupActivities": 25,
+    "selfAssessment": 20
+  },
+  "methodologyCaption": "The workshop combines short inputs, practical exercises, and reflection so participants can translate the topic into everyday work habits.",
+  "sourceDoc": "course/documents-markdown/Critical Thinking In Problem Solving & Decision Making.md",
+  "relatedSlugs": [
+    "teambuilding-for-high-performance-3days",
+    "10-key-tools-for-work-success",
+    "authentic"
+  ]
+}

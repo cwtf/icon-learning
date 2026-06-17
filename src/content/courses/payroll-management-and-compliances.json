@@ -1,0 +1,52 @@
+{
+  "slug": "payroll-management-and-compliances",
+  "title": "Payroll Management and Compliances",
+  "subtitle": "A practical HR and employment-compliance workshop covering payroll management and compliances.",
+  "categorySlug": "hr-employment-law",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Payroll Management and Compliances helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to people-management decisions, documentation, and compliance habits and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "HR executives and administrators",
+    "Line managers who handle employee issues",
+    "Business owners or supervisors who need people-compliance awareness"
+  ],
+  "walkAwayWith": [
+    "Understand the key responsibilities connected to the topic.",
+    "Identify common people-management or compliance risk areas.",
+    "Improve documentation and decision-making habits.",
+    "Know when an issue needs escalation, review, or specialist support."
+  ],
+  "modules": [
+    {
+      "title": "Compliance Context and Manager Responsibilities"
+    },
+    {
+      "title": "Records, Terms, and Workplace Requirements"
+    },
+    {
+      "title": "Handling Common HR Risk Areas"
+    },
+    {
+      "title": "Documentation and Practical Case Review"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 40,
+    "groupActivities": 25,
+    "handsOnExercises": 20,
+    "selfAssessment": 15
+  },
+  "methodologyCaption": "Participants work through realistic HR scenarios and documentation examples so the concepts stay connected to workplace decisions.",
+  "sourceDoc": "course/documents-markdown/Payroll Management and Compliances.md",
+  "relatedSlugs": [
+    "understanding-the-labour-law",
+    "understanding-and-applications-of-employment-act-1955-1-day",
+    "awareness-in-the-new-qms-iso-9001"
+  ]
+}

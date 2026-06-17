@@ -1,0 +1,52 @@
+{
+  "slug": "automobile-sales-training-realigning-the-drive-mindset",
+  "title": "Automobile Sales Training - Realigning The Drive Mindset",
+  "subtitle": "A customer-facing skills workshop for improving automobile sales training - realigning the drive mindset performance and consistency.",
+  "categorySlug": "sales-marketing-customer-service",
+  "durationDays": 2,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Automobile Sales Training - Realigning The Drive Mindset helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to customer trust, communication, and consistent service delivery and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Sales, service, and front-line teams",
+    "Supervisors who coach customer-facing performance",
+    "Employees who manage customer conversations or expectations"
+  ],
+  "walkAwayWith": [
+    "Use clearer service or sales behaviors in everyday interactions.",
+    "Respond to difficult moments with more structure and confidence.",
+    "Strengthen communication, ownership, and follow-through.",
+    "Align practical standards across the team."
+  ],
+  "modules": [
+    {
+      "title": "Coaching Objectives and Workplace Application"
+    },
+    {
+      "title": "The NLP Communication Model"
+    },
+    {
+      "title": "Principles for Success"
+    },
+    {
+      "title": "Under the Belief System"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "rolePlaying": 25
+  },
+  "methodologyCaption": "Participants practise workplace conversations and customer-facing scenarios through role-play, feedback, and group reflection.",
+  "sourceDoc": "course/documents-markdown/Automobile Sales Training - Realigning The Drive Mindset.md",
+  "relatedSlugs": [
+    "customer-care-workshop",
+    "1st-class-hospitality-service-1-day",
+    "complaints-management"
+  ]
+}

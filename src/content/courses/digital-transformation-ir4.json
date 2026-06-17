@@ -1,0 +1,52 @@
+{
+  "slug": "digital-transformation-ir4",
+  "title": "Digital Transformation- IR4",
+  "subtitle": "A hands-on digital skills workshop for applying digital transformation- ir4 in everyday work.",
+  "categorySlug": "microsoft-ai-digital-skills",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Digital Transformation- IR4 helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to productivity, accuracy, and confidence with workplace technology and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Office teams using digital tools in daily work",
+    "Managers who want stronger productivity and reporting habits",
+    "Employees who need practical confidence with workplace technology"
+  ],
+  "walkAwayWith": [
+    "Use the relevant tools or concepts with clearer purpose and structure.",
+    "Improve accuracy, productivity, and confidence in everyday tasks.",
+    "Apply practical workflows to workplace documents, data, or communication.",
+    "Build reusable habits that support better digital work."
+  ],
+  "modules": [
+    {
+      "title": "01\\] Overview of 4th Industrial Revolution"
+    },
+    {
+      "title": "Typical Application (6 Cases)"
+    },
+    {
+      "title": "Physical Principles - How Do Sensors Work?\\"
+    },
+    {
+      "title": "Introduction to AI Levels\\"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 20,
+    "handsOnExercises": 45,
+    "groupActivities": 20,
+    "demonstrations": 15
+  },
+  "methodologyCaption": "Most of the session is hands-on: participants practise tasks, compare outputs, and refine workflows for their own roles.",
+  "sourceDoc": "course/documents-markdown/Digital Transformation- IR4.md",
+  "relatedSlugs": [
+    "work-smarter-prompt-better",
+    "digital-marketing-zero-to-hero-2-days",
+    "dynamic-personal-development-for-work-excellence"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "fundamentals-of-shipping",
+  "title": "Fundamentals Of Shipping",
+  "subtitle": "A practical operations workshop for improving fundamentals of shipping processes and coordination.",
+  "categorySlug": "supply-chain-shipping-warehousing",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Fundamentals Of Shipping helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to coordination, accuracy, and smoother operations and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Operations, logistics, warehouse, and administration teams",
+    "Supervisors responsible for records, stock, or process flow",
+    "Employees who coordinate daily operational handovers"
+  ],
+  "walkAwayWith": [
+    "Understand the key process requirements and operational risks.",
+    "Improve accuracy, coordination, and follow-through in daily work.",
+    "Apply practical controls to records, movement, storage, or handovers.",
+    "Identify improvements that support smoother operations."
+  ],
+  "modules": [
+    {
+      "title": "FUNDAMENTALS OF SHIPPING MANAGEMENT"
+    },
+    {
+      "title": "Familiarizing the inward and outward cargo flow process"
+    },
+    {
+      "title": "Introduction to the Carriage of Goods by Sea"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 30,
+    "handsOnExercises": 30,
+    "groupActivities": 25,
+    "demonstrations": 15
+  },
+  "methodologyCaption": "Participants work through operational examples and practical exercises that connect process concepts to day-to-day responsibilities.",
+  "sourceDoc": "course/documents-markdown/FUNDAMENTALS OF SHIPPING.md",
+  "relatedSlugs": [
+    "mastering-incoterms-2020-rulings",
+    "warehouse-management-and-inventory-control",
+    "awareness-in-the-new-qms-iso-9001"
+  ]
+}

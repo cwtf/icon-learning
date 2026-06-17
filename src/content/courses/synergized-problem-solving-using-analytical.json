@@ -1,0 +1,49 @@
+{
+  "slug": "synergized-problem-solving-using-analytical",
+  "title": "Synergized Problem Solving Using Analytical",
+  "subtitle": "A practical workplace effectiveness workshop focused on synergized problem solving using analytical.",
+  "categorySlug": "communication-personal-effectiveness",
+  "durationDays": 2,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Synergized Problem Solving Using Analytical helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to personal effectiveness, communication, and everyday performance and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Executives, officers, and administrative teams",
+    "Employees who need stronger communication or personal effectiveness habits",
+    "Supervisors supporting everyday workplace performance"
+  ],
+  "walkAwayWith": [
+    "Communicate and organize work with more clarity and confidence.",
+    "Apply practical tools to improve decisions, writing, planning, or collaboration.",
+    "Recognize habits that affect personal and team performance.",
+    "Build action steps for better day-to-day effectiveness."
+  ],
+  "modules": [
+    {
+      "title": "Learn how to use idea collection process to facilitate solutions"
+    },
+    {
+      "title": "Module 2: The Process In Problem Solving"
+    },
+    {
+      "title": "Techniques in testing the hypothesis using analytical thinking"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 30,
+    "groupActivities": 25,
+    "selfAssessment": 20
+  },
+  "methodologyCaption": "The workshop combines short inputs, practical exercises, and reflection so participants can translate the topic into everyday work habits.",
+  "sourceDoc": "course/documents-markdown/Synergized Problem Solving Using Analytical.md",
+  "relatedSlugs": [
+    "teambuilding-for-high-performance-3days",
+    "10-key-tools-for-work-success",
+    "authentic"
+  ]
+}

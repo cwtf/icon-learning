@@ -1,0 +1,49 @@
+{
+  "slug": "noise-and-hearing-conservation",
+  "title": "Noise and Hearing Conservation",
+  "subtitle": "A practical workplace safety and health programme focused on noise and hearing conservation.",
+  "categorySlug": "safety-health-environment",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Noise and Hearing Conservation helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to risk awareness, prevention, and responsible workplace behavior and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Employees in operational, site-based, or technical roles",
+    "Supervisors responsible for daily safety practices",
+    "Teams that need stronger safety awareness and prevention habits"
+  ],
+  "walkAwayWith": [
+    "Recognize relevant workplace hazards and risk factors earlier.",
+    "Apply safer work practices and basic control measures.",
+    "Understand individual responsibility in safety, health, or environmental performance.",
+    "Support better reporting, prevention, and follow-through at work."
+  ],
+  "modules": [
+    {
+      "title": "INTRODUCTION TO SOUND AND NOISE"
+    },
+    {
+      "title": "Introduction To FMA (Noise Exposure Regulation) 1989 OSHA 1994"
+    },
+    {
+      "title": "HEARING PROTECTORS AND ITS APPLICATION"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 30,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "demonstrations": 20
+  },
+  "methodologyCaption": "The workshop uses workplace examples, discussion, and practical hazard-recognition activities to make safe behavior concrete.",
+  "sourceDoc": "course/documents-markdown/NOISE AND HEARING CONSERVATION.md",
+  "relatedSlugs": [
+    "occupational-safety-and-health-at-work-place",
+    "chemical-safe-and-right-use-of-ppe",
+    "defensive-driving-osh-practice-for-truck-drivers"
+  ]
+}

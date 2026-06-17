@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-17T09:52:45.185Z",
+  "generatedAt": "2026-06-17T10:35:12.261Z",
   "totals": {
-    "coursesReviewed": 10,
+    "coursesReviewed": 100,
     "hardFailures": 0,
     "warnings": 0,
     "hrdUnconfirmed": 0
@@ -12,6 +12,134 @@
     "hrdClaimable": "false means unconfirmed or not claimable. Do not switch to true without source PDF/title-page or Icon Learning confirmation."
   },
   "courses": [
+    {
+      "slug": "10-key-tools-for-work-success",
+      "title": "10 Key Tools For Work Success",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/10-key-tools-for-work-success.json",
+      "sourceDoc": "course/documents-markdown/10 Key Tools For Work Success.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "authentic",
+        "change-management-managing-mindset-for-peak-performance"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "1st-class-hospitality-service-1-day",
+      "title": "1st Class Hospitality Service - 1 day",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/1st-class-hospitality-service-1-day.json",
+      "sourceDoc": "course/documents-markdown/1st Class Hospitality Service - 1 day.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "automobile-sales-training-realigning-the-drive-mindset",
+        "complaints-management"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "5s-best-practices-for-organized",
+      "title": "5S Best Practices for Organized",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/5s-best-practices-for-organized.json",
+      "sourceDoc": "course/documents-markdown/5S Best Practices for Organized.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "6s-toward-a-quality-management-itinerary"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "6s-toward-a-quality-management-itinerary",
+      "title": "6s Toward A Quality Management Itinerary",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/6s-toward-a-quality-management-itinerary.json",
+      "sourceDoc": "course/documents-markdown/6S TOWARD A QUALITY MANAGEMENT ITINERARY.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "7qc-tools",
+      "title": "7QC Tools",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/7qc-tools.json",
+      "sourceDoc": "course/documents-markdown/7QC Tools.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+      "title": "AI Implementation in Accounting & Finance: From Strategy to Optimization",
+      "categorySlug": "finance-taxation",
+      "path": "src/content/courses/ai-implementation-in-accounting-and-finance-from-strategy-to-optimization.json",
+      "sourceDoc": "course/documents-markdown/AI Implementation in Accounting ^0 Finance_ From Strategy to Optimization.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "business-financial-skills-for-non-financial-personnel",
+        "credit-control-management",
+        "fundamental-analysis-for-stock-market"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "authentic",
+      "title": "Authentic",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/authentic.json",
+      "sourceDoc": "course/documents-markdown/AUTHENTIC.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "change-management-managing-mindset-for-peak-performance"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "automobile-sales-training-realigning-the-drive-mindset",
+      "title": "Automobile Sales Training - Realigning The Drive Mindset",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/automobile-sales-training-realigning-the-drive-mindset.json",
+      "sourceDoc": "course/documents-markdown/Automobile Sales Training - Realigning The Drive Mindset.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "complaints-management"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
     {
       "slug": "awareness-in-the-new-qms-iso-9001",
       "title": "Awareness in the New QMS ISO 9001",
@@ -23,6 +151,54 @@
         "kursus-pengendalian-makanan",
         "occupational-safety-and-health-at-work-place",
         "work-smarter-prompt-better"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "awareness-of-environmental-management-systems-iso-14001",
+      "title": "Awareness of Environmental Management Systems ISO 14001",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/awareness-of-environmental-management-systems-iso-14001.json",
+      "sourceDoc": "course/documents-markdown/Awareness of Environmental Management Systems ISO 14001.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "building-an-engaged-team-2d",
+      "title": "Building An Engaged Team (2D)",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/building-an-engaged-team-2d.json",
+      "sourceDoc": "course/documents-markdown/Building An Engaged Team (2D).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-positive-influence",
+        "business-strategy-development-in-a-vuca-world-2-days"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "building-positive-influence",
+      "title": "Building Positive Influence",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/building-positive-influence.json",
+      "sourceDoc": "course/documents-markdown/Building Positive Influence.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "business-strategy-development-in-a-vuca-world-2-days"
       ],
       "status": "review-pass",
       "issues": [],
@@ -45,6 +221,182 @@
       "warnings": []
     },
     {
+      "slug": "business-strategy-development-in-a-vuca-world-2-days",
+      "title": "Business Strategy Development In A VUCA World ( 2 Days)",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/business-strategy-development-in-a-vuca-world-2-days.json",
+      "sourceDoc": "course/documents-markdown/BUSINESS STRATEGY DEVELOPMENT IN A VUCA WORLD ( 2 DAYS).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "change-management-managing-mindset-for-peak-performance",
+      "title": "Change Management- Managing Mindset for Peak Performance",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/change-management-managing-mindset-for-peak-performance.json",
+      "sourceDoc": "course/documents-markdown/Change Management- Managing Mindset for Peak Performance.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "change-your-habits-change-your-life",
+      "title": "Change Your Habits Change Your Life",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/change-your-habits-change-your-life.json",
+      "sourceDoc": "course/documents-markdown/Change Your Habits  Change Yur Life.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "chemical-safe-and-right-use-of-ppe",
+      "title": "Chemical Safe and Right Use Of Ppe",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/chemical-safe-and-right-use-of-ppe.json",
+      "sourceDoc": "course/documents-markdown/CHEMICAL SAFE  AND RIGHT USE OF PPE.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "defensive-driving-osh-practice-for-truck-drivers",
+        "elec-safety-awareness-and-risk-management-2-days"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "coaching-skill-how-to-develop-your-people",
+      "title": "Coaching Skill - How To Develop Your People",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/coaching-skill-how-to-develop-your-people.json",
+      "sourceDoc": "course/documents-markdown/COACHING SKILL – HOW TO DEVELOP YOUR PEOPLE.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "communicate-and-engage-using-nlp",
+      "title": "Communicate And Engage Using NLP",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/communicate-and-engage-using-nlp.json",
+      "sourceDoc": "course/documents-markdown/Communicate And Engage Using NLP.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "complaints-management",
+      "title": "Complaints Management",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/complaints-management.json",
+      "sourceDoc": "course/documents-markdown/Complaints Management.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "automobile-sales-training-realigning-the-drive-mindset"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "conflict-management-and-resolution-in-the-workplace",
+      "title": "Conflict Management & Resolution In The Workplace",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/conflict-management-and-resolution-in-the-workplace.json",
+      "sourceDoc": "course/documents-markdown/Conflict Management & Resolution In The Workplace.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "corporate-image-and-grooming-training-jannette",
+      "title": "CORPORATE IMAGE AND GROOMING TRAINING - Jannette",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/corporate-image-and-grooming-training-jannette.json",
+      "sourceDoc": "course/documents-markdown/CORPORATE IMAGE AND GROOMING TRAINING - Jannette.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "credit-control-management",
+      "title": "Credit Control Management",
+      "categorySlug": "finance-taxation",
+      "path": "src/content/courses/credit-control-management.json",
+      "sourceDoc": "course/documents-markdown/Credit Control Management.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "business-financial-skills-for-non-financial-personnel",
+        "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+        "fundamental-analysis-for-stock-market"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "critical-thinking-in-problem-solving-and-decision-making",
+      "title": "Critical Thinking In Problem Solving & Decision Making",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/critical-thinking-in-problem-solving-and-decision-making.json",
+      "sourceDoc": "course/documents-markdown/Critical Thinking In Problem Solving & Decision Making.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
       "slug": "customer-care-workshop",
       "title": "Customer Care Workshop",
       "categorySlug": "sales-marketing-customer-service",
@@ -55,6 +407,454 @@
         "leadership-boot-camp-leading-with-impact",
         "teambuilding-for-high-performance-3days",
         "work-smarter-prompt-better"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "defensive-driving-osh-practice-for-truck-drivers",
+      "title": "Defensive Driving OSH Practice For Truck Drivers",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/defensive-driving-osh-practice-for-truck-drivers.json",
+      "sourceDoc": "course/documents-markdown/DEFENSIVE DRIVING OSH PRACTICE FOR TRUCK DRIVERS.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "elec-safety-awareness-and-risk-management-2-days"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "digital-marketing-zero-to-hero-2-days",
+      "title": "Digital Marketing Zero To Hero-2 days",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/digital-marketing-zero-to-hero-2-days.json",
+      "sourceDoc": "course/documents-markdown/Digital Marketing Zero To Hero-2 days.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-transformation-ir4",
+        "dynamic-personal-development-for-work-excellence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "digital-transformation-ir4",
+      "title": "Digital Transformation- IR4",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/digital-transformation-ir4.json",
+      "sourceDoc": "course/documents-markdown/Digital Transformation- IR4.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "dynamic-personal-development-for-work-excellence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "dynamic-personal-development-for-work-excellence",
+      "title": "Dynamic Personal Development For Work Excellence",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/dynamic-personal-development-for-work-excellence.json",
+      "sourceDoc": "course/documents-markdown/DYNAMIC PERSONAL DEVELOPMENT FOR WORK EXCELLENCE.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "effective-reports-writing-for-business",
+      "title": "Effective Reports Writing For Business",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/effective-reports-writing-for-business.json",
+      "sourceDoc": "course/documents-markdown/Effective Reports Writing For Business.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "elec-safety-awareness-and-risk-management-2-days",
+      "title": "Elec. Safety Awareness & Risk Management (2 Days",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/elec-safety-awareness-and-risk-management-2-days.json",
+      "sourceDoc": "course/documents-markdown/Elec. Safety Awareness & Risk Management (2 Days.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "embracing-change-2d",
+      "title": "Embracing Change (2D)",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/embracing-change-2d.json",
+      "sourceDoc": "course/documents-markdown/Embracing Change (2D).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "emergency-response-planning-new-version",
+      "title": "Emergency Response Planning New Version",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/emergency-response-planning-new-version.json",
+      "sourceDoc": "course/documents-markdown/EMERGENCY RESPONSE PLANNING NEW VERSION.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "english-for-the-workplace-the-importance-of-english-language-skills-for-effective-performance-3-days",
+      "title": "English for the Workplace The Importance of English Language Skills for Effective Performance (3 Days)",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/english-for-the-workplace-the-importance-of-english-language-skills-for-effective-performance-3-days.json",
+      "sourceDoc": "course/documents-markdown/English for the Workplace  The Importance of English Language Skills for Effective Performance (3 Days).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "excel-functions-and-formulas",
+      "title": "Excel Functions & Formulas",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/excel-functions-and-formulas.json",
+      "sourceDoc": "course/documents-markdown/Excel Functions & Formulas.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "excel-visualize-dashboard",
+      "title": "Excel Visualize Dashboard",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/excel-visualize-dashboard.json",
+      "sourceDoc": "course/documents-markdown/EXCEL VISUALIZE DASHBOARD.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "excellent-interaction-skills",
+      "title": "Excellent Interaction Skills",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/excellent-interaction-skills.json",
+      "sourceDoc": "course/documents-markdown/EXCELLENT INTERACTION SKILLS.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "fssc-22000-v6-training-outline",
+      "title": "FSSC 22000 V6 Training Outline",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/fssc-22000-v6-training-outline.json",
+      "sourceDoc": "course/documents-markdown/FSSC 22000 V6 Training Outline.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "fundamental-analysis-for-stock-market",
+      "title": "Fundamental Analysis For Stock Market",
+      "categorySlug": "finance-taxation",
+      "path": "src/content/courses/fundamental-analysis-for-stock-market.json",
+      "sourceDoc": "course/documents-markdown/FUNDAMENTAL ANALYSIS FOR STOCK MARKET.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "business-financial-skills-for-non-financial-personnel",
+        "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+        "credit-control-management"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "fundamentals-of-shipping",
+      "title": "Fundamentals Of Shipping",
+      "categorySlug": "supply-chain-shipping-warehousing",
+      "path": "src/content/courses/fundamentals-of-shipping.json",
+      "sourceDoc": "course/documents-markdown/FUNDAMENTALS OF SHIPPING.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "mastering-incoterms-2020-rulings",
+        "warehouse-management-and-inventory-control",
+        "awareness-in-the-new-qms-iso-9001"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "gd-and-t-3days",
+      "title": "GD&T (3days)",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/gd-and-t-3days.json",
+      "sourceDoc": "course/documents-markdown/GD&T (3days).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "gmp-and-allergen-management-awareness",
+      "title": "GMP & Allergen Management Awareness",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/gmp-and-allergen-management-awareness.json",
+      "sourceDoc": "course/documents-markdown/GMP & Allergen Management Awareness.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "gmp-outline",
+      "title": "GMP Outline",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/gmp-outline.json",
+      "sourceDoc": "course/documents-markdown/GMP Outline.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "haccp-internal-quality-audit-2-days",
+      "title": "HACCP INTERNAL QUALITY AUDIT (2 days)",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/haccp-internal-quality-audit-2-days.json",
+      "sourceDoc": "course/documents-markdown/HACCP INTERNAL QUALITY AUDIT  (2 days).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "hazard-analysis-critical-control-point-haccp",
+      "title": "Hazard Analysis Critical Control Point (haccp)",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/hazard-analysis-critical-control-point-haccp.json",
+      "sourceDoc": "course/documents-markdown/HAZARD ANALYSIS CRITICAL CONTROL POINT (HACCP).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "healthy-workplace-happier-employees",
+      "title": "Healthy Workplace Happier Employees",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/healthy-workplace-happier-employees.json",
+      "sourceDoc": "course/documents-markdown/HEALTHY WORKPLACE HAPPIER EMPLOYEES.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "hearing-loss-prevention",
+      "title": "Hearing Loss Prevention",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/hearing-loss-prevention.json",
+      "sourceDoc": "course/documents-markdown/Hearing Loss Prevention.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "high-impact-selling-skills-2d",
+      "title": "High Impact Selling Skills (2D)",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/high-impact-selling-skills-2d.json",
+      "sourceDoc": "course/documents-markdown/High Impact Selling Skills (2D).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "automobile-sales-training-realigning-the-drive-mindset"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "improving-negotiation",
+      "title": "Improving Negotiation",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/improving-negotiation.json",
+      "sourceDoc": "course/documents-markdown/Improving Negotiation.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "automobile-sales-training-realigning-the-drive-mindset"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "iso-9001-2015-internal-quality-auditing-and-audit-report-writing",
+      "title": "ISO 9001 2015 Internal Quality Auditing and Audit Report Writing",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/iso-9001-2015-internal-quality-auditing-and-audit-report-writing.json",
+      "sourceDoc": "course/documents-markdown/ISO 9001 2015 Internal Quality Auditing and Audit Report Writing.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "iso-9001-awareness-1-day",
+      "title": "ISO 9001 Awareness 1 day",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/iso-9001-awareness-1-day.json",
+      "sourceDoc": "course/documents-markdown/ISO 9001 Awareness 1 day.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "iso-9001-quality-management-system",
+      "title": "ISO 9001 Quality Management System",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/iso-9001-quality-management-system.json",
+      "sourceDoc": "course/documents-markdown/ISO 9001 Quality Management System.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "iso-9001-strategic-approach-to-risk-based-thinking",
+      "title": "ISO 9001 Strategic Approach To Risk- Based Thinking",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/iso-9001-strategic-approach-to-risk-based-thinking.json",
+      "sourceDoc": "course/documents-markdown/ISO 9001 STRATEGIC APPROACH TO RISK- BASED THINKING.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
       ],
       "status": "review-pass",
       "issues": [],
@@ -77,6 +877,70 @@
       "warnings": []
     },
     {
+      "slug": "kursus-persijilan-halal",
+      "title": "Kursus Persijilan Halal",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/kursus-persijilan-halal.json",
+      "sourceDoc": "course/documents-markdown/KURSUS PERSIJILAN HALAL.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "lead-auditor-iso-14001",
+      "title": "Lead Auditor ISO 14001",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/lead-auditor-iso-14001.json",
+      "sourceDoc": "course/documents-markdown/Lead Auditor ISO 14001.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "lead-generation-using-social-media-marketing-1-day",
+      "title": "Lead Generation Using Social Media Marketing - 1 day",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/lead-generation-using-social-media-marketing-1-day.json",
+      "sourceDoc": "course/documents-markdown/Lead Generation Using Social Media Marketing - 1 day.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "automobile-sales-training-realigning-the-drive-mindset"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "leaders-of-tomorrow-by-icon",
+      "title": "Leaders of Tomorrow by Icon",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/leaders-of-tomorrow-by-icon.json",
+      "sourceDoc": "course/documents-markdown/Leaders of Tomorrow by Icon.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
       "slug": "leadership-boot-camp-leading-with-impact",
       "title": "Leadership Boot Camp: Leading With Impact",
       "categorySlug": "leadership-management-coaching",
@@ -87,6 +951,86 @@
         "teambuilding-for-high-performance-3days",
         "understanding-the-labour-law",
         "customer-care-workshop"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "leadership-people-management-2",
+      "title": "Leadership + People Management (2)",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/leadership-people-management-2.json",
+      "sourceDoc": "course/documents-markdown/Leadership + People Management (2).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "leading-and-managing-the-whole-new-self-moving-forward",
+      "title": "Leading & Managing The Whole New Self - MOVING FORWARD",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/leading-and-managing-the-whole-new-self-moving-forward.json",
+      "sourceDoc": "course/documents-markdown/Leading & Managing The Whole New Self - MOVING FORWARD.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "lean-manufacturing",
+      "title": "Lean Manufacturing",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/lean-manufacturing.json",
+      "sourceDoc": "course/documents-markdown/Lean Manufacturing.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "management-development-program",
+      "title": "Management Development Program",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/management-development-program.json",
+      "sourceDoc": "course/documents-markdown/Management Development Program.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "managing-business-focus-1",
+      "title": "Managing Business Focus (1)",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/managing-business-focus-1.json",
+      "sourceDoc": "course/documents-markdown/Managing Business Focus (1).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
       ],
       "status": "review-pass",
       "issues": [],
@@ -109,6 +1053,118 @@
       "warnings": []
     },
     {
+      "slug": "maximizing-microsoft-excel-tools-for-fast-and-accurate",
+      "title": "Maximizing Microsoft Excel Tools for Fast & Accurate",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/maximizing-microsoft-excel-tools-for-fast-and-accurate.json",
+      "sourceDoc": "course/documents-markdown/Maximizing Microsoft® Excel Tools for Fast & Accurate.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "microsoft-excel-beginner-1-day",
+      "title": "Microsoft Excel Beginner 1 Day",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/microsoft-excel-beginner-1-day.json",
+      "sourceDoc": "course/documents-markdown/Microsoft Excel Begineer 1 Day.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "microsoft-excel-intermediate-level-1-day",
+      "title": "Microsoft Excel - Intermediate Level 1 Day",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/microsoft-excel-intermediate-level-1-day.json",
+      "sourceDoc": "course/documents-markdown/Microsoft Excel  – Intermediate Level 1 Day.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "microsoft-outlook",
+      "title": "Microsoft Outlook",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/microsoft-outlook.json",
+      "sourceDoc": "course/documents-markdown/Microsoft Outlook.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "motivation-for-high-performance-itinerary",
+      "title": "MOTIVATION FOR HIGH PERFORMANCE - Itinerary",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/motivation-for-high-performance-itinerary.json",
+      "sourceDoc": "course/documents-markdown/MOTIVATION FOR HIGH PERFORMANCE - Itinerary.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "ms-1514-2022-good-manufacturing-practices-gmp",
+      "title": "MS 1514-2022 Good Manufacturing Practices (GMP)",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/ms-1514-2022-good-manufacturing-practices-gmp.json",
+      "sourceDoc": "course/documents-markdown/MS 1514-2022 Good Manufacturing Practices (GMP).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "noise-and-hearing-conservation",
+      "title": "Noise and Hearing Conservation",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/noise-and-hearing-conservation.json",
+      "sourceDoc": "course/documents-markdown/NOISE AND HEARING CONSERVATION.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
       "slug": "occupational-safety-and-health-at-work-place",
       "title": "Occupational Safety and Health at the Workplace",
       "categorySlug": "safety-health-environment",
@@ -119,6 +1175,198 @@
         "awareness-in-the-new-qms-iso-9001",
         "kursus-pengendalian-makanan",
         "understanding-the-labour-law"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "payroll-management-and-compliances",
+      "title": "Payroll Management and Compliances",
+      "categorySlug": "hr-employment-law",
+      "path": "src/content/courses/payroll-management-and-compliances.json",
+      "sourceDoc": "course/documents-markdown/Payroll Management and Compliances.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "understanding-the-labour-law",
+        "understanding-and-applications-of-employment-act-1955-1-day",
+        "awareness-in-the-new-qms-iso-9001"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "positive-work-attitude",
+      "title": "Positive Work Attitude",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/positive-work-attitude.json",
+      "sourceDoc": "course/documents-markdown/POSITIVE WORK ATTITUDE.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "power-of-emotional-intelligence-in-conflict-management",
+      "title": "Power of Emotional Intelligence in Conflict Management",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/power-of-emotional-intelligence-in-conflict-management.json",
+      "sourceDoc": "course/documents-markdown/Power of Emotional Intelligence in Conflict Management.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "reader-centric-business-writing",
+      "title": "Reader-Centric Business Writing",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/reader-centric-business-writing.json",
+      "sourceDoc": "course/documents-markdown/Reader-Centric Business Writing.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "safety-and-health-awareness",
+      "title": "SAfety & Health Awareness",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/safety-and-health-awareness.json",
+      "sourceDoc": "course/documents-markdown/SAfety & Health Awareness.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "safety-and-health-committee",
+      "title": "Safety & Health Committee",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/safety-and-health-committee.json",
+      "sourceDoc": "course/documents-markdown/Safety & Health Committe.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "safety-signage",
+      "title": "Safety Signage",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/safety-signage.json",
+      "sourceDoc": "course/documents-markdown/Safety Signage.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "schedule-waste-management-1",
+      "title": "Schedule Waste Management (1)",
+      "categorySlug": "safety-health-environment",
+      "path": "src/content/courses/schedule-waste-management-1.json",
+      "sourceDoc": "course/documents-markdown/Schedule Waste Management (1).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "occupational-safety-and-health-at-work-place",
+        "chemical-safe-and-right-use-of-ppe",
+        "defensive-driving-osh-practice-for-truck-drivers"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "statistical-process-control-course-outline",
+      "title": "Statistical Process Control Course Outline",
+      "categorySlug": "quality-lean-food-safety",
+      "path": "src/content/courses/statistical-process-control-course-outline.json",
+      "sourceDoc": "course/documents-markdown/Statistical Process Control Course Outline.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "awareness-in-the-new-qms-iso-9001",
+        "kursus-pengendalian-makanan",
+        "5s-best-practices-for-organized"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "strategic-management-and-execution",
+      "title": "Strategic Management & Execution",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/strategic-management-and-execution.json",
+      "sourceDoc": "course/documents-markdown/Strategic Management & Execution.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "supervisory-development-program",
+      "title": "Supervisory Development Program",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/supervisory-development-program.json",
+      "sourceDoc": "course/documents-markdown/Supervisory Development Program.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "synergized-problem-solving-using-analytical",
+      "title": "Synergized Problem Solving Using Analytical",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/synergized-problem-solving-using-analytical.json",
+      "sourceDoc": "course/documents-markdown/Synergized Problem Solving Using Analytical.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
       ],
       "status": "review-pass",
       "issues": [],
@@ -141,6 +1389,150 @@
       "warnings": []
     },
     {
+      "slug": "teambuilding-teamwork-that-works-2d",
+      "title": "Teambuilding - Teamwork That Works! (2D)",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/teambuilding-teamwork-that-works-2d.json",
+      "sourceDoc": "course/documents-markdown/Teambuilding - Teamwork That Works! (2D).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "telephone-courtesies-and-effectiveness",
+      "title": "Telephone Courtesies & Effectiveness",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/telephone-courtesies-and-effectiveness.json",
+      "sourceDoc": "course/documents-markdown/Telephone Courtesies & Effectiveness.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "automobile-sales-training-realigning-the-drive-mindset"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "the-power-of-effective-communication",
+      "title": "The Power Of Effective Communication",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/the-power-of-effective-communication.json",
+      "sourceDoc": "course/documents-markdown/THE POWER OF EFFECTIVE COMMUNICATION.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "tiktok-marketing-training-1-day",
+      "title": "TikTok Marketing Training - 1 day",
+      "categorySlug": "sales-marketing-customer-service",
+      "path": "src/content/courses/tiktok-marketing-training-1-day.json",
+      "sourceDoc": "course/documents-markdown/TikTok Marketing Training - 1 day.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "customer-care-workshop",
+        "1st-class-hospitality-service-1-day",
+        "automobile-sales-training-realigning-the-drive-mindset"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "trainer-skill-enhancement-workshop",
+      "title": "Trainer Skill Enhancement Workshop",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/trainer-skill-enhancement-workshop.json",
+      "sourceDoc": "course/documents-markdown/Trainer Skill Enhancement Workshop.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "transforming-your-life-to-a-new-norm",
+      "title": "Transforming Your Life to a New Norm",
+      "categorySlug": "communication-personal-effectiveness",
+      "path": "src/content/courses/transforming-your-life-to-a-new-norm.json",
+      "sourceDoc": "course/documents-markdown/Transforming Your Life to a New Norm.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "teambuilding-for-high-performance-3days",
+        "10-key-tools-for-work-success",
+        "authentic"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "ubs-accounting-and-billing",
+      "title": "UBS Accounting & Billing",
+      "categorySlug": "finance-taxation",
+      "path": "src/content/courses/ubs-accounting-and-billing.json",
+      "sourceDoc": "course/documents-markdown/UBS ACCOUNTING & BILLING.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "business-financial-skills-for-non-financial-personnel",
+        "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+        "credit-control-management"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "understanding-and-applications-of-employment-act-1955-1-day",
+      "title": "Understanding & Applications of Employment Act 1955 (1 Day)",
+      "categorySlug": "hr-employment-law",
+      "path": "src/content/courses/understanding-and-applications-of-employment-act-1955-1-day.json",
+      "sourceDoc": "course/documents-markdown/Understanding & Applications of Employment Act 1955 (1 Day).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "understanding-the-labour-law",
+        "payroll-management-and-compliances",
+        "awareness-in-the-new-qms-iso-9001"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "understanding-the-implication-and-the-impact-of-e-invoicing",
+      "title": "Understanding The Implication and The Impact Of E-Invoicing",
+      "categorySlug": "microsoft-ai-digital-skills",
+      "path": "src/content/courses/understanding-the-implication-and-the-impact-of-e-invoicing.json",
+      "sourceDoc": "course/documents-markdown/UNDERSTANDING THE IMPLICATION AND THE IMPACT  OF E-INVOICING.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "work-smarter-prompt-better",
+        "digital-marketing-zero-to-hero-2-days",
+        "digital-transformation-ir4"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
       "slug": "understanding-the-labour-law",
       "title": "Understanding the Labour Law",
       "categorySlug": "hr-employment-law",
@@ -151,6 +1543,54 @@
         "leadership-boot-camp-leading-with-impact",
         "business-financial-skills-for-non-financial-personnel",
         "occupational-safety-and-health-at-work-place"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "understanding-transfer-pricing-fundamentals",
+      "title": "Understanding Transfer Pricing Fundamentals",
+      "categorySlug": "finance-taxation",
+      "path": "src/content/courses/understanding-transfer-pricing-fundamentals.json",
+      "sourceDoc": "course/documents-markdown/UNDERSTANDING TRANSFER PRICING FUNDAMENTALS.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "business-financial-skills-for-non-financial-personnel",
+        "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+        "credit-control-management"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "warehouse-management-and-inventory-control",
+      "title": "Warehouse Management and Inventory Control",
+      "categorySlug": "supply-chain-shipping-warehousing",
+      "path": "src/content/courses/warehouse-management-and-inventory-control.json",
+      "sourceDoc": "course/documents-markdown/WAREHOUSE MANAGEMENT AND INVENTORY CONTROL.md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "mastering-incoterms-2020-rulings",
+        "fundamentals-of-shipping",
+        "awareness-in-the-new-qms-iso-9001"
+      ],
+      "status": "review-pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "slug": "what-it-takes-to-be-an-effective-manager-2-days-1",
+      "title": "What it takes to be an Effective Manager - 2 Days (1)",
+      "categorySlug": "leadership-management-coaching",
+      "path": "src/content/courses/what-it-takes-to-be-an-effective-manager-2-days-1.json",
+      "sourceDoc": "course/documents-markdown/What it takes to be an Effective Manager - 2 Days (1).md",
+      "hrdClaimable": true,
+      "relatedSlugs": [
+        "leadership-boot-camp-leading-with-impact",
+        "building-an-engaged-team-2d",
+        "building-positive-influence"
       ],
       "status": "review-pass",
       "issues": [],

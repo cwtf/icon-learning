@@ -1,0 +1,52 @@
+{
+  "slug": "complaints-management",
+  "title": "Complaints Management",
+  "subtitle": "A customer-facing skills workshop for improving complaints management performance and consistency.",
+  "categorySlug": "sales-marketing-customer-service",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Complaints Management helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to customer trust, communication, and consistent service delivery and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Sales, service, and front-line teams",
+    "Supervisors who coach customer-facing performance",
+    "Employees who manage customer conversations or expectations"
+  ],
+  "walkAwayWith": [
+    "Use clearer service or sales behaviors in everyday interactions.",
+    "Respond to difficult moments with more structure and confidence.",
+    "Strengthen communication, ownership, and follow-through.",
+    "Align practical standards across the team."
+  ],
+  "modules": [
+    {
+      "title": "Principles of resolving complaints"
+    },
+    {
+      "title": "Skills in Handling Complaints"
+    },
+    {
+      "title": "Verbal communication"
+    },
+    {
+      "title": "Listening skills"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "rolePlaying": 25
+  },
+  "methodologyCaption": "Participants practise workplace conversations and customer-facing scenarios through role-play, feedback, and group reflection.",
+  "sourceDoc": "course/documents-markdown/Complaints Management.md",
+  "relatedSlugs": [
+    "customer-care-workshop",
+    "1st-class-hospitality-service-1-day",
+    "automobile-sales-training-realigning-the-drive-mindset"
+  ]
+}

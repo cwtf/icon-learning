@@ -1,0 +1,52 @@
+{
+  "slug": "gd-and-t-3days",
+  "title": "GD&T (3days)",
+  "subtitle": "A quality and compliance-focused workshop covering the practical requirements behind GD&T (3days).",
+  "categorySlug": "quality-lean-food-safety",
+  "durationDays": 3,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "GD&T (3days) helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to standards, process discipline, and continual improvement and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Quality, production, and operations teams",
+    "Supervisors and process owners involved in compliance work",
+    "Employees who support audits, records, or continual improvement"
+  ],
+  "walkAwayWith": [
+    "Understand the key requirements and workplace expectations behind the topic.",
+    "Recognize how process discipline, evidence, and records support compliance.",
+    "Apply practical improvement habits to daily operations.",
+    "Participate more confidently in implementation, review, or audit activities."
+  ],
+  "modules": [
+    {
+      "title": "use as communication tools"
+    },
+    {
+      "title": "The important information using GD&T system"
+    },
+    {
+      "title": "b) Control the datum features"
+    },
+    {
+      "title": "Training Objective"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "demonstrations": 15
+  },
+  "methodologyCaption": "Participants connect standards and quality concepts to workplace examples through guided discussion, exercises, and practical review activities.",
+  "sourceDoc": "course/documents-markdown/GD&T (3days).md",
+  "relatedSlugs": [
+    "awareness-in-the-new-qms-iso-9001",
+    "kursus-pengendalian-makanan",
+    "5s-best-practices-for-organized"
+  ]
+}

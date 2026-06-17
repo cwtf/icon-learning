@@ -1,0 +1,52 @@
+{
+  "slug": "emergency-response-planning-new-version",
+  "title": "Emergency Response Planning New Version",
+  "subtitle": "A practical workplace safety and health programme focused on emergency response planning new version.",
+  "categorySlug": "safety-health-environment",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Emergency Response Planning New Version helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to risk awareness, prevention, and responsible workplace behavior and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Employees in operational, site-based, or technical roles",
+    "Supervisors responsible for daily safety practices",
+    "Teams that need stronger safety awareness and prevention habits"
+  ],
+  "walkAwayWith": [
+    "Recognize relevant workplace hazards and risk factors earlier.",
+    "Apply safer work practices and basic control measures.",
+    "Understand individual responsibility in safety, health, or environmental performance.",
+    "Support better reporting, prevention, and follow-through at work."
+  ],
+  "modules": [
+    {
+      "title": "Understand the legal requirements for emergency response planning"
+    },
+    {
+      "title": "Module 1: Legal Requirements"
+    },
+    {
+      "title": "An overview of Section 15, 16, 17, 18, 20 & 21 of OSH Act 1994"
+    },
+    {
+      "title": "An overview of OHSAS18001 and ISO14001"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 30,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "demonstrations": 20
+  },
+  "methodologyCaption": "The workshop uses workplace examples, discussion, and practical hazard-recognition activities to make safe behavior concrete.",
+  "sourceDoc": "course/documents-markdown/EMERGENCY RESPONSE PLANNING NEW VERSION.md",
+  "relatedSlugs": [
+    "occupational-safety-and-health-at-work-place",
+    "chemical-safe-and-right-use-of-ppe",
+    "defensive-driving-osh-practice-for-truck-drivers"
+  ]
+}

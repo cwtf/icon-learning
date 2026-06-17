@@ -1,0 +1,52 @@
+{
+  "slug": "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+  "title": "AI Implementation in Accounting & Finance: From Strategy to Optimization",
+  "subtitle": "A practical finance and business-control workshop covering ai implementation in accounting & finance: from strategy to optimization.",
+  "categorySlug": "finance-taxation",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "AI Implementation in Accounting & Finance: From Strategy to Optimization helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to financial awareness, control, and better business decisions and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Managers, executives, and finance-facing teams",
+    "Department heads responsible for budgets, records, or controls",
+    "Business owners who want stronger financial awareness"
+  ],
+  "walkAwayWith": [
+    "Understand the key financial concepts and business implications.",
+    "Read information with clearer awareness of cost, risk, and performance.",
+    "Ask better questions when reviewing records, reports, or decisions.",
+    "Use finance thinking to support planning and follow-through."
+  ],
+  "modules": [
+    {
+      "title": "Kickstart AI Implementation"
+    },
+    {
+      "title": "System Development"
+    },
+    {
+      "title": "Workshop: Project Planning"
+    },
+    {
+      "title": "Activity: System Integration"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 35,
+    "groupActivities": 20,
+    "selfAssessment": 10
+  },
+  "methodologyCaption": "The session uses practical business examples and guided exercises so participants can apply financial thinking to workplace decisions.",
+  "sourceDoc": "course/documents-markdown/AI Implementation in Accounting ^0 Finance_ From Strategy to Optimization.md",
+  "relatedSlugs": [
+    "business-financial-skills-for-non-financial-personnel",
+    "credit-control-management",
+    "fundamental-analysis-for-stock-market"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "english-for-the-workplace-the-importance-of-english-language-skills-for-effective-performance-3-days",
+  "title": "English for the Workplace The Importance of English Language Skills for Effective Performance (3 Days)",
+  "subtitle": "A practical workplace effectiveness workshop focused on english for the workplace the importance of english language skills for effective performance (3 days).",
+  "categorySlug": "communication-personal-effectiveness",
+  "durationDays": 3,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "English for the Workplace The Importance of English Language Skills for Effective Performance (3 Days) helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to personal effectiveness, communication, and everyday performance and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Executives, officers, and administrative teams",
+    "Employees who need stronger communication or personal effectiveness habits",
+    "Supervisors supporting everyday workplace performance"
+  ],
+  "walkAwayWith": [
+    "Communicate and organize work with more clarity and confidence.",
+    "Apply practical tools to improve decisions, writing, planning, or collaboration.",
+    "Recognize habits that affect personal and team performance.",
+    "Build action steps for better day-to-day effectiveness."
+  ],
+  "modules": [
+    {
+      "title": "Communication in the workplace"
+    },
+    {
+      "title": "Greetings and introduction"
+    },
+    {
+      "title": "Improve your phone skills"
+    },
+    {
+      "title": "Control nervousness"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 30,
+    "groupActivities": 25,
+    "selfAssessment": 20
+  },
+  "methodologyCaption": "The workshop combines short inputs, practical exercises, and reflection so participants can translate the topic into everyday work habits.",
+  "sourceDoc": "course/documents-markdown/English for the Workplace  The Importance of English Language Skills for Effective Performance (3 Days).md",
+  "relatedSlugs": [
+    "teambuilding-for-high-performance-3days",
+    "10-key-tools-for-work-success",
+    "authentic"
+  ]
+}

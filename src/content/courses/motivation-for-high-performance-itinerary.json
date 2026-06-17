@@ -1,0 +1,53 @@
+{
+  "slug": "motivation-for-high-performance-itinerary",
+  "title": "MOTIVATION FOR HIGH PERFORMANCE - Itinerary",
+  "subtitle": "A practical leadership and management workshop for strengthening motivation for high performance - itinerary capability at work.",
+  "categorySlug": "leadership-management-coaching",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "MOTIVATION FOR HIGH PERFORMANCE - Itinerary helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to clearer leadership behavior, accountability, and team performance and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Managers, supervisors, and team leads",
+    "High-potential employees preparing for wider responsibility",
+    "Teams that need stronger people-management habits"
+  ],
+  "walkAwayWith": [
+    "Clarify expectations and leadership responsibilities in practical workplace terms.",
+    "Use structured conversations to guide performance and accountability.",
+    "Strengthen confidence when influencing, coaching, or supporting others.",
+    "Build action steps that can be applied immediately after the workshop."
+  ],
+  "modules": [
+    {
+      "title": "Leadership Context and Role Clarity"
+    },
+    {
+      "title": "Communication, Influence, and Accountability"
+    },
+    {
+      "title": "Coaching Workplace Performance"
+    },
+    {
+      "title": "Action Planning for Better Follow-Through"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 25,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "rolePlaying": 15,
+    "selfAssessment": 10
+  },
+  "methodologyCaption": "Short facilitator inputs are balanced with discussion, reflection, and practical activities so participants can connect the ideas to real workplace situations.",
+  "sourceDoc": "course/documents-markdown/MOTIVATION FOR HIGH PERFORMANCE - Itinerary.md",
+  "relatedSlugs": [
+    "leadership-boot-camp-leading-with-impact",
+    "building-an-engaged-team-2d",
+    "building-positive-influence"
+  ]
+}

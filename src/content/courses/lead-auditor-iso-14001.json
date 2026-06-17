@@ -1,0 +1,52 @@
+{
+  "slug": "lead-auditor-iso-14001",
+  "title": "Lead Auditor ISO 14001",
+  "subtitle": "A quality and compliance-focused workshop covering the practical requirements behind Lead Auditor ISO 14001.",
+  "categorySlug": "quality-lean-food-safety",
+  "durationDays": 1,
+  "hrdClaimable": true,
+  "language": "en",
+  "deliveryFormats": [
+    "In-house",
+    "Workshop"
+  ],
+  "whyThisMatters": "Lead Auditor ISO 14001 helps participants turn course concepts into practical workplace habits. The programme gives teams a shared foundation, clearer language, and guided practice so they can connect the subject to standards, process discipline, and continual improvement and apply the learning with more confidence after the workshop.",
+  "builtFor": [
+    "Quality, production, and operations teams",
+    "Supervisors and process owners involved in compliance work",
+    "Employees who support audits, records, or continual improvement"
+  ],
+  "walkAwayWith": [
+    "Understand the key requirements and workplace expectations behind the topic.",
+    "Recognize how process discipline, evidence, and records support compliance.",
+    "Apply practical improvement habits to daily operations.",
+    "Participate more confidently in implementation, review, or audit activities."
+  ],
+  "modules": [
+    {
+      "title": "Identify the key requirements and benefits of ISO 14001:2015"
+    },
+    {
+      "title": "Understand environmental management and drive continual improvement"
+    },
+    {
+      "title": "Identify the aims and benefits of an ISO 14001:2015 audit"
+    },
+    {
+      "title": "Interpret ISO 14001:2015 requirements for audit application"
+    }
+  ],
+  "methodology": {
+    "interactiveLectures": 35,
+    "handsOnExercises": 25,
+    "groupActivities": 25,
+    "demonstrations": 15
+  },
+  "methodologyCaption": "Participants connect standards and quality concepts to workplace examples through guided discussion, exercises, and practical review activities.",
+  "sourceDoc": "course/documents-markdown/Lead Auditor ISO 14001.md",
+  "relatedSlugs": [
+    "awareness-in-the-new-qms-iso-9001",
+    "kursus-pengendalian-makanan",
+    "5s-best-practices-for-organized"
+  ]
+}
