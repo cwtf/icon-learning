@@ -18,9 +18,22 @@ import { site } from "../../content/site";
     <div class="hidden items-center gap-8 lg:flex">
       {
         navigationItems.map((item) => (
-          <a class="body-sm relative text-[var(--color-ink-muted)] transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-[var(--color-ink)] after:transition-[width] after:duration-200 hover:text-[var(--color-ink)] hover:after:w-full" href={item.href}>
-            {item.label}
-          </a>
+          <div class="nav-menu-item relative">
+            <a class="body-sm relative text-[var(--color-ink-muted)] transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-[var(--color-ink)] after:transition-[width] after:duration-200 hover:text-[var(--color-ink)] hover:after:w-full" href={item.href}>
+              {item.label}
+            </a>
+            {"children" in item && item.children?.length ? (
+              <div class="nav-dropdown absolute left-1/2 top-full min-w-48 -translate-x-1/2 pt-4">
+                <div class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-2 shadow-[var(--shadow-md)]">
+                  {item.children.map((child) => (
+                    <a class="block rounded-xl px-3 py-2.5 text-sm font-medium text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-ink)]" href={child.href}>
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+          </div>
         ))
       }
     </div>
@@ -40,9 +53,18 @@ import { site } from "../../content/site";
         <div class="flex flex-col gap-1">
           {
             navigationItems.map((item) => (
-              <a class="rounded-xl px-3 py-3 text-sm font-medium text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-ink)]" href={item.href}>
-                {item.label}
-              </a>
+              <>
+                <a class="rounded-xl px-3 py-3 text-sm font-medium text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-ink)]" href={item.href}>
+                  {item.label}
+                </a>
+                {"children" in item && item.children?.length
+                  ? item.children.map((child) => (
+                      <a class="rounded-xl px-6 py-2.5 text-sm font-medium text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-ink)]" href={child.href}>
+                        {child.label}
+                      </a>
+                    ))
+                  : null}
+              </>
             ))
           }
         </div>
@@ -70,5 +92,21 @@ import { site } from "../../content/site";
     background: rgb(251 250 248 / 0.82);
     backdrop-filter: blur(12px);
     border-color: var(--color-border);
+  }
+
+  .nav-dropdown {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -0.25rem);
+    transition:
+      opacity 160ms var(--ease-standard),
+      transform 160ms var(--ease-standard);
+  }
+
+  .nav-menu-item:hover .nav-dropdown,
+  .nav-menu-item:focus-within .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
   }
 </style>
