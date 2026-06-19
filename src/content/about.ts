@@ -71,7 +71,7 @@ export const aboutPage = {
     body:
       "Icon Learning works with trainers and consultants across different fields, allowing programmes to be matched to the subject area, delivery format, and team context. The goal is not to make every session feel the same; it is to keep every session useful.",
     stats: [
-      { label: "Program categories", value: "9" },
+      { label: "Program categories", value: "10" },
       { label: "Engagement lanes", value: "3" },
       { label: "Brand promise", value: "Results" },
     ],

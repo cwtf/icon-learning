@@ -65,7 +65,7 @@ export const coursesShowcase = {
   description:
     "Browse the six most requested category families, then jump into the full catalog when you are ready to compare formats, durations, and team needs.",
   browseAllCta: {
-    label: "Browse all 9 categories",
+    label: "Browse all 10 categories",
     href: "/programs",
   },
   categories: [
@@ -130,16 +130,20 @@ export const coursesShowcase = {
       ],
     },
     {
-      slug: "microsoft-ai-digital-skills",
-      title: "Microsoft, AI & Digital Skills",
-      summary: "Upgrade everyday productivity with Excel, Power BI, AI, and cyber awareness.",
+      slug: "ai",
+      title: "AI",
+      summary: "Apply AI tools, prompting, and implementation planning with practical workplace judgment.",
       intro:
-        "Digital skills programs are designed for practical workplace use, from spreadsheet confidence to dashboard reporting and safer online habits. The category also includes AI and prompt-engineering topics for modern teams.",
-      topics: ["Excel", "Power BI", "AI", "Cybersecurity"],
+        "AI programs help teams turn modern tools into useful workplace habits, from better prompts to finance implementation planning. The focus is hands-on use, review discipline, and responsible application.",
+      topics: ["Prompting", "Productivity", "Implementation", "Responsible AI"],
       courses: [
         {
           label: "Work Smarter, Prompt Better",
-          href: "/programs/microsoft-ai-digital-skills/work-smarter-prompt-better",
+          href: "/programs/ai/work-smarter-prompt-better",
+        },
+        {
+          label: "AI Implementation in Accounting & Finance",
+          href: "/programs/ai/ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
         },
       ],
     },

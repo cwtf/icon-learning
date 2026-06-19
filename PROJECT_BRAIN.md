@@ -9,7 +9,7 @@
 ## Status Snapshot
 
 - **Phase:** PR 18 QA & Launch implemented; ready for review.
-- **Last touched:** 2026-05-21.
+- **Last touched:** 2026-06-19.
 - **Next action:** Review PR 18, then confirm deploy target, install redirects on the chosen host, and run browser-based Lighthouse/Rich Results checks against the final preview URL.
 - **Working tree:** PR 18 adds launch QA automation, robots/sitemaps, redirect planning docs, HRD-filter entry links, image dimension cleanup for logo surfaces, refreshed course review output, keeps the homepage outcomes/ResultsGrid segment removed, and removes the temporary GitHub Pages base path for canonical launch URLs.
 
@@ -17,6 +17,7 @@
 
 ## What's Done
 
+- **2026-06-19** - AI category split: added `/programs/ai`, moved `AI Implementation in Accounting & Finance` and `Work Smarter, Prompt Better` into it, and renamed public-facing copy for the old mixed bucket to Microsoft & Digital Skills.
 - **2026-05-21** - CI/CD setup: Added GitHub Actions workflow (`deploy.yml`) using Node 22, and configured `base` path in `astro.config.mjs` for temporary GitHub Pages hosting.
 - **2026-05-21** - Programs update: Updated all 10 sample course JSON files to `hrdClaimable: true` and set the HRD Corp claimable toggle on `/programs` to be checked by default.
 - **2026-05-21** - Homepage updates: Added infinite scrolling marquee for "Our Clients" segment, adjusted wording to "Companies across Malaysia", and refined mask gradient.
@@ -27,9 +28,9 @@
 - **2026-05-21** - PR 14 About Us page added: `/about-us` renders verified company story, 15 December 2011 establishment date, company registration number, services, training philosophy, trainer expertise, values, sticky company details, CTA, brand-logo visual, and Breadcrumb/LocalBusiness JSON-LD.
 - **2026-05-21** - PR 13 bulk content review pass completed for the current 10 publishable course JSON files: added `npm run courses:review`, generated `src/content/courses/_curation/review-report.json`, fixed all broken `relatedSlugs`, corrected public-facing title polish, and verified zero hard review failures.
 - **2026-05-21** - PR 12 course detail pages added: all ten course JSON records render at `/programs/[category]/[course]` with hero badges, Why this matters, Built for, outcomes, module-title-only workshop view, methodology bar, closer, sticky inquiry panel, and Course/Breadcrumb JSON-LD.
-- **2026-05-21** - PR 11 program category pages added: all nine `/programs/[category]` routes render category hero, overview, available course list, audience, delivery formats, related categories, sticky inquiry panel, and BreadcrumbList/ItemList structured data.
+- **2026-05-21** - PR 11 program category pages added: `/programs/[category]` routes render category hero, overview, available course list, audience, delivery formats, related categories, sticky inquiry panel, and BreadcrumbList/ItemList structured data.
 - **2026-05-21** - PR 10 programs catalog added: `/programs` renders grouped and flat views from top-level course JSON, with `ProgramCard`, category/duration/language chips, HRD Corp claimable toggle, keyword search, URL state, empty state, and production build verification.
-- **2026-05-21** - PR 9 course rewrite pipeline started: added `src/content/courses/schema.ts`, `npm run courses:inventory`, generated a tracked source inventory at `src/content/courses/_curation/inventory.json`, and created 10 representative summary-only course JSON drafts across all 9 categories plus Bahasa Malaysia and multi-day edge cases.
+- **2026-05-21** - PR 9 course rewrite pipeline started: added `src/content/courses/schema.ts`, `npm run courses:inventory`, generated a tracked source inventory at `src/content/courses/_curation/inventory.json`, and created 10 representative summary-only course JSON drafts across the initial category set plus Bahasa Malaysia and multi-day edge cases.
 - **2026-05-21** - PR 8 homepage wiring and static QA completed: added the missing `ServicesBento` section at `#services`, wired services copy through `home.ts`, confirmed homepage anchors and production build, and kept unavailable workshop/category/testimonial assets out of the UI.
 - **2026-05-21** - PR 7 global motion polish added: hero stack staggers on page load, section headings reveal once on scroll, same-page anchor clicks smooth-scroll for no-preference users, and reduced-motion users keep instant/static behavior.
 - **2026-05-21** - PR 6 outcomes and testimonial components added: `ResultsGrid` was implemented for verified-only proof points with reduced-motion-aware count-up, and `Testimonials` ships as a carousel component gated behind an empty approved-quotes list. The homepage later removed the outcomes/ResultsGrid segment; keep it removed unless the content strategy changes.
@@ -119,7 +120,7 @@ All representative course JSON files use `hrdClaimable: false` until Icon Learni
 
 ### 2026-05-21 - PR 9 samples before bulk rewrite
 
-The first rewrite batch covers all nine categories, plus Bahasa Malaysia (`Kursus Pengendalian Makanan`) and a multi-day programme (`Teambuilding for High Performance`). These are structured drafts for review before scaling to the remaining inventory.
+The first rewrite batch covered the initial category set, plus Bahasa Malaysia (`Kursus Pengendalian Makanan`) and a multi-day programme (`Teambuilding for High Performance`). These are structured drafts for review before scaling to the remaining inventory.
 
 ### 2026-05-21 - PR 10 catalog imports only publishable course JSON
 
@@ -131,7 +132,7 @@ The `/programs` page is readable as grouped HTML without JavaScript. `ProgramsCa
 
 ### 2026-05-21 - PR 11 category metadata lives with category content
 
-`src/content/programs.ts` now carries category-page overview copy, focus areas, audience, delivery formats, and related-category relationships. The `/programs/[category]` route uses the same data for all nine static pages.
+`src/content/programs.ts` now carries category-page overview copy, focus areas, audience, delivery formats, and related-category relationships. The `/programs/[category]` route uses the same data for all ten static pages.
 
 ### 2026-05-21 - PR 11 category pages are static and no-JS
 
@@ -266,7 +267,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 - PR 12 builds ten `/programs/[category]/[course]/index.html` pages from the current course JSON set. The route will automatically scale as more top-level `src/content/courses/*.json` files are added.
 - `Get the full outline` routes to `/contact?training=...`; PR 16 pre-fills the contact form but does not auto-attach source outline PDFs.
 - PR 12 adds Course JSON-LD, and HRD credential schema appears only when `hrdClaimable === true`. Current sample courses are marked claimable; future imports must still be confirmed before toggling.
-- PR 11 builds all nine `/programs/[category]/index.html` pages, and their course cards now land on PR 12 detail pages where a matching course JSON exists.
+- PR 11 builds all ten `/programs/[category]/index.html` pages, and their course cards now land on PR 12 detail pages where a matching course JSON exists.
 - Category page course grouping is currently flat because the PR 9 sample batch has 1-2 courses per category. Add sub-theme grouping when the bulk catalog creates categories with 15+ courses.
 - PR 10 builds `/programs/index.html` and imports the catalog client from `src/components/programs/`. Keep browser-only scripts out of `src/pages/`; Astro treats files there as routes.
 - The HRD Corp filter currently returns zero results because all PR 9 sample courses intentionally have `hrdClaimable: false` pending confirmation.
@@ -317,7 +318,7 @@ The consolidated spec remains authoritative for: light theme only, scroll-spy `C
 | `src/pages/clients.astro` | Clients page route with logo wall and LocalBusiness JSON-LD. | Yes |
 | `src/pages/contact.astro` | Contact page route with form, contact cards, FAQPage, and LocalBusiness JSON-LD. | Yes |
 | `src/pages/programs/index.astro` | Programs catalog route. | Yes |
-| `src/pages/programs/[category].astro` | Program category detail route for all 9 categories. | Yes |
+| `src/pages/programs/[category].astro` | Program category detail route for all 10 categories. | Yes |
 | `src/pages/programs/[category]/[course].astro` | Summary-only course detail route. | Yes |
 | `src/styles/tokens.css` | Design tokens. | Yes |
 | `src/styles/global.css` | Tailwind entry and global styles. | Yes |

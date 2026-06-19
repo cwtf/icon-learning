@@ -20,6 +20,7 @@ const pageEntries = [
   { path: "/programs/quality-lean-food-safety/", priority: "0.8" },
   { path: "/programs/safety-health-environment/", priority: "0.8" },
   { path: "/programs/hr-employment-law/", priority: "0.8" },
+  { path: "/programs/ai/", priority: "0.8" },
   { path: "/programs/microsoft-ai-digital-skills/", priority: "0.8" },
   { path: "/programs/sales-marketing-customer-service/", priority: "0.8" },
   { path: "/programs/finance-taxation/", priority: "0.8" },

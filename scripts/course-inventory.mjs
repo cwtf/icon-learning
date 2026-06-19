@@ -89,6 +89,17 @@ const categoryRules = [
     ],
   },
   {
+    slug: "ai",
+    patterns: [
+      "ai implementation",
+      "artificial intelligence",
+      "prompt",
+      "prompting",
+      "genai",
+      "chatgpt",
+    ],
+  },
+  {
     slug: "microsoft-ai-digital-skills",
     patterns: [
       "microsoft",
@@ -96,8 +107,6 @@ const categoryRules = [
       "power bi",
       "powerpoint",
       "word",
-      "ai",
-      "prompt",
       "cyber",
       "digital",
       "social media",

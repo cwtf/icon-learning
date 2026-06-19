@@ -58,6 +58,12 @@ const categoryCopy = {
     why: (title, topic, modules) =>
       `${title} helps HR teams, managers, and administrators make better workplace decisions around ${topic}. The workshop covers ${modules} so participants can connect legal or payroll requirements to clearer documentation and daily practice.`,
   },
+  "ai": {
+    noun: "AI",
+    subtitle: (duration, topic) => `A ${duration} HRD Corp-claimable AI workshop for applying ${topic} more confidently at work.`,
+    why: (title, topic, modules) =>
+      `${title} helps teams apply ${topic} with clearer use cases, stronger review habits, and practical workplace judgment. Participants practise ${modules} so AI tools support useful output, better decisions, and responsible follow-through.`,
+  },
   "microsoft-ai-digital-skills": {
     noun: "digital productivity",
     subtitle: (duration, topic) => `A ${duration} HRD Corp-claimable digital skills workshop for improving productivity with ${topic}.`,

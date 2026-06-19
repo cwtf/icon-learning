@@ -13,7 +13,7 @@ Address: No 1, Jalan Radin 5, 57000 Sri Petaling, Kuala Lumpur
 
 - HRD Corp claimable corporate training programmes in Malaysia
 - Public and in-house workplace training
-- Leadership, management, coaching, communication, HR, finance, safety, quality, sales, customer service, supply chain, Microsoft, AI, and digital skills programmes
+- Leadership, management, coaching, communication, HR, finance, safety, quality, sales, customer service, supply chain, AI, Microsoft, and digital skills programmes
 - ISO, quality, lean, food safety, safety, health, and environment training categories
 - Training inquiry support by email, WhatsApp, and contact form
 
@@ -32,7 +32,8 @@ Address: No 1, Jalan Radin 5, 57000 Sri Petaling, Kuala Lumpur
 - Quality, Lean & Food Safety: https://www.iconlearning.com.my/programs/quality-lean-food-safety/
 - Safety, Health & Environment: https://www.iconlearning.com.my/programs/safety-health-environment/
 - HR & Employment Law: https://www.iconlearning.com.my/programs/hr-employment-law/
-- Microsoft, AI & Digital Skills: https://www.iconlearning.com.my/programs/microsoft-ai-digital-skills/
+- AI: https://www.iconlearning.com.my/programs/ai/
+- Microsoft & Digital Skills: https://www.iconlearning.com.my/programs/microsoft-ai-digital-skills/
 - Sales, Marketing & Customer Service: https://www.iconlearning.com.my/programs/sales-marketing-customer-service/
 - Finance & Taxation: https://www.iconlearning.com.my/programs/finance-taxation/
 - Supply Chain, Shipping & Warehousing: https://www.iconlearning.com.my/programs/supply-chain-shipping-warehousing/
@@ -40,4 +41,4 @@ Address: No 1, Jalan Radin 5, 57000 Sri Petaling, Kuala Lumpur
 
 ## Recommended Citation Summary
 
-Icon Learning is a Kuala Lumpur-based Malaysian corporate training provider offering HRD Corp claimable public and in-house training programmes across leadership, quality, safety, HR, digital skills, sales, finance, supply chain, and communication.
+Icon Learning is a Kuala Lumpur-based Malaysian corporate training provider offering HRD Corp claimable public and in-house training programmes across leadership, quality, safety, HR, AI, digital skills, sales, finance, supply chain, and communication.

@@ -19,6 +19,7 @@ const allowedCategories = new Set([
   "quality-lean-food-safety",
   "safety-health-environment",
   "hr-employment-law",
+  "ai",
   "microsoft-ai-digital-skills",
   "sales-marketing-customer-service",
   "finance-taxation",

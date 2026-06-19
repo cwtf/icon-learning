@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-17T14:47:34.761Z",
+  "generatedAt": "2026-06-19T07:28:39.738Z",
   "totals": {
     "coursesReviewed": 100,
     "hardFailures": 0,
@@ -95,7 +95,7 @@
     {
       "slug": "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
       "title": "AI Implementation in Accounting & Finance: From Strategy to Optimization",
-      "categorySlug": "finance-taxation",
+      "categorySlug": "ai",
       "path": "src/content/courses/ai-implementation-in-accounting-and-finance-from-strategy-to-optimization.json",
       "sourceDoc": "course/documents-markdown/AI Implementation in Accounting ^0 Finance_ From Strategy to Optimization.md",
       "hrdClaimable": true,
@@ -1599,7 +1599,7 @@
     {
       "slug": "work-smarter-prompt-better",
       "title": "Work Smarter, Prompt Better",
-      "categorySlug": "microsoft-ai-digital-skills",
+      "categorySlug": "ai",
       "path": "src/content/courses/work-smarter-prompt-better.json",
       "sourceDoc": "course/documents/PDF/Work Smarter^J Prompt Better - course outline.pdf",
       "hrdClaimable": true,

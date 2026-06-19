@@ -94,7 +94,7 @@
     {
       "slug": "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
       "title": "AI Implementation in Accounting and Finance_ From Strategy to Optimization",
-      "categorySlug": "microsoft-ai-digital-skills",
+      "categorySlug": "ai",
       "canonicalSource": "course/documents-markdown/AI Implementation in Accounting ^0 Finance_ From Strategy to Optimization.md",
       "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
@@ -122,7 +122,7 @@
     {
       "slug": "automobile-sales-training-realigning-the-drive-mindset",
       "title": "Automobile Sales Training - Realigning The Drive Mindset",
-      "categorySlug": "microsoft-ai-digital-skills",
+      "categorySlug": "sales-marketing-customer-service",
       "canonicalSource": "course/documents-markdown/Automobile Sales Training - Realigning The Drive Mindset.md",
       "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
@@ -356,9 +356,9 @@
       ]
     },
     {
-      "slug": "corporate-image-and-grooming-training",
-      "title": "CORPORATE IMAGE AND GROOMING TRAINING",
-      "categorySlug": "microsoft-ai-digital-skills",
+      "slug": "corporate-image-and-grooming-training-jannette",
+      "title": "CORPORATE IMAGE AND GROOMING TRAINING - Jannette",
+      "categorySlug": "communication-personal-effectiveness",
       "canonicalSource": "course/documents-markdown/CORPORATE IMAGE AND GROOMING TRAINING - Jannette.md",
       "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
@@ -514,7 +514,7 @@
     },
     {
       "slug": "elec-safety-awareness-and-risk-management",
-      "title": "Electrical Safety Awareness & Risk Management",
+      "title": "Elec. Safety Awareness & Risk Management",
       "categorySlug": "leadership-management-coaching",
       "canonicalSource": "course/documents-markdown/Elec. Safety Awareness & Risk Management (2 Days.md",
       "sourceFormat": "md",
@@ -1409,7 +1409,7 @@
     {
       "slug": "trainer-skill-enhancement-workshop",
       "title": "Trainer Skill Enhancement Workshop",
-      "categorySlug": "microsoft-ai-digital-skills",
+      "categorySlug": "communication-personal-effectiveness",
       "canonicalSource": "course/documents-markdown/Trainer Skill Enhancement Workshop.md",
       "sourceFormat": "md",
       "reviewStatus": "needs-human-review",
