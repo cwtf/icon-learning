@@ -85,6 +85,9 @@ const contactHref = `/contact?training=${encodeURIComponent(course.title)}`;
 const emailHref = `${site.emailHref}?subject=${encodeURIComponent(`Training outline: ${course.title}`)}`;
 const whatsappHref = `${site.whatsappHref}?text=${encodeURIComponent(`Hi Icon Learning, I would like the full outline for ${course.title}.`)}`;
 const pageUrl = new URL(courseUrl(course), site.url).toString();
+const durationLabel = formatDuration(course.durationDays);
+const languageLabel = formatLanguage(course.language);
+const formatLabel = course.deliveryFormats.join(", ");
 
 const methodologyLabels: Array<{ key: keyof CourseMethodologyMix; label: string }> = [
   { key: "interactiveLectures", label: "Interactive" },
@@ -127,6 +130,36 @@ const relatedCourses = [...relatedFromSlugs, ...relatedSameCategory, ...relatedF
 
 const timeRequired = course.durationDays === 0.5 ? "PT4H" : `P${course.durationDays}D`;
 const inLanguage = course.language === "en+ms" ? ["en", "ms"] : course.language;
+const courseFaqs = [
+  {
+    question: `Who is ${course.title} for?`,
+    answer: `${course.title} is designed for ${course.builtFor.join(", ").replace(/\.$/, "")}.`,
+  },
+  {
+    question: `How long is ${course.title}?`,
+    answer: `${course.title} runs for ${durationLabel}.`,
+  },
+  {
+    question: `What language is ${course.title} delivered in?`,
+    answer: `${course.title} is delivered in ${languageLabel}.`,
+  },
+  {
+    question: `Can ${course.title} run as in-house training?`,
+    answer: course.deliveryFormats.includes("In-house")
+      ? `Yes. ${course.title} can run as in-house training, and Icon Learning can discuss team size, preferred dates, and delivery format during inquiry.`
+      : `${course.title} is listed as ${formatLabel}. Contact Icon Learning to confirm whether it can be adapted for an in-house team session.`,
+  },
+  {
+    question: `Is ${course.title} HRD Corp claimable?`,
+    answer: course.hrdClaimable
+      ? `Yes. ${course.title} is marked as HRD Corp claimable.`
+      : `Please confirm HRD Corp claimability for ${course.title} during inquiry, because claimability can depend on the current programme setup and employer requirements.`,
+  },
+  {
+    question: `What will participants learn in ${course.title}?`,
+    answer: `Key practical outcomes include: ${course.walkAwayWith.join(" ").replace(/\s+/g, " ").trim()}`,
+  },
+];
 const structuredData = [
   {
     "@context": "https://schema.org",
@@ -170,6 +203,18 @@ const structuredData = [
     audience: course.builtFor.join(", "),
     teaches: course.walkAwayWith,
     coursePrerequisites: "No prerequisites",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: courseFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   },
 ];
 ---
@@ -291,6 +336,21 @@ const structuredData = [
             {course.methodologyCaption && <p class="body-copy mt-5 max-w-3xl text-[var(--color-ink-muted)]">{course.methodologyCaption}</p>}
           </section>
         )}
+
+        <section class="course-section" aria-labelledby="faq-heading" data-reveal>
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-heading" class="display-md mt-4">Frequently Asked Questions</h2>
+          <div class="course-faq-list mt-6">
+            {
+              courseFaqs.map((faq) => (
+                <details>
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))
+            }
+          </div>
+        </section>
 
         {relatedCourses.length > 0 && (
           <section class="course-section" aria-labelledby="related-heading" data-reveal>
@@ -497,6 +557,31 @@ const structuredData = [
   .course-module-groups {
     display: grid;
     gap: 1rem;
+  }
+
+  .course-faq-list {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 52rem;
+  }
+
+  .course-faq-list details {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 1rem;
+  }
+
+  .course-faq-list summary {
+    color: var(--color-ink);
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .course-faq-list p {
+    color: var(--color-ink-muted);
+    margin: 0.75rem 0 0;
   }
 
   .course-module-group {

@@ -60,11 +60,22 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `${category.title} training courses`,
+    numberOfItems: categoryCourses.length,
     itemListElement: categoryCourses.map((course, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: new URL(courseUrl(course), site.url).toString(),
-      name: course.title,
+      item: {
+        "@type": "Course",
+        name: course.title,
+        description: course.whyThisMatters,
+        url: new URL(courseUrl(course), site.url).toString(),
+        provider: {
+          "@type": "Organization",
+          name: site.name,
+          url: site.url,
+        },
+        about: category.title,
+      },
     })),
   },
 ];
