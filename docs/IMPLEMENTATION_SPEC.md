@@ -13,9 +13,19 @@
 > functional/accessibility requirements is in §3. Anything labeled *(reference)*
 > describes how the original happened to do it and may be freely redesigned.
 >
-> **What is NOT in this document**: the bulk content payload — the ~100 course JSON
-> files, client logo images, and photography. Their schemas, naming rules, and one
-> full worked example are included so equivalent content can be authored or imported.
+> **Supplied content payload** (provided verbatim at project start — drop in as-is,
+> do not author or regenerate):
+>
+> - `src/content/courses/*.json` — the ~100 course files. Schema in §4.2, worked
+>   example in §4.4, so templates and validation tooling can be built against them.
+> - `assets/source/brand/icons/` — the vector brand logo (nav/footer).
+> - `assets/source/brand/logo/` — the raster brand logo (default OG image).
+> - `assets/source/logos/clients/` — the ~24 client logo images.
+> - `assets/source/logos/hrd/` — the HRD Corp claimable badge image.
+>
+> **Not supplied**: photography (the original's `assets/web/photos/` hero/section
+> photos). The implementer sources or generates imagery to fit their own design
+> direction — or designs photo-free — subject to the §3 requirements.
 
 ---
 
@@ -81,17 +91,17 @@ evaluating training providers. Tone: professional, practical, commercially clear
     "preview": "astro preview",
     "prebuild": "node scripts/generate-sitemaps.mjs",
     "sitemaps:generate": "node scripts/generate-sitemaps.mjs",
-    "courses:inventory": "node scripts/course-inventory.mjs",
     "courses:review": "node scripts/course-review.mjs",
-    "documents:markdown": "node scripts/pandoc-documents.mjs",
     "qa:launch": "node scripts/launch-qa.mjs",
     "typecheck": "astro check"
   }
 }
 ```
 
-(The original also had `courses:draft` / `courses:checklist` / `courses:seo-polish`
-authoring helpers — optional.)
+(The original repo also had raw-document authoring helpers — `documents:markdown`,
+`courses:inventory`, `courses:draft`, `courses:checklist`, `courses:seo-polish` —
+used to produce the course JSONs from source PDFs. Since the JSONs are supplied
+ready-made, these are not needed; see §10.)
 
 ### 2.3 Config essentials
 
@@ -118,10 +128,11 @@ PUBLIC_GOOGLE_SHEET_REGISTRATION_ENDPOINT=https://script.google.com/macros/s/<de
 /
 ├── astro.config.mjs, tsconfig.json, package.json  (+ styling config of your choice)
 ├── assets/                      # NOT in src/ — imported with relative paths
-│   ├── source/brand/            # logo image + vector icon
-│   ├── source/logos/clients/    # ~24 client logo PNGs
-│   ├── source/logos/hrd/        # HRD Corp claimable badge image
-│   └── web/photos/              # hero/section photography
+│   ├── source/brand/icons/      # vector brand logo — SUPPLIED at start
+│   ├── source/brand/logo/       # raster brand logo (OG image) — SUPPLIED at start
+│   ├── source/logos/clients/    # ~24 client logo PNGs — SUPPLIED at start
+│   ├── source/logos/hrd/        # HRD Corp claimable badge — SUPPLIED at start
+│   └── web/photos/              # implementer-sourced imagery (if the design uses photos)
 ├── public/
 │   ├── favicon.svg
 │   ├── robots.txt
@@ -138,8 +149,8 @@ PUBLIC_GOOGLE_SHEET_REGISTRATION_ENDPOINT=https://script.google.com/macros/s/<de
     │   │   publicTraining.ts, programs.ts
     │   └── courses/
     │       ├── schema.ts, index.ts
-    │       ├── *.json            (one per course, ~100 files)
-    │       └── _curation/        (generated: inventory.json, review-report.json)
+    │       ├── *.json            (one per course, ~100 files — SUPPLIED at start)
+    │       └── _curation/        (generated: review-report.json)
     ├── components/
     │   ├── layout/    Nav.astro, Footer.astro
     │   ├── primitives/ Button.astro, SectionHeading.astro, BrandLogo.astro, ...
@@ -175,9 +186,10 @@ requirements** the visual design must satisfy — everything else is yours:
 3. **HRD Corp claimable must be visually distinguished** wherever a course is shown —
    a badge/chip treatment that reads as a positive status and stands out from the
    other metadata chips (duration, language, formats).
-4. **Text over photography must stay readable.** Several heroes place heading text
-   over a photo; whatever treatment you choose (overlay, wash, split layout) must keep
-   AA contrast on mobile and desktop.
+4. **Text over imagery must stay readable.** If your design places heading text over
+   photos or illustrations (the original did on several heroes), whatever treatment
+   you choose (overlay, wash, split layout) must keep AA contrast on mobile and
+   desktop.
 5. **Client logos** render in a neutralized/uniform treatment (the originals are
    mixed-quality PNGs on white); interactive emphasis on hover is optional.
 6. **Motion is progressive enhancement** (see §3.1) and every animated behavior needs
@@ -212,14 +224,22 @@ elements that participate in this system.
 
 ### 3.2 Imagery inventory
 
-- Photography: workshop/office photos at `assets/web/photos/` used in page heroes and
-  one homepage feature image.
-- Client logos: one PNG per client at `assets/source/logos/clients/`.
-- Brand: a vector logo (nav/footer) and a raster logo (default OG image) under
-  `assets/source/brand/`.
-- HRD Corp badge image: `assets/source/logos/hrd/`.
-- All `<img>` elements need `alt` (QA-enforced) and explicit width/height where
-  available; purely decorative panels use `aria-hidden="true"`.
+Supplied at project start (use as-is):
+- Brand: vector logo at `assets/source/brand/icons/` (nav/footer) and raster logo at
+  `assets/source/brand/logo/` (default OG image).
+- Client logos: one PNG per client at `assets/source/logos/clients/` (the mixed-quality
+  originals behind the §3 neutralized-treatment rule).
+- HRD Corp claimable badge image: `assets/source/logos/hrd/` (used on the homepage
+  services section, §7.2).
+
+Implementer-sourced:
+- Photography/illustration for heroes and feature sections is **not supplied** — the
+  original used workshop/office photos under `assets/web/photos/`, but the choice
+  (and whether to use photos at all) belongs to your design direction. If text
+  overlays imagery, the §3 readability rule applies.
+
+All `<img>` elements need `alt` (QA-enforced) and explicit width/height where
+available; purely decorative panels use `aria-hidden="true"`.
 
 ---
 
@@ -348,6 +368,10 @@ export function courseSearchText(course: Course) {
 ```
 
 ### 4.4 One course JSON file per course — worked example
+
+The full set of course JSONs is **supplied at project start** — copy the directory
+into `src/content/courses/` unchanged. The example below shows what each file looks
+like so the templates and validation tooling can be built and tested against it.
 
 Filename must equal the slug: `ai-implementation-in-accounting-and-finance-from-strategy-to-optimization.json`
 
@@ -675,7 +699,7 @@ paragraph → CTAs/badges, with enough top padding to clear the fixed nav. Exact
 
 ```astro
 <BaseLayout>                      <!-- default title/description from site.ts -->
-  <Hero {...homeHero} backgroundImage={workshopHeroImage.src} />
+  <Hero {...homeHero} backgroundImage={heroImage?.src} />  <!-- imagery optional, implementer-sourced -->
   {showFeaturedTraining && <FeaturedPublicTraining training={featuredPublicTraining} />}
   <BentoMasonry {...proofBento} />
   <CoursesTabbed {...coursesShowcase} />
@@ -694,9 +718,10 @@ Section content specs (visual treatment is yours; ids matter — the nav links t
 `/#categories`, `/#services`, `/#home-clients`):
 
 - **Hero** (`#hero`): full-height-ish opening with eyebrow, H1 headline, sub, and two
-  CTAs (primary + secondary), over/beside the workshop photo (readability rule §3.4).
-  Elements carry `data-hero-item` for the load stagger.
-- **FeaturedPublicTraining** (`#featured-training`): the featured run — cover image,
+  CTAs (primary + secondary). Imagery optional and implementer-sourced (readability
+  rule in §3). Elements carry `data-hero-item` for the load stagger.
+- **FeaturedPublicTraining** (`#featured-training`): the featured run — optional
+  cover imagery (implementer-sourced),
   eyebrow, shortTitle heading, summary, Date/Time/Format/Category fact list, 3 bullet
   points, CTAs "Register interest" + "View course outline".
 - **BentoMasonry** (`#proof`): centered SectionHeading + a card collage of the 3
@@ -1061,19 +1086,31 @@ GA4 (`G-HMHWTHZ724`) + Microsoft Clarity (`x9c45gfnat`) wired directly into
 
 ---
 
-## 10. Course content pipeline & validation tooling
+## 10. Course content & validation tooling
 
-Raw course PDFs/docs live under a **gitignored** `course/` directory (never expected
-in a fresh checkout). Pipeline:
+**The course JSONs are supplied, not generated.** The complete
+`src/content/courses/*.json` set is provided as a starting payload — copy it in
+unchanged before the first build. Everything downstream (course pages, catalog,
+filters, related links, sitemaps, JSON-LD) derives from these files automatically at
+build time; no authoring pipeline needs to be built.
+
+For context: the original files were produced from raw course PDFs via a pandoc →
+inventory → human-authoring pipeline against a gitignored `course/` directory. That
+history explains two things you will see in the data: `sourceDoc` paths that point to
+files that don't exist in this project (expected — the review script treats this as a
+warning only), and the editorial shape rules below.
+
+What you DO need to build is the **validator**, `scripts/course-review.mjs`
+(`npm run courses:review`) — it guards the supplied payload and any future edits:
 
 ```
-raw docs → documents:markdown (pandoc)        → course/documents-markdown/*.md
-        → courses:inventory                    → _curation/inventory.json (groups/dedupes candidates)
-        → HUMAN authors src/content/courses/*.json per schema
-        → courses:review                       → _curation/review-report.json, exit 1 on hard errors
+src/content/courses/*.json → courses:review → _curation/review-report.json
+                                              exit 1 on hard errors
 ```
 
-**Always run `courses:review` after adding or editing a course JSON.**
+**Run `courses:review` after importing the payload and after any course JSON edit.**
+The supplied set should pass with zero hard errors (warnings, especially
+`hrd-unconfirmed`, are expected).
 
 ### 10.1 `courses:review` validation rules (scripts/course-review.mjs)
 
@@ -1192,8 +1229,9 @@ Operational notes:
 2. `site.ts`, `BaseLayout` (head/meta/JSON-LD/analytics), `Nav`, `Footer`,
    `global-motion.ts` (§3.1, §5).
 3. Primitives: Button, SectionHeading, BrandLogo (§6).
-4. Content model: `schema.ts`, `programs.ts`, `courses/index.ts`, seed a handful of
-   course JSONs (§4).
+4. Content model: `schema.ts`, `programs.ts`, `courses/index.ts`, then import the
+   supplied `src/content/courses/*.json` payload (§4) — the real data is available
+   from step one, so build templates against it rather than mock content.
 5. ProgramCard + `/programs` page + ProgramsCatalog island (§7.3, §8.1).
 6. Category pages, then course pages with the SEO recipes and FAQ/JSON-LD generation
    (§7.4–7.5).
@@ -1202,4 +1240,5 @@ Operational notes:
 9. About / Clients / Accessibility pages (§7.8).
 10. FeaturedPublicTraining + registration page + Apps Script (§7.7).
 11. Tooling: sitemap generator, courses:review, launch QA; robots/llms.txt (§9.3, §10).
-12. Full content load (all course JSONs), `npm run build` + `qa:launch` green.
+12. Final gate: `courses:review`, `npm run build`, and `qa:launch` all green across
+    the full supplied catalog.
