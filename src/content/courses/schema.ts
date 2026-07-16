@@ -54,6 +54,8 @@ export type Course = {
   modules: CourseModule[];
   methodology?: CourseMethodologyMix;
   methodologyCaption?: string;
+  /** Optional id into src/content/trainers.ts; renders the "Meet the trainer" block when set. */
+  trainerId?: string;
   sourceDoc: string;
   relatedSlugs?: string[];
 };

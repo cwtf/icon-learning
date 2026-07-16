@@ -17,6 +17,7 @@
 
 ## What's Done
 
+- **2026-07-16** - Trainer profile support added: optional `trainerId` on course JSON renders a verified "Meet the trainer" card (bio, credential highlights, proof-of-work links) and an `instructor` Person in Course JSON-LD. Christopher Wong's profile (from his CV) applied to the three AI courses. Spec updated in DESIGN.md §6.4.
 - **2026-07-16** - New course added: `Vibe Coding for the Workplace` (1-day, `ai` category) from the source outline docx; markdown copy saved under `course/documents-markdown/`. `hrdClaimable: true` confirmed directly by Icon Learning (course owner). Cross-linked from the two existing AI courses. Gates pass: courses:review 0 hard failures, build 118 pages, qa:launch 0 issues.
 - **2026-06-19** - AI category split: added `/programs/ai`, moved `AI Implementation in Accounting & Finance` and `Work Smarter, Prompt Better` into it, and renamed public-facing copy for the old mixed bucket to Microsoft & Digital Skills.
 - **2026-05-21** - CI/CD setup: Added GitHub Actions workflow (`deploy.yml`) using Node 22, and configured `base` path in `astro.config.mjs` for temporary GitHub Pages hosting.
@@ -90,6 +91,10 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 ---
 
 ## Decisions Log
+
+### 2026-07-16 - Trainer profiles are opt-in, verified, and single-sourced
+
+Course detail pages gain an optional "Meet the trainer" section (DESIGN.md §6.4 item 7) driven by a `trainerId` field in course JSON referencing `src/content/trainers.ts`. Bios must come from the trainer's own verified CV, and proof links must point at live public work. The build throws on an unknown `trainerId`. Only the three AI-category courses carry the Christopher Wong profile; other courses stay profile-free until their trainers are confirmed — do not fabricate profiles to fill the gap. Course JSON-LD gains an `instructor` Person (with `sameAs`) when a trainer is set. No photo is rendered until an approved headshot exists.
 
 ### 2026-05-20 - PR 3 bento uses logos before photos
 

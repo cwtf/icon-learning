@@ -35,6 +35,7 @@
     "groupActivities": 15
   },
   "methodologyCaption": "Roughly 70% of the day is hands-on: every participant builds on their own machine, ending with a capstone tool scoped from a real problem in their own role.",
+  "trainerId": "christopher-wong",
   "sourceDoc": "course/documents-markdown/Vibe Coding for the Workplace.md",
   "relatedSlugs": [
     "work-smarter-prompt-better",

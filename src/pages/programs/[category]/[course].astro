@@ -5,6 +5,7 @@ import ProgramCard from "../../../components/programs/ProgramCard.astro";
 import { courseUrl, courses, coursesByCategory } from "../../../content/courses";
 import { formatDuration, formatLanguage, programCategoryMap, type ProgramCategory } from "../../../content/programs";
 import { site } from "../../../content/site";
+import { trainerMap } from "../../../content/trainers";
 import type { Course, CourseMethodologyMix, CourseModule } from "../../../content/courses/schema";
 
 export function getStaticPaths() {
@@ -128,6 +129,11 @@ const relatedCourses = [...relatedFromSlugs, ...relatedSameCategory, ...relatedF
   .filter((item, index, list) => item.slug !== course.slug && list.findIndex((candidate) => candidate.slug === item.slug) === index)
   .slice(0, 3);
 
+const trainer = course.trainerId ? trainerMap.get(course.trainerId) : undefined;
+if (course.trainerId && !trainer) {
+  throw new Error(`Unknown trainerId '${course.trainerId}' on course '${course.slug}'. Add it to src/content/trainers.ts.`);
+}
+
 const timeRequired = course.durationDays === 0.5 ? "PT4H" : `P${course.durationDays}D`;
 const inLanguage = course.language === "en+ms" ? ["en", "ms"] : course.language;
 const courseFaqs = [
@@ -198,6 +204,22 @@ const structuredData = [
       url: site.url,
     },
     ...(course.hrdClaimable ? { educationalCredentialAwarded: "HRD Corp Claimable Training" } : {}),
+    ...(trainer
+      ? {
+          instructor: {
+            "@type": "Person",
+            name: trainer.name,
+            jobTitle: trainer.role,
+            description: trainer.bio,
+            worksFor: {
+              "@type": "Organization",
+              name: site.name,
+              url: site.url,
+            },
+            sameAs: trainer.sameAs,
+          },
+        }
+      : {}),
     inLanguage,
     timeRequired,
     audience: course.builtFor.join(", "),
@@ -334,6 +356,36 @@ const structuredData = [
               }
             </dl>
             {course.methodologyCaption && <p class="body-copy mt-5 max-w-3xl text-[var(--color-ink-muted)]">{course.methodologyCaption}</p>}
+          </section>
+        )}
+
+        {trainer && (
+          <section class="course-section" aria-labelledby="trainer-heading" data-reveal>
+            <p class="eyebrow">Meet the trainer</p>
+            <h2 id="trainer-heading" class="display-md mt-4">Who you'll learn from</h2>
+            <div class="course-trainer mt-6">
+              <div class="course-trainer-head">
+                <strong>{trainer.name}</strong>
+                <span>{trainer.role}</span>
+              </div>
+              <p class="body-copy mt-4 text-[var(--color-ink-muted)]">{trainer.bio}</p>
+              <ul class="course-trainer-highlights mt-5">
+                {trainer.highlights.map((highlight) => <li>{highlight}</li>)}
+              </ul>
+              {trainer.links.length > 0 && (
+                <div class="course-trainer-proof mt-5">
+                  <h3>Built and shipped — see for yourself</h3>
+                  <ul>
+                    {trainer.links.map((link) => (
+                      <li>
+                        <a href={link.href} rel="noopener noreferrer" target="_blank">{link.label}</a>
+                        <span>{link.note}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </section>
         )}
 
@@ -697,6 +749,93 @@ const structuredData = [
 
   .methodology-legend dd {
     color: var(--color-ink);
+  }
+
+  .course-trainer {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    max-width: 52rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .course-trainer-head strong {
+    color: var(--color-ink);
+    display: block;
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+
+  .course-trainer-head span {
+    color: var(--color-ink-muted);
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+  }
+
+  .course-trainer-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .course-trainer-highlights li {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-ink-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .course-trainer-proof {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.25rem;
+  }
+
+  .course-trainer-proof h3 {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .course-trainer-proof ul {
+    display: grid;
+    gap: 0.65rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .course-trainer-proof li {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .course-trainer-proof a {
+    color: var(--color-ink);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .course-trainer-proof li span {
+    color: var(--color-ink-muted);
+    font-size: 0.9rem;
   }
 
   .course-related-grid {
