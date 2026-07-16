@@ -4,7 +4,7 @@
   "subtitle": "Build your own apps and automations with AI — no coding required.",
   "categorySlug": "ai",
   "durationDays": 1,
-  "hrdClaimable": false,
+  "hrdClaimable": true,
   "language": "en",
   "deliveryFormats": ["In-house", "Workshop", "Blended"],
   "whyThisMatters": "Browser-based AI app builders now let staff with no programming background create working tools — calculators, trackers, dashboards, and internal forms — through plain-language conversation. This hands-on workshop takes non-technical teams from first exposure to a working prototype they built themselves, with the judgment to use these tools safely and responsibly.",

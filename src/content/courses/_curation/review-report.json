@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-16T11:32:20.747Z",
+  "generatedAt": "2026-07-16T12:48:06.817Z",
   "totals": {
     "coursesReviewed": 101,
     "hardFailures": 0,
-    "warnings": 1,
-    "hrdUnconfirmed": 1
+    "warnings": 0,
+    "hrdUnconfirmed": 0
   },
   "rules": {
     "summaryOnly": "Review checks enforce concise summary fields, module titles only, valid relatedSlugs, and explicit HRD confirmation before badges/schema appear.",
@@ -1571,21 +1571,15 @@
       "categorySlug": "ai",
       "path": "src/content/courses/vibe-coding-for-the-workplace.json",
       "sourceDoc": "course/documents-markdown/Vibe Coding for the Workplace.md",
-      "hrdClaimable": false,
+      "hrdClaimable": true,
       "relatedSlugs": [
         "work-smarter-prompt-better",
         "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
         "digital-transformation-ir4"
       ],
-      "status": "review-pass-with-warnings",
+      "status": "review-pass",
       "issues": [],
-      "warnings": [
-        {
-          "code": "hrd-unconfirmed",
-          "severity": "warning",
-          "message": "HRD Corp claimable status is not confirmed; badge/schema stays hidden."
-        }
-      ]
+      "warnings": []
     },
     {
       "slug": "warehouse-management-and-inventory-control",
