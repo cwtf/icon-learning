@@ -1,0 +1,44 @@
+{
+  "slug": "vibe-coding-for-the-workplace",
+  "title": "Vibe Coding for the Workplace",
+  "subtitle": "Build your own apps and automations with AI — no coding required.",
+  "categorySlug": "ai",
+  "durationDays": 1,
+  "hrdClaimable": false,
+  "language": "en",
+  "deliveryFormats": ["In-house", "Workshop", "Blended"],
+  "whyThisMatters": "Browser-based AI app builders now let staff with no programming background create working tools — calculators, trackers, dashboards, and internal forms — through plain-language conversation. This hands-on workshop takes non-technical teams from first exposure to a working prototype they built themselves, with the judgment to use these tools safely and responsibly.",
+  "builtFor": [
+    "Non-technical staff in operations, marketing, admin, HR, finance, and customer service",
+    "Teams that want to automate their own workflows without writing code",
+    "Managers exploring quick internal tools before committing to software spend"
+  ],
+  "walkAwayWith": [
+    "Explain what vibe coding and AI app builders can realistically do — and where they fall short.",
+    "Operate browser-based AI building tools to generate, preview, and modify a working application.",
+    "Describe, iterate, and debug an app entirely through outcome-focused natural language.",
+    "Build a working prototype that solves a real task from your own role.",
+    "Check an AI-built tool against basic safety, data privacy, and security criteria before sharing it."
+  ],
+  "modules": [
+    { "title": "Demystifying Vibe Coding" },
+    { "title": "Your AI Building Toolkit" },
+    { "title": "Prompting for Builders" },
+    { "title": "Capstone Build Lab: Automate Your Own Workflow" },
+    { "title": "Safe & Responsible Vibe Coding" },
+    { "title": "Showcase, Assessment & Action Plan" }
+  ],
+  "methodology": {
+    "interactiveLectures": 20,
+    "demonstrations": 10,
+    "handsOnExercises": 55,
+    "groupActivities": 15
+  },
+  "methodologyCaption": "Roughly 70% of the day is hands-on: every participant builds on their own machine, ending with a capstone tool scoped from a real problem in their own role.",
+  "sourceDoc": "course/documents-markdown/Vibe Coding for the Workplace.md",
+  "relatedSlugs": [
+    "work-smarter-prompt-better",
+    "ai-implementation-in-accounting-and-finance-from-strategy-to-optimization",
+    "digital-transformation-ir4"
+  ]
+}

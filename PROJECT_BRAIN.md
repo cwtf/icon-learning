@@ -17,6 +17,7 @@
 
 ## What's Done
 
+- **2026-07-16** - New course added: `Vibe Coding for the Workplace` (1-day, `ai` category) from the source outline docx; markdown copy saved under `course/documents-markdown/`. `hrdClaimable` left `false` pending confirmation, so it is hidden behind the default HRD filter on `/programs` until confirmed. Cross-linked from the two existing AI courses. Gates pass: courses:review 0 hard failures, build 118 pages, qa:launch 0 issues.
 - **2026-06-19** - AI category split: added `/programs/ai`, moved `AI Implementation in Accounting & Finance` and `Work Smarter, Prompt Better` into it, and renamed public-facing copy for the old mixed bucket to Microsoft & Digital Skills.
 - **2026-05-21** - CI/CD setup: Added GitHub Actions workflow (`deploy.yml`) using Node 22, and configured `base` path in `astro.config.mjs` for temporary GitHub Pages hosting.
 - **2026-05-21** - Programs update: Updated all 10 sample course JSON files to `hrdClaimable: true` and set the HRD Corp claimable toggle on `/programs` to be checked by default.
