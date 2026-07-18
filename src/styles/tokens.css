@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --color-bg: #fbfaf8;
   --color-surface: #ffffff;
   --color-surface-muted: #f2f0eb;
@@ -9,15 +10,76 @@
   --color-border: #e8e5de;
   --color-border-strong: #d8d4ca;
   --color-accent: #7c3aed;
+  --color-accent-contrast: #ffffff;
   --color-accent-soft: #f1ecff;
   --color-success-soft: #e9f8ef;
   --color-warning-soft: #fff3d8;
   --shadow-sm: 0 1px 2px rgb(10 10 10 / 0.04);
   --shadow-md: 0 8px 24px rgb(10 10 10 / 0.08);
+  /* Client logo tiles stay light in both themes so full-colour logos remain legible. */
+  --color-logo-tile-bg: #ffffff;
+  --color-logo-tile-border: #e8e5de;
+  --color-logo-tile-border-strong: #d8d4ca;
+  --color-logo-tile-ink: #666666;
+  /* 0 = leave logos as-authored (light theme), 1 = invert dark marks to light (dark theme). */
+  --logo-invert: 0;
+  /* 0 in light theme, 1 in dark — for CSS that needs to know the effective theme (e.g. toggle icons). */
+  --theme-dark: 0;
   --nav-height: 4.5rem;
   --page-gutter: clamp(1rem, 4vw, 4rem);
   --page-max: 80rem;
   --wide-max: 90rem;
   --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*
+ * Dark theme. Applied when the system prefers dark (unless a future toggle
+ * forces light via data-theme="light"), or when data-theme="dark" is forced.
+ * Keep both blocks identical.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #121110;
+    --color-surface: #1c1a18;
+    --color-surface-muted: #262421;
+    --color-ink: #f0eeea;
+    --color-ink-muted: #a8a49c;
+    --color-ink-dim: #7d7972;
+    --color-ink-inverse: #121110;
+    --color-border: #2e2b27;
+    --color-border-strong: #45413a;
+    --color-accent: #a78bfa;
+    --color-accent-contrast: #1c1030;
+    --color-accent-soft: #2b2344;
+    --color-success-soft: #16281d;
+    --color-warning-soft: #2f2712;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
+    --logo-invert: 1;
+    --theme-dark: 1;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #121110;
+  --color-surface: #1c1a18;
+  --color-surface-muted: #262421;
+  --color-ink: #f0eeea;
+  --color-ink-muted: #a8a49c;
+  --color-ink-dim: #7d7972;
+  --color-ink-inverse: #121110;
+  --color-border: #2e2b27;
+  --color-border-strong: #45413a;
+  --color-accent: #a78bfa;
+  --color-accent-contrast: #1c1030;
+  --color-accent-soft: #2b2344;
+  --color-success-soft: #16281d;
+  --color-warning-soft: #2f2712;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
+  --logo-invert: 1;
+  --theme-dark: 1;
 }

@@ -28,7 +28,7 @@ This document reconciles three prior drafts:
 - Contact someone quickly via WhatsApp / email / phone.
 
 **Non-goals this pass**
-- Dark mode (light theme only — see §4).
+- ~~Dark mode (light theme only — see §4)~~ — dark mode added July 2026, see §4.1.
 - Course detail pages beyond category-level templates.
 - Blog / articles / lead magnets / i18n.
 
@@ -74,11 +74,20 @@ Islands are isolated to: mobile nav, program tabs, search/filter, optional carou
 
 ### 4.1 Theme
 
-**Light only.** Warm off-white background, near-black ink, purple as a sparse accent. **No dark mode.** No glassmorphism, no gradient mesh, no glowing orbs, no decorative gradient blobs.
+**Light default, dark follows system.** Warm off-white background, near-black ink, purple as a sparse accent. No glassmorphism, no gradient mesh, no glowing orbs, no decorative gradient blobs.
 
-If dark mode is added later, invert via `[data-theme="dark"]` on `:root`.
+Dark mode (added July 2026) follows the system preference by default, with a manual sun/moon toggle in the nav. The theming itself is pure CSS: `tokens.css` redefines every colour token under `@media (prefers-color-scheme: dark)` (guarded by `:root:not([data-theme="light"])`) and under `:root[data-theme="dark"]`; the two dark blocks must stay identical. The toggle (in `Nav.astro`) sets `data-theme` on `<html>` and persists to `localStorage.theme` **only when overriding the system preference** — choosing what the system already prefers clears the override so the site keeps following the OS. A tiny `is:inline` script in `BaseLayout` applies the stored choice before first paint (no theme flash). The toggle button is SSR'd `hidden` and revealed by JS, so no-JS users never see a dead control. Rules:
+
+- All colour must flow through tokens (or `color-mix()` over tokens). No raw hex/rgb in components — that's what makes both themes work from one stylesheet.
+- `color-scheme` is set per theme so native form controls and scrollbars follow.
+- `BaseLayout` carries paired `<meta name="theme-color">` tags (light `#FBFAF8`, dark `#121110`).
+- Dark accent is `#A78BFA` (the light-theme `#7C3AED` fails WCAG AA on dark backgrounds); text on accent fills uses `--color-accent-contrast`.
+- Brand marks (navy SVG, black PNG) get `class="brand-mark"`, which flattens them to white in dark via the `--logo-invert` token (`filter: brightness(calc(1 - var(--logo-invert))) invert(var(--logo-invert))`).
+- Client logos: `LogoWall` tiles are pinned light in both themes (`--color-logo-tile-*` tokens); logos rendered bare on the page background (homepage marquee, bento logo cloud) use `grayscale(1) invert(var(--logo-invert))`, and hover only restores colour in light.
 
 ### 4.2 Color tokens
+
+Light-theme values below; dark-theme counterparts live alongside them in `src/styles/tokens.css`.
 
 | Token | Value | Usage |
 |---|---:|---|

@@ -92,6 +92,10 @@ Full list lives in [DESIGN.md Section 13](DESIGN.md). Status snapshot here:
 
 ## Decisions Log
 
+### 2026-07-18 - Dark mode added: follows system by default, manual toggle in nav
+
+Reverses the "light theme only" decision (DESIGN.md §4.1 updated). Theming is CSS-only via `prefers-color-scheme`; all dark values live in `src/styles/tokens.css` as two identical blocks (media query guarded by `:root:not([data-theme="light"])`, plus `:root[data-theme="dark"]`). A sun/moon toggle in `Nav.astro` sets `data-theme` on `<html>`, persisting to `localStorage.theme` only when the choice differs from the system preference (matching the system clears the override, returning to follow-system). A pre-paint `is:inline` script in `BaseLayout` applies the stored choice with no theme flash; the button is SSR'd `hidden` and revealed by JS so no-JS users see no dead control. Dark accent is `#A78BFA` for WCAG AA on dark backgrounds. Brand marks invert to white via the `--logo-invert` token (`.brand-mark` class); `LogoWall` client-logo tiles are pinned light in both themes; bare logos (homepage marquee, bento logo cloud) grayscale-invert in dark. All hardcoded `rgb()`/hex overlays in components were migrated to `color-mix()` over tokens — keep it that way. Methodology-mix segment colours on course pages remain fixed hexes (they sit inside a bordered bar on a surface and read fine in both themes).
+
 ### 2026-07-16 - Trainer profiles are opt-in, verified, and single-sourced
 
 Course detail pages gain an optional "Meet the trainer" section (DESIGN.md §6.4 item 7) driven by a `trainerId` field in course JSON referencing `src/content/trainers.ts`. Bios must come from the trainer's own verified CV, and proof links must point at live public work. The build throws on an unknown `trainerId`. Only the three AI-category courses carry the Christopher Wong profile; other courses stay profile-free until their trainers are confirmed — do not fabricate profiles to fill the gap. Course JSON-LD gains an `instructor` Person (with `sameAs`) when a trainer is set. No photo is rendered until an approved headshot exists.

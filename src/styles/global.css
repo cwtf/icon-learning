@@ -147,14 +147,19 @@ a {
 
 .photo-hero::after {
   background:
-    linear-gradient(90deg, rgb(251 250 248 / 0.94) 0%, rgb(251 250 248 / 0.84) 42%, rgb(251 250 248 / 0.7) 100%),
-    linear-gradient(180deg, rgb(251 250 248 / 0.84) 0%, rgb(251 250 248 / 0.58) 48%, var(--color-bg) 100%);
+    linear-gradient(90deg, color-mix(in srgb, var(--color-bg) 94%, transparent) 0%, color-mix(in srgb, var(--color-bg) 84%, transparent) 42%, color-mix(in srgb, var(--color-bg) 70%, transparent) 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 84%, transparent) 0%, color-mix(in srgb, var(--color-bg) 58%, transparent) 48%, var(--color-bg) 100%);
   z-index: 0;
 }
 
 .photo-hero > * {
   position: relative;
   z-index: 1;
+}
+
+/* Brand marks are dark artwork (navy SVG, black PNG); flatten to white in dark theme. */
+.brand-mark {
+  filter: brightness(calc(1 - var(--logo-invert))) invert(var(--logo-invert));
 }
 
 @media (max-width: 48rem) {
@@ -165,8 +170,8 @@ a {
 
   .photo-hero::after {
     background:
-      linear-gradient(180deg, rgb(251 250 248 / 0.92) 0%, rgb(251 250 248 / 0.8) 52%, var(--color-bg) 100%),
-      linear-gradient(90deg, rgb(251 250 248 / 0.9), rgb(251 250 248 / 0.72));
+      linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 92%, transparent) 0%, color-mix(in srgb, var(--color-bg) 80%, transparent) 52%, var(--color-bg) 100%),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-bg) 90%, transparent), color-mix(in srgb, var(--color-bg) 72%, transparent));
   }
 }
 
